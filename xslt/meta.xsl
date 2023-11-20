@@ -31,8 +31,10 @@
             <body class="d-flex flex-column h-100">
             <xsl:call-template name="nav_bar"/>
                 <main>
-                    <div class="container">                        
-                        <h1><xsl:value-of select="$doc_title"/></h1>    
+                    <div class="container-md">                        
+                        <h1 class="display-3 text-center">
+                            <xsl:value-of select="$doc_title"/>
+                        </h1>    
                         <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
                         <p style="text-align:center;">
                             <xsl:for-each select=".//tei:note">
@@ -75,7 +77,7 @@
     </xsl:template>
 
     <xsl:template match="tei:graphic">
-        <img src="{'img/'||tokenize(data(@url), '/')[last()]}"/>
+        <img src="{'img/'||tokenize(data(@url), '/')[last()]}" class="pb-1"/>
     </xsl:template>
     
     <xsl:template match="tei:hi[@rend]">
@@ -111,6 +113,9 @@
             <xsl:value-of select="count(ancestor-or-self::tei:div)"/>
         </xsl:variable>
         <xsl:element name="{concat('h', $level + 1)}">
+            <xsl:attribute name="class">
+                <xsl:value-of select="concat('text-center display-', $level + 4)"/>
+            </xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
