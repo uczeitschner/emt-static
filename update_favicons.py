@@ -1,8 +1,8 @@
 import os
 from favicons import Favicons
 
-ICON = os.environ.get("ICON", "./html/images/logo.png")
-OUT_DIR = os.environ.get("OUT_DIR", "html/images/favicons")
+ICON = os.environ.get("ICON", "./html/img/logo.png")
+OUT_DIR = os.environ.get("OUT_DIR", "html/img/favicons")
 
 if os.environ.get("NOT_TRANSPARENT"):
     TRANSPARENT = False

@@ -17,11 +17,12 @@ jobs:
         apt-get update && apt-get install openjdk-11-jre-headless ant -y --no-install-recommend
         ./shellscripts/script.sh
         pip install -r requirements.txt
+    - name: Fetch data
+      run: ./fetch_data.sh
+    - name: Process Data
+      run: ./process.sh
     - name: Build
-      run: |
-        ant
-    - name: Update Favicons
-      run: python update_favicons.py
+      run: ant
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:

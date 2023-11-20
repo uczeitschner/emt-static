@@ -29,3 +29,6 @@ rm -rf ./emt-para-text-main
 
 echo "update imprint"
 ./shellscripts/dl_imprint.sh
+
+echo "fetch rss feed"
+./dl_rssfeed.sh
