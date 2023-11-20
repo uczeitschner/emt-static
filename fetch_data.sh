@@ -1,5 +1,5 @@
 # bin/bash
-
+mkdir data
 echo "fetching transkriptions from emt-working-data"
 rm -rf data/editions && mkdir data/editions
 curl -LO https://github.com/emt-project/emt-working-data/archive/refs/heads/main.zip
