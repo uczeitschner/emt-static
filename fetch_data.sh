@@ -18,7 +18,8 @@ rm main.zip
 rm -rf ./emt-entities-main
 
 echo "fetching transkriptions from emt-para-text"
-rm -rf data/meta/*.xml
+rm -rf data/meta/
+mkdir data/meta
 curl -LO https://github.com/emt-project/emt-para-text/archive/refs/heads/main.zip
 unzip main
 mv ./emt-para-text-main/data/meta/*.xml ./data/meta/

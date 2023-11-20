@@ -10,7 +10,7 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
     
-    <!-- <xslt in="${index}" out="${target}/toc.html" style="./xslt/toc.xsl">
+    <xslt in="${index}" out="${target}/toc.html" style="./xslt/toc.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -43,11 +43,10 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt> 
-<!-\-  BLOG/RSS   -\->
     <xslt in="./data/rss.xml" out="${target}/rss.html" style="./xslt/rss.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt> -->
+    </xslt>
     <replace dir="${target}" value="">
         <include name="*.html"/>
         <replacetoken> xmlns=""</replacetoken>
