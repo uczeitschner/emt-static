@@ -16,43 +16,59 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projekt</a>
-                                <ul class="dropdown-menu">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__project" aria-expanded="false" />
+                                <ul class=" dropdown-menu" role="menu">
                                     <li>
-                                        <a class="dropdown-item" href="about.html">Über das Projekt</a>
+                                        <a class="dropdown-item" data-i18n="navbar__about" href="projekt.html" />
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="imprint.html">Impressum</a>
+                                        <a class="dropdown-item" data-i18n="navbar__tradition" href="ueberlieferung.html" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__cipher"
+                                        href="chiffre.html" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__edition"
+                                        href="richtlinien.html" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__team"
+                                        href="team.html" />
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__sourcecode"
+                                        href="https://github.com/emt-project/emt-static/" />
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="calendar.html" data-i18n="navbar__calendar"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a title="Briefverzeichnis" href="toc.html" class="nav-link" data-i18n="navbar__letterindex"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__project" aria-expanded="false" />
+                                <ul class=" dropdown-menu" role="menu">
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__persons"
+                                        href="listperson.html" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__places"
+                                        href="listplace.html" />
                                     </li>
                                 </ul>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="toc.html">Editionseinheiten</a>
-                            </li>
-
-                            <li class="nav-item dropdown disabled">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Register</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="listperson.html">Personen</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="listplace.html">Orte</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="listorg.html">Organisationen</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="listbibl.html">Werke</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a title="Suche" class="nav-link" href="search.html">Suche</a>
-                            </li>
+                                    
                         </ul>
+                        <a title="Suche" href="search.html" class="nav-link pe-3" data-i18n="navbar__search"></a>
+                        <select class="form-select" name="language" id="languageSwitcher"></select>
                     </div>
                 </div>
             </nav>
