@@ -39,7 +39,10 @@
                             <thead>
                                 <tr>
                                     <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
-                                    <th scope="col" tabulator-headerFilter="input">Titel</th>
+                                    <th scope="col" tabulator-headerFilter="input">Sender</th>
+                                    <th scope="col" tabulator-headerFilter="input">Empfänger</th>
+                                    <th scope="col" tabulator-headerFilter="input">Datum</th>
+                                    <th scope="col" tabulator-headerFilter="input">Ort</th>
                                     <th scope="col" tabulator-headerFilter="input">Dateinname</th>
                                 </tr>
                             </thead>
@@ -60,14 +63,22 @@
                                                 <i class="bi bi-link-45deg"/>
                                             </a>
                                         </td>
+                                        
                                         <td>
-                                            <xsl:value-of
-                                                select=".//tei:titleStmt/tei:title[1]/text()"/>
+                                            <xsl:value-of select=".//tei:correspAction[@type='sent']/tei:persName/text()"/>
                                         </td>
                                         <td>
-                                            <xsl:value-of select="tokenize($full_path, '/')[last()]"
-                                            />
+                                            <xsl:value-of select=".//tei:correspAction[@type='received']/tei:persName/text()"/>
                                         </td>
+                                        <td>
+                                            <xsl:value-of select="data(.//tei:origDate/@when-iso)[1]"/>
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select=".//tei:correspAction[@type='sent']/tei:placeName/text()"/>
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select="tokenize($full_path, '/')[last()]"/>
+                                        </td>  
                                     </tr>
                                 </xsl:for-each>
                             </tbody>
