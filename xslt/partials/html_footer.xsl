@@ -7,6 +7,39 @@
     version="2.0">
     <xsl:template match="/" name="html_footer">
         <footer class="footer mt-auto py-3 bg-body-tertiary">
+            <div class="container"><div class="row justify-content-md-center" style="text-align:center;">
+                <div class="col" style="text-align:left;">
+                    <p>
+                        Austrian Acadamy of Sciences<br/>
+                        Institute for Habsburg and Balkan Studies<br/>
+                        <br/>       
+                        Georg-Coch-Platz 2<br/>
+                        1010 Vienna (Austria)<br/>
+                        Apostelgasse 23<br/>
+                        1030 Vienna (Austria)
+                    </p>
+                </div>
+                <div class="col">
+                    <a href="https://www.oeaw.ac.at/ihb/" target="_blank" rel="noopener" aria-label="IHB">
+                        <img src="logos/ihb-logo-en-text.png" alt="IHB" title="Institut for Habsburg and Balkan Studies"/>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.fwf.ac.at/" target="_blank" rel="noopener" aria-label="FWF">
+                        <img src="logos/fwf-logo-transparent.png" alt="FWF" title="FWF Science-Fond"/>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.oeaw.ac.at/" target="_blank" rel="noopener" aria-label="OEAW">
+                        <img src="logos/oeaw-logo-transparent.png" alt="OEAW" title="Austrian Academy of Sciences"/>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.oeaw.ac.at/acdh/" target="_blank" rel="noopener" aria-label="ACDH">
+                        <img src="logos/acdh_logo_with_text.svg" alt="ACDH" title="Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH) of the Austrian Academy of Sciences"/>
+                    </a>                            
+                </div>
+            </div></div>
             <div class="float-end me-3">
                 <a href="{$github_url}"><i class="bi bi-github"></i></a>
             </div>

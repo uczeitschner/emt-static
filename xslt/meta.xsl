@@ -76,8 +76,22 @@
         </html>
     </xsl:template>
 
-    <xsl:template match="tei:graphic">
+ <!--   <xsl:template match="tei:graphic" name="img">
         <img src="{'img/'||tokenize(data(@url), '/')[last()]}" class="pb-1"/>
+    </xsl:template>-->
+    
+    <xsl:template match="tei:figure">
+        <xsl:variable name="imgurl">
+            <xsl:value-of select="./tei:graphic/@url"/>
+        </xsl:variable>
+        <img class="pb-1">
+            <xsl:attribute name="src">
+                <xsl:value-of select="'img/'||tokenize(data($imgurl), '/')[last()]"/>
+            </xsl:attribute>
+        </img>
+        <xsl:if test=".//tei:desc">
+            <figcaption><xsl:apply-templates select=".//tei:desc"/></figcaption>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:hi[@rend]">
