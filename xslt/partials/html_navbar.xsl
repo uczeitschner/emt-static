@@ -37,6 +37,10 @@
                                         href="team.html" />
                                     </li>
                                     <li>
+                                        <a class="dropdown-item" data-i18n="navbar__blog"
+                                            href="blog.html" />
+                                    </li>
+                                    <li>
                                         <hr class="dropdown-divider" />
                                     </li>
                                     <li>
