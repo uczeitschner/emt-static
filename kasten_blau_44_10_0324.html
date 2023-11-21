@@ -35,12 +35,7 @@
       <title xmlns="http://www.w3.org/1999/xhtml">Johann Wilhelm von Pfalz-Neuburg an Eleonora Magdalena von Pfalz-Neuburg, Düsseldorf am 1711.07.16</title>
       <link xmlns="http://www.w3.org/1999/xhtml" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
       <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-      <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/style.css" type="text/css"><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script><style>
-                    .navBarNavDropdown ul li:nth-child(2) {
-                        display: none !important;
-                    }
-                </style>
-   </head>
+      <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/style.css" type="text/css"><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script><script src="js/osd_single.js"></script></head>
    <body class="d-flex flex-column h-100">
       <header xmlns="http://www.w3.org/1999/xhtml">
          <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -54,6 +49,7 @@
                            <li><a class="dropdown-item" data-i18n="navbar__cipher" href="chiffre.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__edition" href="richtlinien.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__team" href="team.html"></a></li>
+                           <li><a class="dropdown-item" data-i18n="navbar__blog" href="rss.html"></a></li>
                            <li>
                               <hr class="dropdown-divider">
                            </li>
@@ -62,7 +58,7 @@
                      </li>
                      <li class="nav-item"><a class="nav-link" href="calendar.html" data-i18n="navbar__calendar"></a></li>
                      <li class="nav-item"><a title="Briefverzeichnis" href="toc.html" class="nav-link" data-i18n="navbar__letterindex"></a></li>
-                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__project" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
+                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__register" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
                            <li><a class="dropdown-item" data-i18n="navbar__persons" href="listperson.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__places" href="listplace.html"></a></li>
                         </ul>
@@ -85,163 +81,49 @@
                <div class="col-md-2 col-lg-2 col-sm-12" style="text-align:right">
                   <h1><a href="kasten_blau_44_10_0325.html"><i class="bi bi-chevron-right" title="weiter"></i></a></h1>
                </div>
-               <div id="editor-widget">
-                  <div xmlns="http://www.w3.org/1999/xhtml" id="aot-navBarNavDropdown" class="navBarNavDropdown dropstart"><a title="Annotationen" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
-                           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path></svg></a><ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                           <full-size opt="fls"></full-size>
-                        </li>
-                        <li class="dropdown-item">
-                           <image-switch opt="es"></image-switch>
-                        </li>
-                        <li class="dropdown-item">
-                           <font-size opt="fs"></font-size>
-                        </li>
-                        <li class="dropdown-item">
-                           <font-family opt="ff"></font-family>
-                        </li>
-                        <li class="dropdown-item" style="border-top: 5px dashed lightgrey !important;">
-                           <annotation-slider opt="ef"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="prs"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="plc"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="wrk"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="org"></annotation-slider>
-                        </li>
-                     </ul>
+            </div>
+            <div class="regest">
+               <h4><span class="badge badge-primary p-1 m-1">Konzept</span><span class="badge badge-primary p-1 m-1">Schreiber</span></h4>
+               <div class="regest-text">
+                  
+                  <p id="p__1" data-id=""></p>
                   </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>199 r</h5>
                </div>
             </div>
-            
-            <div id="div__33"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_1">199 r</span><p id="p__33" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-1"><img id="os-id-1-img" src="https://files.transkribus.eu/Get?id=GSHVSFVCNGPUQPDJJBPSWKIM&amp;fileType=view" onload="loadImage('os-id-1', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__33" data-id="#facs_1_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb1" name="#facs_1_r1__p1__lb1" id="#facs_1_r1__p1__lb1" size="800,1312" zone="740,40 774,39 774,9 740,10" class="linenumbersTransparent linenumbers">0001</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb2" name="#facs_1_r1__p1__lb2" id="#facs_1_r1__p1__lb2" size="800,1312" zone="29,52 58,52 87,52 117,53 146,54 176,55 176,25 146,24 117,23 87,22 58,22 29,22" class="linenumbersTransparent linenumbers">0002</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb3" name="#facs_1_r1__p1__lb3" id="#facs_1_r1__p1__lb3" size="800,1312" zone="76,81 118,83 118,53 76,51" class="linenumbersTransparent linenumbers">0003</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb4" name="#facs_1_r1__p1__lb4" id="#facs_1_r1__p1__lb4" size="800,1312" zone="33,137 64,138 95,139 126,140 157,140 189,140 220,140 251,139 282,139 313,138 345,138 376,136 407,136 438,136 469,136 501,136 532,136 563,137 594,138 625,140 657,143 657,113 625,110 594,108 563,107 532,106 501,106 469,106 438,106 407,106 376,106 345,108 313,108 282,109 251,109 220,110 189,110 157,110 126,110 95,109 64,108 33,107" class="linenumbersTransparent linenumbers">0004</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb5" name="#facs_1_r1__p1__lb5" id="#facs_1_r1__p1__lb5" size="800,1312" zone="39,179 65,180 92,180 119,179 146,178 173,178 200,178 227,180 227,150 200,148 173,148 146,148 119,149 92,150 65,150 39,149" class="linenumbersVisible linenumbers" data-lbnr="5">0005</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb6" name="#facs_1_r1__p1__lb6" id="#facs_1_r1__p1__lb6" size="800,1312" zone="385,225 411,225 437,223 463,223 489,222 515,221 541,220 567,220 593,219 619,219 645,219 671,219 697,220 723,220 749,221 776,222 776,192 749,191 723,190 697,190 671,189 645,189 619,189 593,189 567,190 541,190 515,191 489,192 463,193 437,193 411,195 385,195" class="linenumbersTransparent linenumbers">0006</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb7" name="#facs_1_r1__p1__lb7" id="#facs_1_r1__p1__lb7" size="800,1312" zone="102,234 133,234 164,234 195,234 226,234 226,204 195,204 164,204 133,204 102,204" class="linenumbersTransparent linenumbers">0007</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb8" name="#facs_1_r1__p1__lb8" id="#facs_1_r1__p1__lb8" size="800,1312" zone="226,284 253,282 280,280 308,277 335,276 362,274 390,273 417,271 444,270 472,269 499,268 526,268 554,267 581,267 608,266 636,266 663,265 690,265 718,265 745,265 773,265 773,235 745,235 718,235 690,235 663,235 636,236 608,236 581,237 554,237 526,238 499,238 472,239 444,240 417,241 390,243 362,244 335,246 308,247 280,250 253,252 226,254" class="linenumbersTransparent linenumbers">0008</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb9" name="#facs_1_r1__p1__lb9" id="#facs_1_r1__p1__lb9" size="800,1312" zone="371,321 396,319 421,318 446,317 471,316 496,315 521,315 546,314 571,313 596,312 621,312 646,312 671,311 696,311 721,311 746,311 772,312 772,282 746,281 721,281 696,281 671,281 646,282 621,282 596,282 571,283 546,284 521,285 496,285 471,286 446,287 421,288 396,289 371,291" class="linenumbersTransparent linenumbers">0009</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb10" name="#facs_1_r1__p1__lb10" id="#facs_1_r1__p1__lb10" size="800,1312" zone="485,347 511,345 538,343 564,342 591,342 617,341 644,339 671,335 671,305 644,309 617,311 591,312 564,312 538,313 511,315 485,317" class="linenumbersVisible linenumbers" data-lbnr="10">0010</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb11" name="#facs_1_r1__p1__lb11" id="#facs_1_r1__p1__lb11" size="800,1312" zone="377,364 403,364 430,363 456,363 483,362 510,361 536,360 563,360 589,359 616,359 643,359 669,359 696,360 722,361 749,363 776,364 776,334 749,333 722,331 696,330 669,329 643,329 616,329 589,329 563,330 536,330 510,331 483,332 456,333 430,333 403,334 377,334" class="linenumbersTransparent linenumbers">0011</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb12" name="#facs_1_r1__p1__lb12" id="#facs_1_r1__p1__lb12" size="800,1312" zone="379,415 404,413 430,410 456,408 482,407 508,406 534,406 560,405 585,405 611,405 637,406 663,406 689,407 715,409 741,410 767,411 767,381 741,380 715,379 689,377 663,376 637,376 611,375 585,375 560,375 534,376 508,376 482,377 456,378 430,380 404,383 379,385" class="linenumbersTransparent linenumbers">0012</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb13" name="#facs_1_r1__p1__lb13" id="#facs_1_r1__p1__lb13" size="800,1312" zone="321,454 346,454 371,454 396,454 421,454 446,454 471,454 496,454 521,453 547,453 572,454 597,454 622,454 647,454 672,455 697,456 722,457 747,458 773,460 773,430 747,428 722,427 697,426 672,425 647,424 622,424 597,424 572,424 547,423 521,423 496,424 471,424 446,424 421,424 396,424 371,424 346,424 321,424" class="linenumbersTransparent linenumbers">0013</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb14" name="#facs_1_r1__p1__lb14" id="#facs_1_r1__p1__lb14" size="800,1312" zone="273,511 298,508 323,506 348,504 373,502 398,501 423,501 448,500 473,500 498,500 524,500 549,500 574,501 599,502 624,503 649,503 674,504 699,505 724,506 749,507 775,507 775,477 749,477 724,476 699,475 674,474 649,473 624,473 599,472 574,471 549,470 524,470 498,470 473,470 448,470 423,471 398,471 373,472 348,474 323,476 298,478 273,481" class="linenumbersTransparent linenumbers">0014</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb15" name="#facs_1_r1__p1__lb15" id="#facs_1_r1__p1__lb15" size="800,1312" zone="379,548 405,547 432,547 458,547 485,547 511,547 538,547 564,547 591,547 617,547 644,548 670,548 697,549 723,550 750,551 777,552 777,522 750,521 723,520 697,519 670,518 644,518 617,517 591,517 564,517 538,517 511,517 485,517 458,517 432,517 405,517 379,518" class="linenumbersVisible linenumbers" data-lbnr="15">0015</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb16" name="#facs_1_r1__p1__lb16" id="#facs_1_r1__p1__lb16" size="800,1312" zone="380,601 405,599 430,597 456,596 481,595 507,595 532,595 557,595 583,596 608,596 634,597 659,597 684,598 710,598 735,598 761,598 761,568 735,568 710,568 684,568 659,567 634,567 608,566 583,566 557,565 532,565 507,565 481,565 456,566 430,567 405,569 380,571" class="linenumbersTransparent linenumbers">0016</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb17" name="#facs_1_r1__p1__lb17" id="#facs_1_r1__p1__lb17" size="800,1312" zone="524,623 553,623 583,623 613,623 643,622 673,619 673,589 643,592 613,593 583,593 553,593 524,593" class="linenumbersTransparent linenumbers">0017</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb18" name="#facs_1_r1__p1__lb18" id="#facs_1_r1__p1__lb18" size="800,1312" zone="580,638 600,637 600,607 580,608" class="linenumbersTransparent linenumbers">0018</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb19" name="#facs_1_r1__p1__lb19" id="#facs_1_r1__p1__lb19" size="800,1312" zone="383,641 408,640 433,639 458,638 483,638 508,638 533,638 559,639 559,609 533,608 508,608 483,608 458,608 433,609 408,610 383,611" class="linenumbersTransparent linenumbers">0019</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb20" name="#facs_1_r1__p1__lb20" id="#facs_1_r1__p1__lb20" size="800,1312" zone="644,646 670,646 697,645 723,643 750,643 777,647 777,617 750,613 723,613 697,615 670,616 644,616" class="linenumbersVisible linenumbers" data-lbnr="20">0020</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb21" name="#facs_1_r1__p1__lb21" id="#facs_1_r1__p1__lb21" size="800,1312" zone="385,689 410,687 435,687 461,686 486,686 512,685 537,685 562,685 588,686 613,686 639,686 664,686 689,686 715,687 740,687 766,687 766,657 740,657 715,657 689,656 664,656 639,656 613,656 588,656 562,655 537,655 512,655 486,656 461,656 435,657 410,657 385,659" class="linenumbersTransparent linenumbers">0021</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb22" name="#facs_1_r1__p1__lb22" id="#facs_1_r1__p1__lb22" size="800,1312" zone="375,735 400,733 426,732 452,731 478,730 504,730 530,730 556,730 581,730 607,731 633,731 659,731 685,731 711,731 737,731 763,730 763,700 737,701 711,701 685,701 659,701 633,701 607,701 581,700 556,700 530,700 504,700 478,700 452,701 426,702 400,703 375,705" class="linenumbersTransparent linenumbers">0022</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb23" name="#facs_1_r1__p1__lb23" id="#facs_1_r1__p1__lb23" size="800,1312" zone="453,758 482,758 512,759 512,729 482,728 453,728" class="linenumbersTransparent linenumbers">0023</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb24" name="#facs_1_r1__p1__lb24" id="#facs_1_r1__p1__lb24" size="800,1312" zone="380,781 405,779 430,778 456,777 481,777 507,778 532,778 558,779 583,779 609,780 634,781 660,781 685,781 711,781 736,780 762,779 762,749 736,750 711,751 685,751 660,751 634,751 609,750 583,749 558,749 532,748 507,748 481,747 456,747 430,748 405,749 380,751" class="linenumbersTransparent linenumbers">0024</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb25" name="#facs_1_r1__p1__lb25" id="#facs_1_r1__p1__lb25" size="800,1312" zone="375,827 401,826 428,826 454,826 481,826 507,827 534,827 560,828 587,828 613,828 640,829 666,829 693,830 719,830 746,830 773,829 773,799 746,800 719,800 693,800 666,799 640,799 613,798 587,798 560,798 534,797 507,797 481,796 454,796 428,796 401,796 375,797" class="linenumbersVisible linenumbers" data-lbnr="25">0025</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb26" name="#facs_1_r1__p1__lb26" id="#facs_1_r1__p1__lb26" size="800,1312" zone="375,875 401,874 427,874 454,874 480,874 506,874 533,874 559,875 585,875 612,876 638,877 664,877 691,878 717,879 743,880 770,881 770,851 743,850 717,849 691,848 664,847 638,847 612,846 585,845 559,845 533,844 506,844 480,844 454,844 427,844 401,844 375,845" class="linenumbersTransparent linenumbers">0026</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb27" name="#facs_1_r1__p1__lb27" id="#facs_1_r1__p1__lb27" size="800,1312" zone="373,923 401,922 430,920 459,919 488,919 517,919 517,889 488,889 459,889 430,890 401,892 373,893" class="linenumbersTransparent linenumbers">0027</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb28" name="#facs_1_r1__p1__lb28" id="#facs_1_r1__p1__lb28" size="800,1312" zone="507,994 533,997 559,995 586,989 612,984 638,980 665,981 665,951 638,950 612,954 586,959 559,965 533,967 507,964" class="linenumbersTransparent linenumbers">0028</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb29" name="#facs_1_r1__p1__lb29" id="#facs_1_r1__p1__lb29" size="800,1312" zone="393,1003 423,999 453,999 483,1002 513,1008 513,978 483,972 453,969 423,969 393,973" class="linenumbersTransparent linenumbers">0029</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb30" name="#facs_1_r1__p1__lb30" id="#facs_1_r1__p1__lb30" size="800,1312" zone="468,1062 482,1056 482,1026 468,1032" class="linenumbersVisible linenumbers" data-lbnr="30">0030</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb31" name="#facs_1_r1__p1__lb31" id="#facs_1_r1__p1__lb31" size="800,1312" zone="489,1081 518,1072 547,1065 547,1035 518,1042 489,1051" class="linenumbersTransparent linenumbers">0031</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb32" name="#facs_1_r1__p1__lb32" id="#facs_1_r1__p1__lb32" size="800,1312" zone="630,1230 661,1231 661,1201 630,1200" class="linenumbersTransparent linenumbers">0032</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
             </div>
-            
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
             <p style="text-align:center;"></p>
          </div>
          <div class="tei-back">
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_place_id__13" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Düsseldorf" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Düsseldorf</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table>
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    Geonames
-                                    </th>
-                                 <td><a href="https://sws.geonames.org/2934246/" target="_blank">2934246</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_place_id__13.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
+            EMT - Eleonora Magdalena von Pfalz-Neuburg, Kaiserin
+            https://d-nb.info/gnd/101026641
             
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_person_id__18" data-bs-keyboard="false" tabindex="-1" aria-labelledby=", " aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">, </h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table class="table">
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    GND ID
-                                    </th>
-                                 <td><a href="https://d-nb.info/gnd/118712411" target="_blank">118712411</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_person_id__18.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
             
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_person_id__9" data-bs-keyboard="false" tabindex="-1" aria-labelledby=", " aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">, </h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table class="table">
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    GND ID
-                                    </th>
-                                 <td><a href="https://d-nb.info/gnd/101026641" target="_blank">101026641</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_person_id__9.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
+            JW - Johann Wilhelm von der Pfalz
+            https://d-nb.info/gnd/118712411
+            
+            
+            Düsseldorf
+            
+            51.22172 6.776160
+            
+            https://sws.geonames.org/2934246/
+            
             </div>
       </main>
       <footer xmlns="http://www.w3.org/1999/xhtml" class="footer mt-auto py-3 bg-body-tertiary">
@@ -251,5 +133,5 @@
                 new Darkmode().showWidget();
             }
             window.addEventListener('load', addDarkmodeWidget);
-        </script><script xmlns="http://www.w3.org/1999/xhtml" src="js/i18n.js"></script><script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script><script type="text/javascript" src="js/run.js"></script><script type="text/javascript" src="js/osd_scroll.js"></script></body>
+        </script><script xmlns="http://www.w3.org/1999/xhtml" src="js/i18n.js"></script></body>
 </html>

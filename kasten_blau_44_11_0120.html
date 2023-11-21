@@ -35,12 +35,7 @@
       <title xmlns="http://www.w3.org/1999/xhtml">Johann Wilhelm von Pfalz-Neuburg an Eleonora Magdalena von Pfalz-Neuburg, Düsseldorf am 1713.03.09</title>
       <link xmlns="http://www.w3.org/1999/xhtml" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
       <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-      <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/style.css" type="text/css"><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script><style>
-                    .navBarNavDropdown ul li:nth-child(2) {
-                        display: none !important;
-                    }
-                </style>
-   </head>
+      <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/style.css" type="text/css"><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script><script src="js/osd_single.js"></script></head>
    <body class="d-flex flex-column h-100">
       <header xmlns="http://www.w3.org/1999/xhtml">
          <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -54,6 +49,7 @@
                            <li><a class="dropdown-item" data-i18n="navbar__cipher" href="chiffre.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__edition" href="richtlinien.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__team" href="team.html"></a></li>
+                           <li><a class="dropdown-item" data-i18n="navbar__blog" href="rss.html"></a></li>
                            <li>
                               <hr class="dropdown-divider">
                            </li>
@@ -62,7 +58,7 @@
                      </li>
                      <li class="nav-item"><a class="nav-link" href="calendar.html" data-i18n="navbar__calendar"></a></li>
                      <li class="nav-item"><a title="Briefverzeichnis" href="toc.html" class="nav-link" data-i18n="navbar__letterindex"></a></li>
-                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__project" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
+                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__register" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
                            <li><a class="dropdown-item" data-i18n="navbar__persons" href="listperson.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__places" href="listplace.html"></a></li>
                         </ul>
@@ -85,188 +81,88 @@
                <div class="col-md-2 col-lg-2 col-sm-12" style="text-align:right">
                   <h1><a href="kasten_blau_44_11_0123.html"><i class="bi bi-chevron-right" title="weiter"></i></a></h1>
                </div>
-               <div id="editor-widget">
-                  <div xmlns="http://www.w3.org/1999/xhtml" id="aot-navBarNavDropdown" class="navBarNavDropdown dropstart"><a title="Annotationen" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
-                           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path></svg></a><ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                           <full-size opt="fls"></full-size>
-                        </li>
-                        <li class="dropdown-item">
-                           <image-switch opt="es"></image-switch>
-                        </li>
-                        <li class="dropdown-item">
-                           <font-size opt="fs"></font-size>
-                        </li>
-                        <li class="dropdown-item">
-                           <font-family opt="ff"></font-family>
-                        </li>
-                        <li class="dropdown-item" style="border-top: 5px dashed lightgrey !important;">
-                           <annotation-slider opt="ef"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="prs"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="plc"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="wrk"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="org"></annotation-slider>
-                        </li>
-                     </ul>
+            </div>
+            <div class="regest">
+               <h4><span class="badge badge-primary p-1 m-1">Konzept</span><span class="badge badge-primary p-1 m-1">Schreiber</span></h4>
+               <div class="regest-text">
+                  
+                  <p id="p__1" data-id=""></p>
                   </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>20 r</h5>
                </div>
             </div>
-            
-            <div id="div__37"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_1">20 r</span><p id="p__9" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
-               <p id="p__30" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-1"><img id="os-id-1-img" src="https://files.transkribus.eu/Get?id=HRKOCZFDIFUQDHFRTPOVIFKZ&amp;fileType=view" onload="loadImage('os-id-1', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__9" data-id="#facs_1_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb1" name="#facs_1_r1__p1__lb1" id="#facs_1_r1__p1__lb1" size="800,1302" zone="35,64 63,59 91,56 119,54 147,54 175,54 203,54 231,54 231,24 203,24 175,24 147,24 119,24 91,26 63,29 35,34" class="linenumbersTransparent linenumbers">0001</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb2" name="#facs_1_r1__p1__lb2" id="#facs_1_r1__p1__lb2" size="800,1302" zone="65,87 102,85 139,88 139,58 102,55 65,57" class="linenumbersTransparent linenumbers">0002</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb3" name="#facs_1_r1__p1__lb3" id="#facs_1_r1__p1__lb3" size="800,1302" zone="32,143 58,144 84,144 110,144 136,144 163,143 189,142 215,142 241,141 268,140 294,139 320,138 346,137 373,137 373,107 346,107 320,108 294,109 268,110 241,111 215,112 189,112 163,113 136,114 110,114 84,114 58,114 32,113" class="linenumbersTransparent linenumbers">0003</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb4" name="#facs_1_r1__p1__lb4" id="#facs_1_r1__p1__lb4" size="800,1302" zone="57,182 85,182 113,182 142,181 142,151 113,152 85,152 57,152" class="linenumbersTransparent linenumbers">0004</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb5" name="#facs_1_r1__p1__lb5" id="#facs_1_r1__p1__lb5" size="800,1302" zone="32,240 57,238 82,238 107,237 132,238 157,238 183,239 208,240 233,240 258,241 283,241 308,240 334,239 334,209 308,210 283,211 258,211 233,210 208,210 183,209 157,208 132,208 107,207 82,208 57,208 32,210" class="linenumbersVisible linenumbers" data-lbnr="5">0005</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb6" name="#facs_1_r1__p1__lb6" id="#facs_1_r1__p1__lb6" size="800,1302" zone="32,276 57,275 83,275 109,275 134,275 160,276 186,277 211,277 237,278 263,279 288,279 314,279 340,279 340,249 314,249 288,249 263,249 237,248 211,247 186,247 160,246 134,245 109,245 83,245 57,245 32,246" class="linenumbersTransparent linenumbers">0006</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb7" name="#facs_1_r1__p1__lb7" id="#facs_1_r1__p1__lb7" size="800,1302" zone="21,312 46,312 72,312 98,312 124,312 150,313 176,314 202,314 228,315 254,316 280,317 306,318 332,318 332,288 306,288 280,287 254,286 228,285 202,284 176,284 150,283 124,282 98,282 72,282 46,282 21,282" class="linenumbersTransparent linenumbers">0007</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb8" name="#facs_1_r1__p1__lb8" id="#facs_1_r1__p1__lb8" size="800,1302" zone="33,351 60,352 88,352 115,352 143,352 171,352 198,353 226,353 254,355 254,325 226,323 198,323 171,322 143,322 115,322 88,322 60,322 33,321" class="linenumbersTransparent linenumbers">0008</a></span><span class="transcript-line-contents"></span></span></p>
+                  <p id="p__30" data-id="#facs_1_r2"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb9" name="#facs_1_r2__p2__lb9" id="#facs_1_r2__p2__lb9" size="800,1302" zone="749,51 769,51 769,21 749,21" class="linenumbersTransparent linenumbers">0009</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb10" name="#facs_1_r2__p2__lb10" id="#facs_1_r2__p2__lb10" size="800,1302" zone="409,143 434,144 459,145 484,145 509,145 534,144 559,144 584,143 609,143 635,142 635,112 609,113 584,113 559,114 534,114 509,115 484,115 459,115 434,114 409,113" class="linenumbersVisible linenumbers" data-lbnr="10">0010</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb11" name="#facs_1_r2__p2__lb11" id="#facs_1_r2__p2__lb11" size="800,1302" zone="380,240 405,239 431,239 457,239 483,239 509,239 535,238 561,238 586,238 612,237 638,236 664,235 690,234 716,232 742,230 768,228 768,198 742,200 716,202 690,204 664,205 638,206 612,207 586,208 561,208 535,208 509,209 483,209 457,209 431,209 405,209 380,210" class="linenumbersTransparent linenumbers">0011</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb12" name="#facs_1_r2__p2__lb12" id="#facs_1_r2__p2__lb12" size="800,1302" zone="700,262 721,260 721,230 700,232" class="linenumbersTransparent linenumbers">0012</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb13" name="#facs_1_r2__p2__lb13" id="#facs_1_r2__p2__lb13" size="800,1302" zone="401,288 427,287 453,286 479,285 505,284 531,283 557,282 583,281 609,280 635,279 661,278 687,277 713,277 739,277 766,276 766,246 739,247 713,247 687,247 661,248 635,249 609,250 583,251 557,252 531,253 505,254 479,255 453,256 427,257 401,258" class="linenumbersTransparent linenumbers">0013</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb14" name="#facs_1_r2__p2__lb14" id="#facs_1_r2__p2__lb14" size="800,1302" zone="395,335 420,334 445,332 470,331 495,330 521,329 546,328 571,327 596,327 621,326 647,325 672,325 697,324 722,323 747,323 773,322 773,292 747,293 722,293 697,294 672,295 647,295 621,296 596,297 571,297 546,298 521,299 495,300 470,301 445,302 420,304 395,305" class="linenumbersTransparent linenumbers">0014</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb15" name="#facs_1_r2__p2__lb15" id="#facs_1_r2__p2__lb15" size="800,1302" zone="397,377 423,377 449,377 475,376 501,375 528,373 554,372 580,371 606,369 632,368 659,367 685,367 711,366 737,366 764,366 764,336 737,336 711,336 685,337 659,337 632,338 606,339 580,341 554,342 528,343 501,345 475,346 449,347 423,347 397,347" class="linenumbersVisible linenumbers" data-lbnr="15">0015</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb16" name="#facs_1_r2__p2__lb16" id="#facs_1_r2__p2__lb16" size="800,1302" zone="401,419 426,417 451,416 476,415 501,415 527,414 552,413 577,412 602,412 627,411 653,411 678,410 703,409 728,409 754,408 754,378 728,379 703,379 678,380 653,381 627,381 602,382 577,382 552,383 527,384 501,385 476,385 451,386 426,387 401,389" class="linenumbersTransparent linenumbers">0016</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb17" name="#facs_1_r2__p2__lb17" id="#facs_1_r2__p2__lb17" size="800,1302" zone="399,461 425,460 452,459 479,458 505,457 532,456 559,456 586,455 612,455 639,454 666,454 692,453 719,452 746,451 773,450 773,420 746,421 719,422 692,423 666,424 639,424 612,425 586,425 559,426 532,426 505,427 479,428 452,429 425,430 399,431" class="linenumbersTransparent linenumbers">0017</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb18" name="#facs_1_r2__p2__lb18" id="#facs_1_r2__p2__lb18" size="800,1302" zone="391,505 416,504 442,502 467,501 493,500 519,500 544,499 570,499 595,499 621,499 647,499 672,499 698,499 723,499 749,498 775,498 775,468 749,468 723,469 698,469 672,469 647,469 621,469 595,469 570,469 544,469 519,470 493,470 467,471 442,472 416,474 391,475" class="linenumbersTransparent linenumbers">0018</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb19" name="#facs_1_r2__p2__lb19" id="#facs_1_r2__p2__lb19" size="800,1302" zone="388,544 413,544 438,544 464,544 489,544 515,543 540,543 565,542 591,542 616,541 642,540 667,540 692,539 718,539 743,539 769,539 769,509 743,509 718,509 692,509 667,510 642,510 616,511 591,512 565,512 540,513 515,513 489,514 464,514 438,514 413,514 388,514" class="linenumbersTransparent linenumbers">0019</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb20" name="#facs_1_r2__p2__lb20" id="#facs_1_r2__p2__lb20" size="800,1302" zone="400,586 426,586 452,586 479,586 505,586 531,586 558,585 584,585 610,584 637,584 663,583 689,583 716,582 742,582 769,582 769,552 742,552 716,552 689,553 663,553 637,554 610,554 584,555 558,555 531,556 505,556 479,556 452,556 426,556 400,556" class="linenumbersVisible linenumbers" data-lbnr="20">0020</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb21" name="#facs_1_r2__p2__lb21" id="#facs_1_r2__p2__lb21" size="800,1302" zone="389,628 414,627 440,627 465,627 491,627 517,627 542,627 568,627 593,627 619,627 645,627 670,627 696,627 721,627 747,627 773,627 773,597 747,597 721,597 696,597 670,597 645,597 619,597 593,597 568,597 542,597 517,597 491,597 465,597 440,597 414,597 389,598" class="linenumbersTransparent linenumbers">0021</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb22" name="#facs_1_r2__p2__lb22" id="#facs_1_r2__p2__lb22" size="800,1302" zone="397,674 422,673 447,672 473,672 498,671 523,671 549,671 574,671 599,671 625,671 650,671 675,671 701,671 726,671 751,670 777,670 777,640 751,640 726,641 701,641 675,641 650,641 625,641 599,641 574,641 549,641 523,641 498,641 473,642 447,642 422,643 397,644" class="linenumbersTransparent linenumbers">0022</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb23" name="#facs_1_r2__p2__lb23" id="#facs_1_r2__p2__lb23" size="800,1302" zone="395,717 420,717 445,716 470,716 495,715 520,715 545,714 570,714 595,713 620,713 645,712 670,712 695,711 720,710 745,710 771,709 771,679 745,680 720,680 695,681 670,682 645,682 620,683 595,683 570,684 545,684 520,685 495,685 470,686 445,686 420,687 395,687" class="linenumbersTransparent linenumbers">0023</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb24" name="#facs_1_r2__p2__lb24" id="#facs_1_r2__p2__lb24" size="800,1302" zone="385,759 411,759 437,759 463,758 490,758 516,758 542,757 568,757 595,756 621,756 647,755 673,755 700,754 726,754 752,753 779,753 779,723 752,723 726,724 700,724 673,725 647,725 621,726 595,726 568,727 542,727 516,728 490,728 463,728 437,729 411,729 385,729" class="linenumbersTransparent linenumbers">0024</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb25" name="#facs_1_r2__p2__lb25" id="#facs_1_r2__p2__lb25" size="800,1302" zone="389,802 415,801 441,800 467,799 494,799 520,798 546,798 573,798 599,798 625,797 651,797 678,797 704,796 730,795 757,794 757,764 730,765 704,766 678,767 651,767 625,767 599,768 573,768 546,768 520,768 494,769 467,769 441,770 415,771 389,772" class="linenumbersVisible linenumbers" data-lbnr="25">0025</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb26" name="#facs_1_r2__p2__lb26" id="#facs_1_r2__p2__lb26" size="800,1302" zone="387,845 412,845 438,844 464,843 489,842 515,842 541,841 566,840 592,840 618,839 643,839 669,839 695,839 720,839 746,840 772,841 772,811 746,810 720,809 695,809 669,809 643,809 618,809 592,810 566,810 541,811 515,812 489,812 464,813 438,814 412,815 387,815" class="linenumbersTransparent linenumbers">0026</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb27" name="#facs_1_r2__p2__lb27" id="#facs_1_r2__p2__lb27" size="800,1302" zone="386,887 411,886 437,885 462,885 488,884 513,884 539,883 564,883 590,883 615,883 641,882 666,882 692,881 717,880 743,880 769,878 769,848 743,850 717,850 692,851 666,852 641,852 615,853 590,853 564,853 539,853 513,854 488,854 462,855 437,855 411,856 386,857" class="linenumbersTransparent linenumbers">0027</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb28" name="#facs_1_r2__p2__lb28" id="#facs_1_r2__p2__lb28" size="800,1302" zone="393,928 418,928 444,927 470,927 496,926 522,926 547,926 573,925 599,925 625,925 651,925 676,925 702,926 728,926 754,926 780,927 780,897 754,896 728,896 702,896 676,895 651,895 625,895 599,895 573,895 547,896 522,896 496,896 470,897 444,897 418,898 393,898" class="linenumbersTransparent linenumbers">0028</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb29" name="#facs_1_r2__p2__lb29" id="#facs_1_r2__p2__lb29" size="800,1302" zone="392,974 418,974 444,974 470,974 496,973 522,973 548,971 574,970 601,969 627,968 653,968 679,967 705,968 731,968 757,969 784,971 784,941 757,939 731,938 705,938 679,937 653,938 627,938 601,939 574,940 548,941 522,943 496,943 470,944 444,944 418,944 392,944" class="linenumbersTransparent linenumbers">0029</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb30" name="#facs_1_r2__p2__lb30" id="#facs_1_r2__p2__lb30" size="800,1302" zone="698,995 724,995 750,996 776,997 776,967 750,966 724,965 698,965" class="linenumbersVisible linenumbers" data-lbnr="30">0030</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb31" name="#facs_1_r2__p2__lb31" id="#facs_1_r2__p2__lb31" size="800,1302" zone="660,997 672,995 672,965 660,967" class="linenumbersTransparent linenumbers">0031</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb32" name="#facs_1_r2__p2__lb32" id="#facs_1_r2__p2__lb32" size="800,1302" zone="389,1020 414,1019 440,1018 465,1018 491,1017 516,1016 542,1016 567,1015 593,1015 618,1014 644,1014 669,1014 695,1014 720,1014 746,1014 772,1014 772,984 746,984 720,984 695,984 669,984 644,984 618,984 593,985 567,985 542,986 516,986 491,987 465,988 440,988 414,989 389,990" class="linenumbersTransparent linenumbers">0032</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb33" name="#facs_1_r2__p2__lb33" id="#facs_1_r2__p2__lb33" size="800,1302" zone="626,1039 641,1037 641,1007 626,1009" class="linenumbersTransparent linenumbers">0033</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb34" name="#facs_1_r2__p2__lb34" id="#facs_1_r2__p2__lb34" size="800,1302" zone="387,1061 413,1060 439,1059 465,1058 492,1057 518,1057 544,1056 570,1056 597,1056 623,1056 649,1055 675,1055 702,1055 728,1055 754,1055 781,1054 781,1024 754,1025 728,1025 702,1025 675,1025 649,1025 623,1026 597,1026 570,1026 544,1026 518,1027 492,1027 465,1028 439,1029 413,1030 387,1031" class="linenumbersTransparent linenumbers">0034</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb35" name="#facs_1_r2__p2__lb35" id="#facs_1_r2__p2__lb35" size="800,1302" zone="287,1101 312,1101 338,1100 364,1100 390,1100 416,1100 442,1099 467,1099 493,1099 519,1099 545,1099 571,1099 597,1099 622,1099 648,1099 674,1099 700,1099 726,1098 752,1098 778,1098 778,1068 752,1068 726,1068 700,1069 674,1069 648,1069 622,1069 597,1069 571,1069 545,1069 519,1069 493,1069 467,1069 442,1069 416,1070 390,1070 364,1070 338,1070 312,1071 287,1071" class="linenumbersVisible linenumbers" data-lbnr="35">0035</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p2__lb36" name="#facs_1_r2__p2__lb36" id="#facs_1_r2__p2__lb36" size="800,1302" zone="390,1142 415,1142 441,1143 466,1143 492,1143 518,1142 543,1142 569,1141 594,1140 620,1139 646,1139 671,1138 697,1138 722,1138 748,1138 774,1138 774,1108 748,1108 722,1108 697,1108 671,1108 646,1109 620,1109 594,1110 569,1111 543,1112 518,1112 492,1113 466,1113 441,1113 415,1112 390,1112" class="linenumbersTransparent linenumbers">0036</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
             </div>
-            <div id="div__15"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_2">20 v</span><p id="p__2" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
-               <p id="p__4" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
-               <p id="p__13" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
             </div>
-            <div id="div__4"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_3">3</span><p id="p__2" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>20 v</h5>
+               </div>
             </div>
-            
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-2"><img id="os-id-2-img" src="https://files.transkribus.eu/Get?id=PLZDPJPVMFYUWRTEGXTINQGM&amp;fileType=view" onload="loadImage('os-id-2', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__2" data-id="#facs_2_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p3__lb37" name="#facs_2_r1__p3__lb37" id="#facs_2_r1__p3__lb37" size="800,1279" zone="20,1278 30,1278 30,1164 20,1163" class="linenumbersTransparent linenumbers">0037</a></span><span class="transcript-line-contents"></span></span></p>
+                  <p id="p__4" data-id="#facs_2_r2"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r2__p4__lb38" name="#facs_2_r2__p4__lb38" id="#facs_2_r2__p4__lb38" size="800,1279" zone="325,420 356,416 388,414 388,384 356,386 325,390" class="linenumbersTransparent linenumbers">0038</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r2__p4__lb39" name="#facs_2_r2__p4__lb39" id="#facs_2_r2__p4__lb39" size="800,1279" zone="296,457 327,455 358,454 389,456 389,426 358,424 327,425 296,427" class="linenumbersTransparent linenumbers">0039</a></span><span class="transcript-line-contents"></span></span></p>
+                  <p id="p__13" data-id="#facs_2_r3"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb40" name="#facs_2_r3__p5__lb40" id="#facs_2_r3__p5__lb40" size="800,1279" zone="402,135 428,135 455,136 481,136 508,136 534,136 561,136 587,136 614,136 640,136 667,136 693,136 720,137 746,138 773,139 773,105 746,104 720,103 693,102 667,102 640,102 614,102 587,102 561,102 534,102 508,102 481,102 455,102 428,101 402,101" class="linenumbersVisible linenumbers" data-lbnr="40">0040</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb41" name="#facs_2_r3__p5__lb41" id="#facs_2_r3__p5__lb41" size="800,1279" zone="396,183 422,183 448,183 474,182 500,182 526,182 552,182 578,182 605,182 631,182 657,183 683,183 709,183 735,182 761,182 788,182 788,149 761,149 735,149 709,150 683,150 657,150 631,149 605,149 578,149 552,149 526,149 500,149 474,149 448,150 422,150 396,150" class="linenumbersTransparent linenumbers">0041</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb42" name="#facs_2_r3__p5__lb42" id="#facs_2_r3__p5__lb42" size="800,1279" zone="405,229 431,228 458,227 484,227 511,226 538,226 564,225 591,225 618,225 644,225 671,226 698,226 724,227 751,227 778,228 778,198 751,197 724,197 698,196 671,196 644,195 618,195 591,195 564,195 538,196 511,196 484,197 458,197 431,198 405,199" class="linenumbersTransparent linenumbers">0042</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb43" name="#facs_2_r3__p5__lb43" id="#facs_2_r3__p5__lb43" size="800,1279" zone="405,268 431,269 458,270 485,270 511,270 538,270 565,270 592,270 618,270 645,270 672,271 698,271 725,272 752,273 779,274 779,244 752,243 725,242 698,241 672,241 645,240 618,240 592,240 565,240 538,240 511,240 485,240 458,240 431,239 405,238" class="linenumbersTransparent linenumbers">0043</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb44" name="#facs_2_r3__p5__lb44" id="#facs_2_r3__p5__lb44" size="800,1279" zone="405,310 431,311 457,312 484,313 510,313 536,313 563,314 589,313 615,313 642,313 668,313 694,313 721,313 747,313 774,314 774,284 747,283 721,283 694,283 668,283 642,283 615,283 589,283 563,284 536,283 510,283 484,283 457,282 431,281 405,280" class="linenumbersTransparent linenumbers">0044</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb45" name="#facs_2_r3__p5__lb45" id="#facs_2_r3__p5__lb45" size="800,1279" zone="401,358 426,357 451,357 476,356 501,356 526,356 551,356 577,357 602,357 627,357 652,357 677,357 702,357 727,356 753,355 753,324 727,325 702,326 677,326 652,326 627,326 602,326 577,326 551,325 526,325 501,325 476,325 451,326 426,326 401,327" class="linenumbersVisible linenumbers" data-lbnr="45">0045</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb46" name="#facs_2_r3__p5__lb46" id="#facs_2_r3__p5__lb46" size="800,1279" zone="405,402 434,403 463,402 492,400 521,400 551,403 551,372 521,369 492,369 463,371 434,372 405,371" class="linenumbersTransparent linenumbers">0046</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb47" name="#facs_2_r3__p5__lb47" id="#facs_2_r3__p5__lb47" size="800,1279" zone="430,490 458,484 487,484 515,487 544,485 544,452 515,454 487,451 458,451 430,457" class="linenumbersTransparent linenumbers">0047</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb48" name="#facs_2_r3__p5__lb48" id="#facs_2_r3__p5__lb48" size="800,1279" zone="566,506 588,506 588,464 566,464" class="linenumbersTransparent linenumbers">0048</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r3__p5__lb49" name="#facs_2_r3__p5__lb49" id="#facs_2_r3__p5__lb49" size="800,1279" zone="489,527 534,531 534,500 489,496" class="linenumbersTransparent linenumbers">0049</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>3</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-3"><img id="os-id-3-img" src="https://files.transkribus.eu/Get?id=PGBJPXXXIXMNQZMKUSOCHIRS&amp;fileType=view" onload="loadImage('os-id-3', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__2" data-id="#facs_3_region_1669885630134_508"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_region_1669885630134_508__p6__lb50" name="#facs_3_region_1669885630134_508__p6__lb50" id="#facs_3_region_1669885630134_508__p6__lb50" size="1792,2746" zone="461,91 666,93 974,95 974,145 666,143 461,141" class="linenumbersVisible linenumbers" data-lbnr="50">0050</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
             <p style="text-align:center;"></p>
          </div>
          <div class="tei-back">
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_place_id__13" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Düsseldorf" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Düsseldorf</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table>
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    Geonames
-                                    </th>
-                                 <td><a href="https://sws.geonames.org/2934246/" target="_blank">2934246</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_place_id__13.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
+            EMT - Eleonora Magdalena von Pfalz-Neuburg, Kaiserin
+            https://d-nb.info/gnd/101026641
             
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_person_id__18" data-bs-keyboard="false" tabindex="-1" aria-labelledby=", " aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">, </h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table class="table">
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    GND ID
-                                    </th>
-                                 <td><a href="https://d-nb.info/gnd/118712411" target="_blank">118712411</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_person_id__18.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
             
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_person_id__9" data-bs-keyboard="false" tabindex="-1" aria-labelledby=", " aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">, </h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table class="table">
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    GND ID
-                                    </th>
-                                 <td><a href="https://d-nb.info/gnd/101026641" target="_blank">101026641</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_person_id__9.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
+            JW - Johann Wilhelm von der Pfalz
+            https://d-nb.info/gnd/118712411
+            
+            
+            Düsseldorf
+            
+            51.22172 6.776160
+            
+            https://sws.geonames.org/2934246/
+            
             </div>
       </main>
       <footer xmlns="http://www.w3.org/1999/xhtml" class="footer mt-auto py-3 bg-body-tertiary">
@@ -276,5 +172,5 @@
                 new Darkmode().showWidget();
             }
             window.addEventListener('load', addDarkmodeWidget);
-        </script><script xmlns="http://www.w3.org/1999/xhtml" src="js/i18n.js"></script><script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script><script type="text/javascript" src="js/run.js"></script><script type="text/javascript" src="js/osd_scroll.js"></script></body>
+        </script><script xmlns="http://www.w3.org/1999/xhtml" src="js/i18n.js"></script></body>
 </html>

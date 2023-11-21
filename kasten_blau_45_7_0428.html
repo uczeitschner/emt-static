@@ -35,12 +35,7 @@
       <title xmlns="http://www.w3.org/1999/xhtml">Eleonora Magdalena von Pfalz-Neuburg an Johann Wilhelm von Pfalz-Neuburg, Wien am 1706.10.20</title>
       <link xmlns="http://www.w3.org/1999/xhtml" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
       <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-      <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/style.css" type="text/css"><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script><style>
-                    .navBarNavDropdown ul li:nth-child(2) {
-                        display: none !important;
-                    }
-                </style>
-   </head>
+      <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/style.css" type="text/css"><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script><script src="js/osd_single.js"></script></head>
    <body class="d-flex flex-column h-100">
       <header xmlns="http://www.w3.org/1999/xhtml">
          <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -54,6 +49,7 @@
                            <li><a class="dropdown-item" data-i18n="navbar__cipher" href="chiffre.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__edition" href="richtlinien.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__team" href="team.html"></a></li>
+                           <li><a class="dropdown-item" data-i18n="navbar__blog" href="rss.html"></a></li>
                            <li>
                               <hr class="dropdown-divider">
                            </li>
@@ -62,7 +58,7 @@
                      </li>
                      <li class="nav-item"><a class="nav-link" href="calendar.html" data-i18n="navbar__calendar"></a></li>
                      <li class="nav-item"><a title="Briefverzeichnis" href="toc.html" class="nav-link" data-i18n="navbar__letterindex"></a></li>
-                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__project" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
+                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__register" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
                            <li><a class="dropdown-item" data-i18n="navbar__persons" href="listperson.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__places" href="listplace.html"></a></li>
                         </ul>
@@ -85,362 +81,321 @@
                <div class="col-md-2 col-lg-2 col-sm-12" style="text-align:right">
                   <h1><a href="kasten_blau_45_7_0442.html"><i class="bi bi-chevron-right" title="weiter"></i></a></h1>
                </div>
-               <div id="editor-widget">
-                  <div xmlns="http://www.w3.org/1999/xhtml" id="aot-navBarNavDropdown" class="navBarNavDropdown dropstart"><a title="Annotationen" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
-                           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path></svg></a><ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                           <full-size opt="fls"></full-size>
-                        </li>
-                        <li class="dropdown-item">
-                           <image-switch opt="es"></image-switch>
-                        </li>
-                        <li class="dropdown-item">
-                           <font-size opt="fs"></font-size>
-                        </li>
-                        <li class="dropdown-item">
-                           <font-family opt="ff"></font-family>
-                        </li>
-                        <li class="dropdown-item" style="border-top: 5px dashed lightgrey !important;">
-                           <annotation-slider opt="ef"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="prs"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="plc"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="wrk"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="org"></annotation-slider>
-                        </li>
-                     </ul>
+            </div>
+            <div class="regest">
+               <h4><span class="badge badge-primary p-1 m-1">Ausfertigung</span><span class="badge badge-primary p-1 m-1">eigenhändig</span></h4>
+               <div class="regest-text">
+                  
+                  <p id="p__1" data-id=""></p>
                   </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>76 r</h5>
                </div>
             </div>
-            
-            <div id="div__33"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_1">76 r</span><p id="p__33" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">Durchleüchtiger Curfürst, mein herzallerlibster herrh bruder
-                  <br  xmlns:local="http://dse-static.foo.bar">Ich hette langst auf dero schreiben vom 9ten passato
-                  <br  xmlns:local="http://dse-static.foo.bar">geantwort, habe aber vermeindt zu erwarten, was
-                  <br  xmlns:local="http://dse-static.foo.bar">ihr HeiligkeitH in der munstrischen sag ausschprechen werden.
-                  <br  xmlns:local="http://dse-static.foo.bar">Zweifele nit, er werde vnsren Bischof von Osnabrukh confir-
-                  <br  xmlns:local="http://dse-static.foo.bar">miren, als deßen wahl legitime geschen vnd bey der andren
-                  <br  xmlns:local="http://dse-static.foo.bar">ville fähler vnterlaufen. Das schantligste ist, vndt hett
-                  <br  xmlns:local="http://dse-static.foo.bar">ich es mihr nie einbilden können, das ein ambition sich
-                  <br  xmlns:local="http://dse-static.foo.bar">so solt verliren machen, wider den Papsten vnd den Keiser
-                  <br  xmlns:local="http://dse-static.foo.bar">zu höchsten schaden vndt vnruh des Reichs vnd nachdeil der
-                  <br  xmlns:local="http://dse-static.foo.bar">religion, sich an vndt vnter vncatolische protection zu
-                  <br  xmlns:local="http://dse-static.foo.bar">henken, welches die erschrekligste consequenzen nach sich zien
-                  <br  xmlns:local="http://dse-static.foo.bar">kan, vnd wan ihnen dises gelingt, sie in allen stifftern wollen
-                  <br  xmlns:local="http://dse-static.foo.bar">leges vohrschreiben vnd alle bischoff im Reich machen werden.
-                  <br  xmlns:local="http://dse-static.foo.bar">Ich kan dero Liebden nit bergen das ich zu meiner hochsten nottiffi-
-                  <br  xmlns:local="http://dse-static.foo.bar">cation von vnterschidligen hören mus, als solten dero Liebden auch
-                  <br  xmlns:local="http://dse-static.foo.bar">den Bischoffen von Osnabrük abandeniren vnd der gegen parti</p>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-1"><img id="os-id-1-img" src="https://files.transkribus.eu/Get?id=XCXMLAEAKIVBIEVQRUUDWSYN&amp;fileType=view" onload="loadImage('os-id-1', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__33" data-id="#facs_1_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb1" name="#facs_1_r1__p1__lb1" id="#facs_1_r1__p1__lb1" size="800,1217" zone="111,357 244,382 273,363 297,383 556,365 627,396 710,380 713,299 548,302 462,332 393,303 112,301" class="linenumbersTransparent linenumbers">0001</a></span><span class="transcript-line-contents">Durchleüchtiger Curfürst, mein herzallerlibster <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: h">herr</abbr>  bruder
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb2" name="#facs_1_r1__p1__lb2" id="#facs_1_r1__p1__lb2" size="800,1217" zone="60,429 177,404 238,428 388,420 428,447 483,421 579,450 704,431 705,384 525,399 483,370 427,388 267,366 244,383 156,351 61,354" class="linenumbersTransparent linenumbers">0002</a></span><span class="transcript-line-contents">Ich hette langst auf dero sch<span  xmlns:local="http://dse-static.foo.bar" class="supplied">rei</span>ben vom 9ten passato
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb3" name="#facs_1_r1__p1__lb3" id="#facs_1_r1__p1__lb3" size="800,1217" zone="56,468 171,456 217,482 250,462 334,478 692,464 692,442 553,453 494,423 443,448 388,421 288,414 214,440 179,422 57,436" class="linenumbersTransparent linenumbers">0003</a></span><span class="transcript-line-contents">geantwort, habe aber vermeindt zu erwarten, was
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb4" name="#facs_1_r1__p1__lb4" id="#facs_1_r1__p1__lb4" size="800,1217" zone="50,518 241,515 359,546 470,524 553,550 632,518 678,539 665,479 490,500 426,470 308,497 236,473 189,486 137,456 51,469" class="linenumbersTransparent linenumbers">0004</a></span><span class="transcript-line-contents">ihr <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: H">Heiligkeit</abbr>  in der mu<span  xmlns:local="http://dse-static.foo.bar" class="supplied">n</span>strischen sag ausschprechen werden.
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb5" name="#facs_1_r1__p1__lb5" id="#facs_1_r1__p1__lb5" size="800,1217" zone="45,568 266,582 321,562 476,605 508,580 702,576 714,523 672,540 636,517 550,555 476,525 335,553 242,514 46,521" class="linenumbersVisible linenumbers" data-lbnr="5">0005</a></span><span class="transcript-line-contents">Zweifele nit, <span  xmlns:local="http://dse-static.foo.bar" class="supplied">er</span> werde vnsren B<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>schof von Osnabrukh confir-
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb6" name="#facs_1_r1__p1__lb6" id="#facs_1_r1__p1__lb6" size="800,1217" zone="42,616 251,620 309,647 396,628 489,658 563,615 714,628 707,571 512,583 475,605 414,576 337,596 302,573 43,575" class="linenumbersTransparent linenumbers">0006</a></span><span class="transcript-line-contents">miren, als deßen wahl legitime geschen vnd bey der andren
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb7" name="#facs_1_r1__p1__lb7" id="#facs_1_r1__p1__lb7" size="800,1217" zone="41,666 133,681 259,661 305,690 333,666 368,684 393,666 494,700 703,664 703,614 494,657 406,629 315,647 255,622 41,620" class="linenumbersTransparent linenumbers">0007</a></span><span class="transcript-line-contents">v<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>lle fähler vnterlaufen. Das schantligste ist, vndt hett
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb8" name="#facs_1_r1__p1__lb8" id="#facs_1_r1__p1__lb8" size="800,1217" zone="40,723 120,696 291,709 344,740 441,708 519,735 583,713 640,729 700,721 702,677 651,691 602,671 519,702 464,676 411,701 343,670 304,690 42,665" class="linenumbersTransparent linenumbers">0008</a></span><span class="transcript-line-contents">ich es mihr nie einbilden können, das ein ambition sich
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb9" name="#facs_1_r1__p1__lb9" id="#facs_1_r1__p1__lb9" size="800,1217" zone="37,744 222,772 269,750 320,781 396,765 506,793 579,760 610,784 700,771 703,717 474,740 380,720 346,740 141,698 38,711" class="linenumbersTransparent linenumbers">0009</a></span><span class="transcript-line-contents">so solt verliren machen, wider den Papsten vnd den Keiser
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb10" name="#facs_1_r1__p1__lb10" id="#facs_1_r1__p1__lb10" size="800,1217" zone="30,813 86,798 133,825 216,826 299,806 484,841 554,810 710,825 711,786 641,764 605,790 549,764 502,793 396,765 318,780 149,749 31,756" class="linenumbersVisible linenumbers" data-lbnr="10">0010</a></span><span class="transcript-line-contents">zu höch<span  xmlns:local="http://dse-static.foo.bar" class="supplied">s</span>ten schaden vndt vnruh des Reichs vnd nac<span  xmlns:local="http://dse-static.foo.bar" class="supplied">h</span>deil der
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb11" name="#facs_1_r1__p1__lb11" id="#facs_1_r1__p1__lb11" size="800,1217" zone="34,846 93,876 263,849 479,884 667,872 714,847 714,822 639,806 475,843 409,819 264,837 124,823 87,798 34,814" class="linenumbersTransparent linenumbers">0011</a></span><span class="transcript-line-contents">religion, sich an vndt v<span  xmlns:local="http://dse-static.foo.bar" class="supplied">n</span>ter vncatolische protection zu
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb12" name="#facs_1_r1__p1__lb12" id="#facs_1_r1__p1__lb12" size="800,1217" zone="29,911 52,902 83,932 129,903 275,931 409,911 521,927 551,901 706,914 706,865 683,859 400,887 361,865 302,880 179,859 115,882 49,844 29,858" class="linenumbersTransparent linenumbers">0012</a></span><span class="transcript-line-contents">henken, welches die erschrekligste consequenzen nach sich zien
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb13" name="#facs_1_r1__p1__lb13" id="#facs_1_r1__p1__lb13" size="800,1217" zone="22,946 218,958 294,989 337,965 385,980 417,950 614,978 704,940 685,908 551,903 456,932 391,913 348,933 322,914 199,933 137,902 88,932 22,913" class="linenumbersTransparent linenumbers">0013</a></span><span class="transcript-line-contents">kan, vnd wan ihnen dises gelingt, sie in allen stifftern wollen
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb14" name="#facs_1_r1__p1__lb14" id="#facs_1_r1__p1__lb14" size="800,1217" zone="22,999 64,1018 105,990 166,1024 255,999 403,1021 503,991 549,1015 700,999 700,946 501,980 419,949 380,985 352,965 303,986 219,981 189,955 110,974 22,952" class="linenumbersTransparent linenumbers">0014</a></span><span class="transcript-line-contents">leges vohrschreiben vnd alle bischoff im Reich machen werden.
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb15" name="#facs_1_r1__p1__lb15" id="#facs_1_r1__p1__lb15" size="800,1217" zone="32,1059 110,1039 414,1070 504,1035 602,1069 628,1044 724,1048 709,987 630,1018 443,1000 393,1034 330,1005 164,1022 105,990 62,1021 31,1005" class="linenumbersVisible linenumbers" data-lbnr="15">0015</a></span><span class="transcript-line-contents">Ich kan dero Liebden nit be<span  xmlns:local="http://dse-static.foo.bar" class="supplied">r</span>gen das ich zu meiner hochsten nottiffi-
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb16" name="#facs_1_r1__p1__lb16" id="#facs_1_r1__p1__lb16" size="800,1217" zone="28,1106 83,1109 114,1083 387,1119 462,1086 579,1117 704,1092 704,1058 628,1044 602,1069 529,1053 399,1078 307,1045 275,1066 91,1043 28,1059" class="linenumbersTransparent linenumbers">0016</a></span><span class="transcript-line-contents">cation von vnterschidligen hören mus, als solten dero Liebden auch
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r1__p1__lb17" name="#facs_1_r1__p1__lb17" id="#facs_1_r1__p1__lb17" size="800,1217" zone="26,1145 640,1147 697,1130 697,1100 576,1120 428,1086 385,1120 303,1100 154,1119 111,1082 79,1112 26,1105" class="linenumbersTransparent linenumbers">0017</a></span><span class="transcript-line-contents">den Bischoffen von Osnabrük abande<span  xmlns:local="http://dse-static.foo.bar" class="supplied">n</span>iren vnd der gegen parti</span></span></p>
+               </div>
             </div>
-            <div id="div__53"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_2">76 v</span><p id="p__52" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">beförderlich sein, dan wan auch nit das wort, so dero Liebden ihnen dem
-                  <br  xmlns:local="http://dse-static.foo.bar">Keiser vnd mihr vohr ihn geben, vnd die freuntschafft, so dero Liebden vohr
-                  <br  xmlns:local="http://dse-static.foo.bar">selbiges haus haben, so bin ich doch gesichret, das dero Liebden das publicum
-                  <br  xmlns:local="http://dse-static.foo.bar">wie auch das Reichs vnd die religion gahr zu lieb haben, das sie zu
-                  <br  xmlns:local="http://dse-static.foo.bar">was solchen, so allen disen den höchsten schaden bringst, cooperiren wurden,
-                  <br  xmlns:local="http://dse-static.foo.bar">sondern vill mehr den Bischoff von Paterborn vnd die HerrenH Staden suchen
-                  <br  xmlns:local="http://dse-static.foo.bar">zur raison zu bringen vnd auch zu Rohm vohr vnsern
-                  <br  xmlns:local="http://dse-static.foo.bar">Bischoff von Osnabrukh die confirmation helfen auswürken
-                  <br  xmlns:local="http://dse-static.foo.bar">vndt dem Fedl, welcher schon vill passus gedahn, <abbr  xmlns:local="http://dse-static.foo.bar" title="unclear">dauon</abbr> ich gesichert
-                  <br  xmlns:local="http://dse-static.foo.bar">bin, das er von dero Liebden kein befehl gehabt haben wirt, scharf befehlen,
-                  <br  xmlns:local="http://dse-static.foo.bar">niks bey ihr HeiligkeitH zu negotiren, was ihm dero Liebden nit befehlen vnd
-                  <br  xmlns:local="http://dse-static.foo.bar">was wider den Kaißer vnd den Bischoff könte sein. Ich hab dise
-                  <br  xmlns:local="http://dse-static.foo.bar">ganzlige zuefersicht, das dero Liebden in disen bestendig verharen werden.
-                  <br  xmlns:local="http://dse-static.foo.bar">Im übrigen ist der Hertot hier wider angelangt, vnd seint
-                  <br  xmlns:local="http://dse-static.foo.bar">mihr alle mitt ihm gahr übel zuefriden gewesen, das er
-                  <br  xmlns:local="http://dse-static.foo.bar">nit nach dero Liebden befehl auf Düßeldorf gangen ist. Er hatt
-                  <br  xmlns:local="http://dse-static.foo.bar">sich aber mit der vnmöglikeit entschuldiget, wie
-                  <br  xmlns:local="http://dse-static.foo.bar">dero Liebden aus beyligenden seinen schreiben werden ersehen, welches ich herbey
-                  <br  xmlns:local="http://dse-static.foo.bar">schließ, vnd er aus forcht, ein fähler in titul zu begehen,
-                  <br  xmlns:local="http://dse-static.foo.bar">nit überschrieben hatt, waraus auch dero Liebden sein vollige relation
-                  <br  xmlns:local="http://dse-static.foo.bar">vernemmen werden. Den Garelli haben auf Preßlaw vndt Prag
-                  <br  xmlns:local="http://dse-static.foo.bar">geschikt, von Preslaw hab nachricht, das er sie sehr lobt, aber
-                  <br  xmlns:local="http://dse-static.foo.bar">noch allzu jung vndt nit ausgewaksen oder in stand zu heiraten gefundengfd.</p>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
             </div>
-            <div id="div__46"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_3">77 r</span><p id="p__44" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">Forchte, es werd mit der andren eben so sein. In deßen wirt der Sinzendorf
-                  <br  xmlns:local="http://dse-static.foo.bar">vnd der PaterP bey dero Liebden angelangt sein vnd dero Liebden selbigen weiters beforderen,
-                  <br  xmlns:local="http://dse-static.foo.bar">gott gebe sein gnad und was zu seiner ehr ist. Wegen Sulsbach
-                  <br  xmlns:local="http://dse-static.foo.bar">werden dero Liebden auch vom Wißer vernemmen, was ich hab notwendig
-                  <br  xmlns:local="http://dse-static.foo.bar">befunden an selbige Prinzeßin zu schreiben, weil periculum in
-                  <br  xmlns:local="http://dse-static.foo.bar">mora wahr, das sie das kint hetten auf Wolfenbüttel geschikt,
-                  <br  xmlns:local="http://dse-static.foo.bar">wan ich ein antwort bekomm, werds dero Liebden berichten. Laßen sies
-                  <br  xmlns:local="http://dse-static.foo.bar">auf Regenspurg, kenen dero Liebden alzeit disponiren, wohin sie wollen, wans
-                  <br  xmlns:local="http://dse-static.foo.bar">möglich, wier es mihr zu Parma zum libsten, weil mein schwester
-                  <br  xmlns:local="http://dse-static.foo.bar">vohr ihn sorg dragen wurde. Sonst bin ich nit in geringen sorgen,
-                  <br  xmlns:local="http://dse-static.foo.bar">weil so gahr niks aus Schpanien vnd man mein arme frawf
-                  <br  xmlns:local="http://dse-static.foo.bar">schwester gefangen sagt, auch nit weis, wies mein sohn geht, der liebste
-                  <br  xmlns:local="http://dse-static.foo.bar">gott wolle alles zum besten schiken. Ich aber werde leben vndt
-                  <br  xmlns:local="http://dse-static.foo.bar">sterben
-                  <br  xmlns:local="http://dse-static.foo.bar">dero Liebden
-                  <br  xmlns:local="http://dse-static.foo.bar">getrewste schwester
-                  <br  xmlns:local="http://dse-static.foo.bar">Eleonora
-                  <br  xmlns:local="http://dse-static.foo.bar">Wien den 20ten octobris8br 1706
-                  <br  xmlns:local="http://dse-static.foo.bar">Ich mein, ich hab dis memorial von mein camerdiener vergeßen einzuschlißen,
-                  <br  xmlns:local="http://dse-static.foo.bar">so schikh es hirbey, weil er mich so gebetten vnd niks als ein tittul verlangt.</p>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>76 v</h5>
+               </div>
             </div>
-            <div id="div__5"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_4">77 v</span><p id="p__2" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-2"><img id="os-id-2-img" src="https://files.transkribus.eu/Get?id=JMLDGZJLUEYCTSGVAMANXCAI&amp;fileType=view" onload="loadImage('os-id-2', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__52" data-id="#facs_2_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb18" name="#facs_2_r1__p2__lb18" id="#facs_2_r1__p2__lb18" size="800,1244" zone="58,141 131,113 199,143 261,124 294,143 767,132 725,89 554,104 426,78 365,102 60,59" class="linenumbersTransparent linenumbers">0018</a></span><span class="transcript-line-contents">beförderlich sein, dan wan auch nit das wort, so dero Liebden ihnen dem
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb19" name="#facs_2_r1__p2__lb19" id="#facs_2_r1__p2__lb19" size="800,1244" zone="43,171 147,152 312,193 450,175 555,197 651,167 713,180 758,146 44,119" class="linenumbersTransparent linenumbers">0019</a></span><span class="transcript-line-contents">Keiser vnd mihr vohr ihn geben, vnd die fre<span  xmlns:local="http://dse-static.foo.bar" class="supplied">u</span>ntschafft, so dero Liebden vohr
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb20" name="#facs_2_r1__p2__lb20" id="#facs_2_r1__p2__lb20" size="800,1244" zone="46,186 155,220 226,202 259,233 356,217 391,242 423,220 475,249 550,222 777,230 779,177 493,198 447,174 391,196 219,161 46,171" class="linenumbersVisible linenumbers" data-lbnr="20">0020</a></span><span class="transcript-line-contents">selb<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>ges haus haben, so bin ich doch gesichr<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>t, das dero Liebden das publicum
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb21" name="#facs_2_r1__p2__lb21" id="#facs_2_r1__p2__lb21" size="800,1244" zone="49,251 289,262 349,294 420,263 448,283 762,284 763,237 657,218 475,249 226,203 141,230 50,218" class="linenumbersTransparent linenumbers">0021</a></span><span class="transcript-line-contents"><span  xmlns:local="http://dse-static.foo.bar" class="add">wie auch</span> das Reichs vnd die religion gahr zu lieb haben, das sie zu
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb22" name="#facs_2_r1__p2__lb22" id="#facs_2_r1__p2__lb22" size="800,1244" zone="53,301 270,300 318,332 339,315 501,340 531,312 754,316 779,271 604,293 419,263 345,292 315,266 54,252" class="linenumbersTransparent linenumbers">0022</a></span><span class="transcript-line-contents">was solchen, so allen disen den höchsten schaden bringst, cooperiren wurden,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb23" name="#facs_2_r1__p2__lb23" id="#facs_2_r1__p2__lb23" size="800,1244" zone="45,346 198,339 383,391 470,366 761,366 762,302 589,327 530,312 498,340 325,334 274,303 161,325 117,288 46,300" class="linenumbersTransparent linenumbers">0023</a></span><span class="transcript-line-contents">sonde<span  xmlns:local="http://dse-static.foo.bar" class="supplied">r</span>n vill mehr den B<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>schoff von Paterborn vnd die <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: H">Herren</abbr>  Staden suchen
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb24" name="#facs_2_r1__p2__lb24" id="#facs_2_r1__p2__lb24" size="800,1244" zone="56,394 106,380 178,414 248,403 297,435 642,393 685,417 737,395 738,358 547,380 471,366 386,393 269,351 57,342" class="linenumbersTransparent linenumbers">0024</a></span><span class="transcript-line-contents">zur raison zu bringen vnd auch zu Rohm vohr vnsern
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb25" name="#facs_2_r1__p2__lb25" id="#facs_2_r1__p2__lb25" size="800,1244" zone="60,458 121,441 187,468 227,448 413,476 489,448 557,482 612,439 694,460 743,440 727,395 631,424 583,397 469,429 337,415 310,439 251,404 59,393" class="linenumbersVisible linenumbers" data-lbnr="25">0025</a></span><span class="transcript-line-contents">Bischoff von Osnabrukh die confirmation helfen auswürken
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb26" name="#facs_2_r1__p2__lb26" id="#facs_2_r1__p2__lb26" size="800,1244" zone="61,495 207,518 307,503 378,534 418,505 457,521 676,502 758,470 758,447 695,461 612,440 564,475 509,462 486,481 305,476 258,450 191,471 120,440 60,458" class="linenumbersTransparent linenumbers">0026</a></span><span class="transcript-line-contents">vndt dem Fedl, welcher schon vill passus gedahn, <span  xmlns:local="http://dse-static.foo.bar" class="unclear"><abbr title="unsichere Lesart">dauon</abbr></span> ich gesiche<span  xmlns:local="http://dse-static.foo.bar" class="supplied">r</span>t
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb27" name="#facs_2_r1__p2__lb27" id="#facs_2_r1__p2__lb27" size="800,1244" zone="50,554 233,543 347,578 408,550 491,583 529,551 764,525 763,489 714,487 545,527 486,503 375,538 307,503 49,506" class="linenumbersTransparent linenumbers">0027</a></span><span class="transcript-line-contents">bin, das er von dero Liebden kein befehl gehabt haben wirt, scharf befehlen,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb28" name="#facs_2_r1__p2__lb28" id="#facs_2_r1__p2__lb28" size="800,1244" zone="52,583 222,629 273,601 378,628 597,583 669,599 715,569 771,584 760,525 463,578 408,549 348,577 177,539 52,555" class="linenumbersTransparent linenumbers">0028</a></span><span class="transcript-line-contents">niks bey ihr <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: H">Heiligkeit</abbr>  zu negotiren, was ihm dero Liebden nit befehlen vnd
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb29" name="#facs_2_r1__p2__lb29" id="#facs_2_r1__p2__lb29" size="800,1244" zone="50,640 145,640 215,676 338,651 410,679 519,642 597,658 758,625 757,588 701,583 598,582 511,620 460,600 378,629 275,601 190,623 49,598" class="linenumbersTransparent linenumbers">0029</a></span><span class="transcript-line-contents">was wider den Kaißer vnd den B<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>schoff könte sein. Ich hab dise
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb30" name="#facs_2_r1__p2__lb30" id="#facs_2_r1__p2__lb30" size="800,1244" zone="43,708 152,696 213,727 449,695 507,728 605,722 640,693 693,710 727,681 777,686 777,630 602,658 522,641 417,682 303,652 213,677 145,641 42,654" class="linenumbersVisible linenumbers" data-lbnr="30">0030</a></span><span class="transcript-line-contents">ga<span  xmlns:local="http://dse-static.foo.bar" class="supplied">n</span>zlige zuefersicht, das dero Liebden in disen bestend<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>g verharen werden.
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb31" name="#facs_2_r1__p2__lb31" id="#facs_2_r1__p2__lb31" size="800,1244" zone="56,764 106,745 153,779 215,752 376,773 509,746 627,761 763,739 776,688 531,731 466,704 218,730 152,696 54,707" class="linenumbersTransparent linenumbers">0031</a></span><span class="transcript-line-contents">Im übrigen ist der Hertot hier wider angelangt, vnd seint
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb32" name="#facs_2_r1__p2__lb32" id="#facs_2_r1__p2__lb32" size="800,1244" zone="56,806 135,791 306,825 347,805 388,829 493,808 632,829 681,790 764,778 748,739 563,774 458,751 376,782 319,753 215,752 155,780 118,750 55,765" class="linenumbersTransparent linenumbers">0032</a></span><span class="transcript-line-contents">mihr alle mitt ihm gahr übel zuefriden gew<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>sen, das er
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb33" name="#facs_2_r1__p2__lb33" id="#facs_2_r1__p2__lb33" size="800,1244" zone="51,837 319,874 353,854 397,877 460,853 624,866 769,841 768,788 554,832 493,808 387,830 50,802" class="linenumbersTransparent linenumbers">0033</a></span><span class="transcript-line-contents">nit na<span  xmlns:local="http://dse-static.foo.bar" class="supplied">c</span>h dero Liebden befehl auf Düßeldorf gangen ist. Er hatt
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb34" name="#facs_2_r1__p2__lb34" id="#facs_2_r1__p2__lb34" size="800,1244" zone="48,901 84,885 513,911 558,937 750,881 702,837 373,891 242,850 213,867 170,839 48,841" class="linenumbersTransparent linenumbers">0034</a></span><span class="transcript-line-contents">sich aber mit der vnmöglikeit entschuldiget, wie
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb35" name="#facs_2_r1__p2__lb35" id="#facs_2_r1__p2__lb35" size="800,1244" zone="46,944 141,953 186,983 215,964 336,982 372,950 513,985 574,956 708,959 742,941 742,902 612,909 557,938 505,909 377,933 352,910 171,891 46,903" class="linenumbersVisible linenumbers" data-lbnr="35">0035</a></span><span class="transcript-line-contents">dero Liebden aus beyl<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>genden seinen sch<span  xmlns:local="http://dse-static.foo.bar" class="supplied">rei</span>ben werden ersehen, welches ich herbey
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb36" name="#facs_2_r1__p2__lb36" id="#facs_2_r1__p2__lb36" size="800,1244" zone="52,1012 217,992 338,1032 394,1005 446,1026 483,1002 712,1004 725,954 590,955 512,985 457,967 430,990 361,966 310,988 193,981 154,954 53,946" class="linenumbersTransparent linenumbers">0036</a></span><span class="transcript-line-contents">schließ, vnd er aus forcht, ein fähler in titul zu begehen,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb37" name="#facs_2_r1__p2__lb37" id="#facs_2_r1__p2__lb37" size="800,1244" zone="52,1035 109,1030 173,1075 287,1049 373,1076 497,1045 575,1065 772,1052 772,998 745,989 625,1012 525,999 445,1037 404,1006 304,1030 217,991 52,1015" class="linenumbersTransparent linenumbers">0037</a></span><span class="transcript-line-contents">nit üb<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>rsch<span  xmlns:local="http://dse-static.foo.bar" class="supplied">rie</span>ben hatt, waraus auch dero Liebden sein vollige relation
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb38" name="#facs_2_r1__p2__lb38" id="#facs_2_r1__p2__lb38" size="800,1244" zone="48,1096 129,1086 189,1117 254,1094 467,1115 548,1090 760,1099 760,1060 707,1048 512,1052 466,1077 426,1052 374,1076 303,1052 169,1074 95,1034 48,1043" class="linenumbersTransparent linenumbers">0038</a></span><span class="transcript-line-contents">vernemmen werden. Den Garelli haben auf Preß<span  xmlns:local="http://dse-static.foo.bar" class="supplied">l</span>aw vndt Prag
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb39" name="#facs_2_r1__p2__lb39" id="#facs_2_r1__p2__lb39" size="800,1244" zone="48,1162 276,1140 411,1172 468,1143 512,1165 778,1127 764,1098 652,1086 468,1114 242,1099 203,1121 130,1087 48,1096" class="linenumbersTransparent linenumbers">0039</a></span><span class="transcript-line-contents">geschikt, von Preslaw hab na<span  xmlns:local="http://dse-static.foo.bar" class="supplied">c</span>hricht, das er sie sehr lobt, aber
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb40" name="#facs_2_r1__p2__lb40" id="#facs_2_r1__p2__lb40" size="800,1244" zone="57,1181 749,1184 768,1181 768,1137 611,1160 570,1142 512,1165 468,1144 416,1169 341,1142 176,1164 105,1141 57,1161" class="linenumbersVisible linenumbers" data-lbnr="40">0040</a></span><span class="transcript-line-contents">noch allzu jung vndt nit ausgewaksen oder in stand zu he<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>r<span  xmlns:local="http://dse-static.foo.bar" class="supplied">a</span>ten <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: gfd">gefunden</abbr> .</span></span></p>
+               </div>
             </div>
-            <div id="div__23"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_5">5</span><p id="p__19" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar"><abbr  xmlns:local="http://dse-static.foo.bar" title="unclear">samt zwey beylagen</abbr>
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"> 
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
             </div>
-            <div id="div__24"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_6">6</span><p id="p__19" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>77 r</h5>
+               </div>
             </div>
-            <div id="div__24"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_7">7</span><p id="p__18" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-3"><img id="os-id-3-img" src="https://files.transkribus.eu/Get?id=SYCSHEFUUFQFRGZCUTCBUFAF&amp;fileType=view" onload="loadImage('os-id-3', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__44" data-id="#facs_3_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb41" name="#facs_3_r1__p3__lb41" id="#facs_3_r1__p3__lb41" size="800,1221" zone="16,112 228,105 314,138 431,147 485,119 714,149 742,144 744,105 466,97 417,67 351,85 18,68" class="linenumbersTransparent linenumbers">0041</a></span><span class="transcript-line-contents">Forchte, es werd mit der andren eben so sein. In deßen wi<span  xmlns:local="http://dse-static.foo.bar" class="supplied">r</span>t der Si<span  xmlns:local="http://dse-static.foo.bar" class="supplied">n</span>zendorf
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb42" name="#facs_3_r1__p3__lb42" id="#facs_3_r1__p3__lb42" size="800,1221" zone="18,152 314,176 420,161 512,194 620,178 708,203 734,165 468,122 431,149 251,108 138,126 21,111" class="linenumbersTransparent linenumbers">0042</a></span><span class="transcript-line-contents">vnd der <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: P">Pater</abbr>  bey dero Liebden angelangt sein vnd dero Liebden selbigen weiters beforderen,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb43" name="#facs_3_r1__p3__lb43" id="#facs_3_r1__p3__lb43" size="800,1221" zone="11,208 187,194 512,240 730,238 732,203 678,185 512,193 488,173 368,182 347,162 276,176 57,145 14,167" class="linenumbersTransparent linenumbers">0043</a></span><span class="transcript-line-contents">gott gebe sein gnad <span  xmlns:local="http://dse-static.foo.bar" class="supplied">und</span> was zu seiner ehr ist. Wegen Sulsbach
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb44" name="#facs_3_r1__p3__lb44" id="#facs_3_r1__p3__lb44" size="800,1221" zone="6,237 413,251 463,291 503,265 733,291 736,247 618,229 223,204 161,222 111,193 8,212" class="linenumbersTransparent linenumbers">0044</a></span><span class="transcript-line-contents">werden dero Liebden auch vom Wißer vernemmen, was ich hab notwendig
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb45" name="#facs_3_r1__p3__lb45" id="#facs_3_r1__p3__lb45" size="800,1221" zone="4,302 248,288 693,342 745,306 497,266 462,292 426,258 201,238 162,263 8,247" class="linenumbersVisible linenumbers" data-lbnr="45">0045</a></span><span class="transcript-line-contents">befunden an selbige Pr<span  xmlns:local="http://dse-static.foo.bar" class="supplied">in</span>zeßin zu schreiben, weil periculum in
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb46" name="#facs_3_r1__p3__lb46" id="#facs_3_r1__p3__lb46" size="800,1221" zone="5,337 349,345 403,383 460,362 671,370 703,395 750,377 753,330 301,313 248,287 7,307" class="linenumbersTransparent linenumbers">0046</a></span><span class="transcript-line-contents">mora wahr, das sie das kint hetten auf Wolfenbüttel geschikt,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb47" name="#facs_3_r1__p3__lb47" id="#facs_3_r1__p3__lb47" size="800,1221" zone="2,397 122,387 199,410 303,388 692,439 741,423 744,384 469,362 404,383 320,347 150,365 6,337" class="linenumbersTransparent linenumbers">0047</a></span><span class="transcript-line-contents">wan ich ein antwort bekomm, werds dero Liebden ber<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>chten. Laßen sies
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb48" name="#facs_3_r1__p3__lb48" id="#facs_3_r1__p3__lb48" size="800,1221" zone="10,430 740,473 742,424 699,441 536,408 463,429 305,390 189,412 12,397" class="linenumbersTransparent linenumbers">0048</a></span><span class="transcript-line-contents">auf Regenspurg, kenen dero Liebden alzeit disponiren, wohin sie wollen, wans
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb49" name="#facs_3_r1__p3__lb49" id="#facs_3_r1__p3__lb49" size="800,1221" zone="7,462 328,512 711,518 758,549 762,490 720,474 687,494 468,443 370,473 254,432 172,456 90,431 8,442" class="linenumbersTransparent linenumbers">0049</a></span><span class="transcript-line-contents">möglich, wier es mihr zu Parma zum libsten, weil mein schw<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>ster
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb50" name="#facs_3_r1__p3__lb50" id="#facs_3_r1__p3__lb50" size="800,1221" zone="6,522 228,558 305,538 416,575 747,561 749,522 727,517 647,541 577,514 461,523 369,497 276,516 9,472" class="linenumbersVisible linenumbers" data-lbnr="50">0050</a></span><span class="transcript-line-contents">vohr ihn sorg dragen wurde. Sonst bin ich nit in geringen sorgen,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb51" name="#facs_3_r1__p3__lb51" id="#facs_3_r1__p3__lb51" size="800,1221" zone="15,583 54,576 84,602 284,585 405,623 472,591 566,620 641,595 697,613 723,568 585,582 549,553 416,575 304,537 229,559 78,527 17,540" class="linenumbersTransparent linenumbers">0051</a></span><span class="transcript-line-contents">weil so gahr niks aus Schpanien vnd man mein arme <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: f">fraw</abbr> </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb52" name="#facs_3_r1__p3__lb52" id="#facs_3_r1__p3__lb52" size="800,1221" zone="19,636 76,625 157,661 248,636 462,638 549,671 743,652 744,610 721,602 574,625 471,591 367,621 309,587 85,602 21,580" class="linenumbersTransparent linenumbers">0052</a></span><span class="transcript-line-contents">schw<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>ster gefangen sagt, auch nit weis, wies mein sohn geht, der liebste
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb53" name="#facs_3_r1__p3__lb53" id="#facs_3_r1__p3__lb53" size="800,1221" zone="16,691 61,674 186,708 289,689 343,719 556,694 624,709 720,684 721,651 548,670 443,639 287,670 250,635 156,663 17,636" class="linenumbersTransparent linenumbers">0053</a></span><span class="transcript-line-contents">gott wolle alles zum b<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>sten schiken. Ich aber werde leben vndt
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb54" name="#facs_3_r1__p3__lb54" id="#facs_3_r1__p3__lb54" size="800,1221" zone="24,732 39,735 48,743 53,740 56,744 63,741 78,745 86,681 76,676 69,680 62,672 53,676 41,670 31,670" class="linenumbersTransparent linenumbers">0054</a></span><span class="transcript-line-contents">st<span  xmlns:local="http://dse-static.foo.bar" class="supplied">er</span>ben
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb55" name="#facs_3_r1__p3__lb55" id="#facs_3_r1__p3__lb55" size="800,1221" zone="154,812 162,813 178,826 182,823 190,824 201,815 208,816 215,749 209,750 204,744 198,744 196,741 182,744 172,741 168,744 161,743" class="linenumbersVisible linenumbers" data-lbnr="55">0055</a></span><span class="transcript-line-contents">dero Liebden
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb56" name="#facs_3_r1__p3__lb56" id="#facs_3_r1__p3__lb56" size="800,1221" zone="376,849 457,852 486,868 502,861 523,882 547,883 589,858 613,858 615,819 596,810 534,828 433,811 378,819" class="linenumbersTransparent linenumbers">0056</a></span><span class="transcript-line-contents">g<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>tr<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>wste schw<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>ster
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb57" name="#facs_3_r1__p3__lb57" id="#facs_3_r1__p3__lb57" size="800,1221" zone="374,920 397,915 432,922 473,911 493,923 513,920 538,935 601,910 602,892 575,897 539,881 507,892 471,873 431,888 404,871 389,878 376,874" class="linenumbersTransparent linenumbers">0057</a></span><span class="transcript-line-contents">Eleonora
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb58" name="#facs_3_r1__p3__lb58" id="#facs_3_r1__p3__lb58" size="800,1221" zone="15,851 94,895 123,878 246,898 283,880 324,891 349,883 354,820 322,816 284,838 202,822 107,829 69,801 47,816 18,802" class="linenumbersTransparent linenumbers">0058</a></span><span class="transcript-line-contents">Wien den 20ten <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: 8br">octobris</abbr>  1706
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb59" name="#facs_3_r1__p3__lb59" id="#facs_3_r1__p3__lb59" size="800,1221" zone="18,974 130,990 176,972 346,1012 456,984 711,1006 724,952 521,965 446,937 402,960 359,938 286,954 252,929 20,917" class="linenumbersTransparent linenumbers">0059</a></span><span class="transcript-line-contents">Ich mein, ich hab dis memorial von mein camerd<span  xmlns:local="http://dse-static.foo.bar" class="supplied">i</span>ener vergeßen einzuschlißen,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_3_r1__p3__lb60" name="#facs_3_r1__p3__lb60" id="#facs_3_r1__p3__lb60" size="800,1221" zone="15,1031 178,1052 342,1035 431,1063 513,1031 744,1064 735,1001 565,1008 461,983 301,1003 164,971 16,992" class="linenumbersVisible linenumbers" data-lbnr="60">0060</a></span><span class="transcript-line-contents">so schikh es hirbey, weil er mich so geb<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>tten vnd niks als ein tittul v<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>rla<span  xmlns:local="http://dse-static.foo.bar" class="supplied">n</span>gt.</span></span></p>
+               </div>
             </div>
-            <div id="div__26"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_8">8</span><p id="p__19" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
             </div>
-            <div id="div__23"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_9">9</span><p id="p__15" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>77 v</h5>
+               </div>
             </div>
-            <div id="div__26"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_10">10</span><p id="p__17" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"> 
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-4"><img id="os-id-4-img" src="https://files.transkribus.eu/Get?id=DDGGGBVAIOLJHXHABZNSZGKC&amp;fileType=view" onload="loadImage('os-id-4', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__2" data-id="#facs_4_region_1669898457104_802"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_4_region_1669898457104_802__p4__lb61" name="#facs_4_region_1669898457104_802__p4__lb61" id="#facs_4_region_1669898457104_802__p4__lb61" size="1692,2459" zone="492,184 814,174 1107,173 1107,223 815,224 493,234" class="linenumbersTransparent linenumbers">0061</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
             </div>
-            <div id="div__25"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_11">11</span><p id="p__15" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
             </div>
-            <div id="div__27"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_12">12</span><p id="p__16" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"> 
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>5</h5>
+               </div>
             </div>
-            <div id="div__30"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_13">13</span><p id="p__18" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar">
-                  <br  xmlns:local="http://dse-static.foo.bar"></p>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-5"><img id="os-id-5-img" src="https://files.transkribus.eu/Get?id=DXKYTKQPVHYXZHXMKUEJDKDN&amp;fileType=view" onload="loadImage('os-id-5', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__19" data-id="#facs_5_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb62" name="#facs_5_r1__p5__lb62" id="#facs_5_r1__p5__lb62" size="800,1221" zone="152,111 198,120 255,91 276,100 330,88 412,98 465,91 464,55 410,50 372,69 346,52 304,70 216,45 150,55" class="linenumbersTransparent linenumbers">0062</a></span><span class="transcript-line-contents"><span  xmlns:local="http://dse-static.foo.bar" class="unclear"><abbr title="Aktenvermerk">samt zwey beylagen</abbr></span></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb63" name="#facs_5_r1__p5__lb63" id="#facs_5_r1__p5__lb63" size="800,1221" zone="254,152 264,155 280,145 320,151 339,143 373,151 416,139 428,149 443,148 443,101 394,110 379,104 364,112 355,106 342,115 308,97 279,110 254,105" class="linenumbersTransparent linenumbers">0063</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb64" name="#facs_5_r1__p5__lb64" id="#facs_5_r1__p5__lb64" size="800,1221" zone="105,207 217,222 287,192 336,213 377,195 584,219 734,195 734,157 661,168 559,130 498,165 334,144 105,155" class="linenumbersTransparent linenumbers">0064</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb65" name="#facs_5_r1__p5__lb65" id="#facs_5_r1__p5__lb65" size="800,1221" zone="79,360 133,348 174,375 358,344 524,364 760,336 759,300 716,288 449,310 336,289 258,318 78,301" class="linenumbersVisible linenumbers" data-lbnr="65">0065</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb66" name="#facs_5_r1__p5__lb66" id="#facs_5_r1__p5__lb66" size="800,1221" zone="69,432 141,435 265,395 389,420 466,390 585,403 713,381 759,400 768,364 711,338 656,362 336,350 173,374 126,345 68,369" class="linenumbersTransparent linenumbers">0066</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb67" name="#facs_5_r1__p5__lb67" id="#facs_5_r1__p5__lb67" size="800,1221" zone="62,472 146,445 376,469 432,445 647,440 720,460 766,448 765,400 61,431" class="linenumbersTransparent linenumbers">0067</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb68" name="#facs_5_r1__p5__lb68" id="#facs_5_r1__p5__lb68" size="800,1221" zone="69,503 623,505 765,485 775,445 68,474" class="linenumbersTransparent linenumbers">0068</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb69" name="#facs_5_r1__p5__lb69" id="#facs_5_r1__p5__lb69" size="800,1221" zone="60,561 778,537 777,506 697,498 59,513" class="linenumbersTransparent linenumbers">0069</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb70" name="#facs_5_r1__p5__lb70" id="#facs_5_r1__p5__lb70" size="800,1221" zone="69,591 758,598 757,549 714,535 69,565" class="linenumbersVisible linenumbers" data-lbnr="70">0070</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb71" name="#facs_5_r1__p5__lb71" id="#facs_5_r1__p5__lb71" size="800,1221" zone="60,651 717,660 768,646 768,608 359,592 276,616 137,588 60,613" class="linenumbersTransparent linenumbers">0071</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb72" name="#facs_5_r1__p5__lb72" id="#facs_5_r1__p5__lb72" size="800,1221" zone="72,718 181,692 232,716 300,690 595,713 774,685 774,655 71,661" class="linenumbersTransparent linenumbers">0072</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb73" name="#facs_5_r1__p5__lb73" id="#facs_5_r1__p5__lb73" size="800,1221" zone="62,785 154,750 434,764 587,736 679,758 766,716 491,699 60,717" class="linenumbersTransparent linenumbers">0073</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb74" name="#facs_5_r1__p5__lb74" id="#facs_5_r1__p5__lb74" size="800,1221" zone="60,799 231,824 316,802 407,829 625,793 766,811 765,752 731,743 595,772 416,754 60,783" class="linenumbersTransparent linenumbers">0074</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb75" name="#facs_5_r1__p5__lb75" id="#facs_5_r1__p5__lb75" size="800,1221" zone="48,864 318,883 435,857 498,880 746,857 735,814 504,841 47,815" class="linenumbersVisible linenumbers" data-lbnr="75">0075</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb76" name="#facs_5_r1__p5__lb76" id="#facs_5_r1__p5__lb76" size="800,1221" zone="61,924 147,939 238,908 446,941 528,910 605,926 625,908 769,908 769,873 715,868 456,877 430,899 389,875 61,873" class="linenumbersTransparent linenumbers">0076</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb77" name="#facs_5_r1__p5__lb77" id="#facs_5_r1__p5__lb77" size="800,1221" zone="66,984 146,1000 248,967 480,995 594,965 749,990 771,985 770,924 65,942" class="linenumbersTransparent linenumbers">0077</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_5_r1__p5__lb78" name="#facs_5_r1__p5__lb78" id="#facs_5_r1__p5__lb78" size="800,1221" zone="73,1036 146,1055 284,1030 435,1051 482,1034 776,1042 769,981 289,999 200,979 136,1003 72,987" class="linenumbersTransparent linenumbers">0078</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
             </div>
-            
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>6</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-6"><img id="os-id-6-img" src="https://files.transkribus.eu/Get?id=NCVBNYOYBFYRHTOGHRXBEVLG&amp;fileType=view" onload="loadImage('os-id-6', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__19" data-id="#facs_6_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb79" name="#facs_6_r1__p6__lb79" id="#facs_6_r1__p6__lb79" size="800,1261" zone="35,203 343,221 601,188 634,212 753,192 752,124 495,164 346,130 287,159 249,138 35,164" class="linenumbersTransparent linenumbers">0079</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb80" name="#facs_6_r1__p6__lb80" id="#facs_6_r1__p6__lb80" size="800,1261" zone="44,263 339,240 476,266 695,238 762,265 767,201 575,224 515,205 397,228 276,205 43,218" class="linenumbersVisible linenumbers" data-lbnr="80">0080</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb81" name="#facs_6_r1__p6__lb81" id="#facs_6_r1__p6__lb81" size="800,1261" zone="36,310 99,292 395,310 430,292 594,314 752,286 761,262 454,254 272,276 217,256 36,277" class="linenumbersTransparent linenumbers">0081</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb82" name="#facs_6_r1__p6__lb82" id="#facs_6_r1__p6__lb82" size="800,1261" zone="26,357 344,372 619,345 756,365 780,351 779,299 690,286 539,324 312,306 174,330 129,306 25,309" class="linenumbersTransparent linenumbers">0082</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb83" name="#facs_6_r1__p6__lb83" id="#facs_6_r1__p6__lb83" size="800,1261" zone="42,406 593,426 646,398 774,388 774,368 692,352 556,378 477,360 344,381 280,358 42,367" class="linenumbersTransparent linenumbers">0083</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb84" name="#facs_6_r1__p6__lb84" id="#facs_6_r1__p6__lb84" size="800,1261" zone="43,471 72,485 187,456 425,483 557,442 631,465 776,441 776,400 624,429 535,409 42,414" class="linenumbersTransparent linenumbers">0084</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb85" name="#facs_6_r1__p6__lb85" id="#facs_6_r1__p6__lb85" size="800,1261" zone="45,513 788,522 787,465 748,459 455,484 44,470" class="linenumbersVisible linenumbers" data-lbnr="85">0085</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb86" name="#facs_6_r1__p6__lb86" id="#facs_6_r1__p6__lb86" size="800,1261" zone="38,569 772,573 771,520 667,505 484,507 401,535 283,517 101,536 37,512" class="linenumbersTransparent linenumbers">0086</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb87" name="#facs_6_r1__p6__lb87" id="#facs_6_r1__p6__lb87" size="800,1261" zone="37,635 294,628 333,606 390,633 445,602 676,627 767,606 780,577 681,561 623,582 566,560 525,583 465,561 255,588 199,567 109,595 35,571" class="linenumbersTransparent linenumbers">0087</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb88" name="#facs_6_r1__p6__lb88" id="#facs_6_r1__p6__lb88" size="800,1261" zone="39,675 256,695 344,663 623,682 652,658 780,656 780,620 661,638 480,605 388,633 39,625" class="linenumbersTransparent linenumbers">0088</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb89" name="#facs_6_r1__p6__lb89" id="#facs_6_r1__p6__lb89" size="800,1261" zone="32,732 255,744 308,716 421,731 483,712 774,737 760,671 31,682" class="linenumbersTransparent linenumbers">0089</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb90" name="#facs_6_r1__p6__lb90" id="#facs_6_r1__p6__lb90" size="800,1261" zone="35,790 769,788 769,742 667,719 604,744 331,723 271,745 34,747" class="linenumbersVisible linenumbers" data-lbnr="90">0090</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb91" name="#facs_6_r1__p6__lb91" id="#facs_6_r1__p6__lb91" size="800,1261" zone="34,855 292,829 386,848 782,837 781,779 33,790" class="linenumbersTransparent linenumbers">0091</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb92" name="#facs_6_r1__p6__lb92" id="#facs_6_r1__p6__lb92" size="800,1261" zone="37,913 98,892 541,908 753,884 779,876 779,836 502,855 334,826 246,855 36,856" class="linenumbersTransparent linenumbers">0092</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb93" name="#facs_6_r1__p6__lb93" id="#facs_6_r1__p6__lb93" size="800,1261" zone="40,953 757,958 756,881 641,910 563,894 351,923 132,899 103,923 39,920" class="linenumbersTransparent linenumbers">0093</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb94" name="#facs_6_r1__p6__lb94" id="#facs_6_r1__p6__lb94" size="800,1261" zone="38,1016 753,1008 768,958 396,956 231,983 36,962" class="linenumbersTransparent linenumbers">0094</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb95" name="#facs_6_r1__p6__lb95" id="#facs_6_r1__p6__lb95" size="800,1261" zone="44,1061 164,1080 247,1064 333,1095 475,1060 685,1070 782,1039 782,1012 329,1030 194,1009 142,1035 43,1035" class="linenumbersVisible linenumbers" data-lbnr="95">0095</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_6_r1__p6__lb96" name="#facs_6_r1__p6__lb96" id="#facs_6_r1__p6__lb96" size="800,1261" zone="44,1247 98,1247 105,1253 112,1249 130,1252 134,1248 148,1254 161,1243 177,1244 176,1212 155,1204 125,1205 98,1198 75,1210 54,1199 43,1201" class="linenumbersTransparent linenumbers">0096</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>7</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-7"><img id="os-id-7-img" src="https://files.transkribus.eu/Get?id=IYZZDNSUEFCCHZBSPDFOKKXO&amp;fileType=view" onload="loadImage('os-id-7', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__18" data-id="#facs_7_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb97" name="#facs_7_r1__p7__lb97" id="#facs_7_r1__p7__lb97" size="800,1280" zone="23,194 181,218 227,196 326,220 418,201 475,224 755,226 748,150 526,175 392,145 275,158 170,136 108,166 24,148" class="linenumbersTransparent linenumbers">0097</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb98" name="#facs_7_r1__p7__lb98" id="#facs_7_r1__p7__lb98" size="800,1280" zone="28,238 217,269 438,246 558,271 747,245 747,226 692,213 461,228 408,203 328,220 289,200 28,218" class="linenumbersTransparent linenumbers">0098</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb99" name="#facs_7_r1__p7__lb99" id="#facs_7_r1__p7__lb99" size="800,1280" zone="23,311 187,289 214,309 685,309 763,296 763,258 23,267" class="linenumbersTransparent linenumbers">0099</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb100" name="#facs_7_r1__p7__lb100" id="#facs_7_r1__p7__lb100" size="800,1280" zone="29,337 268,335 489,366 688,360 753,335 753,318 620,302 541,321 279,294 182,319 29,308" class="linenumbersVisible linenumbers" data-lbnr="100">0100</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb101" name="#facs_7_r1__p7__lb101" id="#facs_7_r1__p7__lb101" size="800,1280" zone="16,417 386,390 512,417 576,396 657,423 765,403 736,360 608,351 551,373 461,354 16,365" class="linenumbersTransparent linenumbers">0101</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb102" name="#facs_7_r1__p7__lb102" id="#facs_7_r1__p7__lb102" size="800,1280" zone="29,469 316,457 373,482 440,457 588,469 632,450 740,468 769,454 769,402 680,423 465,406 268,425 128,403 29,421" class="linenumbersTransparent linenumbers">0102</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb103" name="#facs_7_r1__p7__lb103" id="#facs_7_r1__p7__lb103" size="800,1280" zone="38,511 163,530 473,497 567,524 638,494 764,513 764,472 542,462 412,484 226,459 38,477" class="linenumbersTransparent linenumbers">0103</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb104" name="#facs_7_r1__p7__lb104" id="#facs_7_r1__p7__lb104" size="800,1280" zone="33,572 225,583 384,558 466,582 520,559 770,556 769,504 429,535 32,519" class="linenumbersTransparent linenumbers">0104</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb105" name="#facs_7_r1__p7__lb105" id="#facs_7_r1__p7__lb105" size="800,1280" zone="32,621 90,639 181,604 440,624 599,595 756,614 755,549 638,580 255,586 138,564 31,584" class="linenumbersVisible linenumbers" data-lbnr="105">0105</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb106" name="#facs_7_r1__p7__lb106" id="#facs_7_r1__p7__lb106" size="800,1280" zone="37,694 363,672 397,691 559,686 736,653 735,625 619,612 519,634 462,616 278,619 212,647 35,637" class="linenumbersTransparent linenumbers">0106</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb107" name="#facs_7_r1__p7__lb107" id="#facs_7_r1__p7__lb107" size="800,1280" zone="20,741 172,717 397,742 759,717 758,679 701,665 493,697 173,677 19,702" class="linenumbersTransparent linenumbers">0107</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb108" name="#facs_7_r1__p7__lb108" id="#facs_7_r1__p7__lb108" size="800,1280" zone="27,798 163,781 267,808 422,771 612,788 769,765 768,726 696,716 476,754 366,733 193,753 77,729 27,753" class="linenumbersTransparent linenumbers">0108</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb109" name="#facs_7_r1__p7__lb109" id="#facs_7_r1__p7__lb109" size="800,1280" zone="14,841 180,850 292,825 349,847 536,851 580,831 753,850 752,779 731,774 440,803 384,781 251,808 150,778 14,802" class="linenumbersTransparent linenumbers">0109</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb110" name="#facs_7_r1__p7__lb110" id="#facs_7_r1__p7__lb110" size="800,1280" zone="28,906 582,880 645,916 760,907 759,849 27,852" class="linenumbersVisible linenumbers" data-lbnr="110">0110</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb111" name="#facs_7_r1__p7__lb111" id="#facs_7_r1__p7__lb111" size="800,1280" zone="31,976 142,947 229,965 439,940 529,965 767,954 749,905 30,917" class="linenumbersTransparent linenumbers">0111</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb112" name="#facs_7_r1__p7__lb112" id="#facs_7_r1__p7__lb112" size="800,1280" zone="33,1025 129,995 356,1029 757,1008 756,957 735,949 565,974 360,954 207,980 32,972" class="linenumbersTransparent linenumbers">0112</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_7_r1__p7__lb113" name="#facs_7_r1__p7__lb113" id="#facs_7_r1__p7__lb113" size="800,1280" zone="16,1078 169,1051 516,1084 746,1049 745,1001 340,1030 234,1020 203,993 134,1025 15,1024" class="linenumbersTransparent linenumbers">0113</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>8</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-8"><img id="os-id-8-img" src="https://files.transkribus.eu/Get?id=CHZHIEJMYAVKWKTCNUNUOLYB&amp;fileType=view" onload="loadImage('os-id-8', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__19" data-id="#facs_8_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb114" name="#facs_8_r1__p8__lb114" id="#facs_8_r1__p8__lb114" size="800,1241" zone="67,197 325,211 486,186 527,209 570,190 625,220 757,194 757,156 627,170 509,133 279,163 68,149" class="linenumbersTransparent linenumbers">0114</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb115" name="#facs_8_r1__p8__lb115" id="#facs_8_r1__p8__lb115" size="800,1241" zone="58,238 130,252 165,233 264,260 345,235 447,252 488,235 555,266 603,243 754,253 756,215 708,195 564,227 509,199 58,207" class="linenumbersVisible linenumbers" data-lbnr="115">0115</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb116" name="#facs_8_r1__p8__lb116" id="#facs_8_r1__p8__lb116" size="800,1241" zone="52,298 153,280 247,303 338,287 756,304 750,252 532,270 339,243 261,265 54,236" class="linenumbersTransparent linenumbers">0116</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb117" name="#facs_8_r1__p8__lb117" id="#facs_8_r1__p8__lb117" size="800,1241" zone="61,351 123,333 258,357 733,344 733,304 674,315 628,296 402,315 159,282 122,303 61,297" class="linenumbersTransparent linenumbers">0117</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb118" name="#facs_8_r1__p8__lb118" id="#facs_8_r1__p8__lb118" size="800,1241" zone="57,398 138,380 245,405 323,385 737,404 761,396 762,357 58,349" class="linenumbersTransparent linenumbers">0118</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb119" name="#facs_8_r1__p8__lb119" id="#facs_8_r1__p8__lb119" size="800,1241" zone="38,446 106,430 138,453 239,453 317,432 757,455 758,415 695,424 636,387 563,406 460,390 420,412 373,394 307,413 40,400" class="linenumbersTransparent linenumbers">0119</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb120" name="#facs_8_r1__p8__lb120" id="#facs_8_r1__p8__lb120" size="800,1241" zone="45,518 258,482 300,507 514,484 579,512 672,491 750,514 757,456 491,446 422,471 364,444 138,453 111,434 46,457" class="linenumbersVisible linenumbers" data-lbnr="120">0120</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb121" name="#facs_8_r1__p8__lb121" id="#facs_8_r1__p8__lb121" size="800,1241" zone="50,550 365,538 555,563 763,548 763,511 521,497 444,523 375,499 310,523 207,495 50,518" class="linenumbersTransparent linenumbers">0121</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb122" name="#facs_8_r1__p8__lb122" id="#facs_8_r1__p8__lb122" size="800,1241" zone="44,593 302,589 386,619 531,588 596,611 765,597 765,569 666,550 570,564 517,545 394,571 212,542 112,570 44,552" class="linenumbersTransparent linenumbers">0122</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb123" name="#facs_8_r1__p8__lb123" id="#facs_8_r1__p8__lb123" size="800,1241" zone="60,645 338,666 579,643 757,666 757,615 621,599 536,617 420,595 347,625 243,594 103,607 60,590" class="linenumbersTransparent linenumbers">0123</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb124" name="#facs_8_r1__p8__lb124" id="#facs_8_r1__p8__lb124" size="800,1241" zone="56,701 261,724 384,695 506,718 562,690 771,696 771,675 616,654 56,649" class="linenumbersTransparent linenumbers">0124</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb125" name="#facs_8_r1__p8__lb125" id="#facs_8_r1__p8__lb125" size="800,1241" zone="60,759 224,767 259,744 293,768 667,767 769,747 751,709 621,696 532,725 60,707" class="linenumbersVisible linenumbers" data-lbnr="125">0125</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb126" name="#facs_8_r1__p8__lb126" id="#facs_8_r1__p8__lb126" size="800,1241" zone="47,816 120,795 476,816 663,797 731,824 760,814 760,763 47,764" class="linenumbersTransparent linenumbers">0126</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb127" name="#facs_8_r1__p8__lb127" id="#facs_8_r1__p8__lb127" size="800,1241" zone="44,872 194,880 318,850 404,878 525,843 763,858 763,824 574,802 44,821" class="linenumbersTransparent linenumbers">0127</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb128" name="#facs_8_r1__p8__lb128" id="#facs_8_r1__p8__lb128" size="800,1241" zone="52,934 272,921 380,942 425,919 579,913 763,928 769,878 619,859 378,887 262,865 126,890 51,873" class="linenumbersTransparent linenumbers">0128</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb129" name="#facs_8_r1__p8__lb129" id="#facs_8_r1__p8__lb129" size="800,1241" zone="42,983 154,986 202,962 286,992 380,971 439,991 576,965 765,976 764,926 41,936" class="linenumbersTransparent linenumbers">0129</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb130" name="#facs_8_r1__p8__lb130" id="#facs_8_r1__p8__lb130" size="800,1241" zone="46,1038 241,1048 352,1028 523,1053 645,1015 754,1016 756,971 633,998 45,979" class="linenumbersVisible linenumbers" data-lbnr="130">0130</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_8_r1__p8__lb131" name="#facs_8_r1__p8__lb131" id="#facs_8_r1__p8__lb131" size="800,1241" zone="113,1220 120,1219 128,1223 140,1215 146,1219 151,1215 156,1219 167,1212 179,1215 203,1211 203,1172 180,1165 170,1169 163,1167 152,1173 135,1163 124,1166 113,1162" class="linenumbersTransparent linenumbers">0131</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>9</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-9"><img id="os-id-9-img" src="https://files.transkribus.eu/Get?id=ZKQVQWNBTZETMRAUSNOKYQSX&amp;fileType=view" onload="loadImage('os-id-9', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__15" data-id="#facs_9_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb132" name="#facs_9_r1__p9__lb132" id="#facs_9_r1__p9__lb132" size="800,1253" zone="53,218 107,233 197,202 262,219 435,197 485,217 765,203 765,162 739,155 567,181 488,160 229,178 53,151" class="linenumbersTransparent linenumbers">0132</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb133" name="#facs_9_r1__p9__lb133" id="#facs_9_r1__p9__lb133" size="800,1253" zone="44,262 169,243 423,271 469,245 618,241 724,265 772,254 771,202 502,227 352,202 253,229 182,207 106,233 43,222" class="linenumbersTransparent linenumbers">0133</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb134" name="#facs_9_r1__p9__lb134" id="#facs_9_r1__p9__lb134" size="800,1253" zone="47,309 186,295 318,321 390,297 519,329 684,299 764,318 764,261 742,259 47,263" class="linenumbersTransparent linenumbers">0134</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb135" name="#facs_9_r1__p9__lb135" id="#facs_9_r1__p9__lb135" size="800,1253" zone="60,357 270,376 497,345 580,369 752,349 752,320 544,332 443,306 418,325 60,328" class="linenumbersVisible linenumbers" data-lbnr="135">0135</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb136" name="#facs_9_r1__p9__lb136" id="#facs_9_r1__p9__lb136" size="800,1253" zone="47,411 268,425 409,402 541,431 706,425 727,418 727,366 602,387 543,369 363,381 303,357 270,376 214,361 47,381" class="linenumbersTransparent linenumbers">0136</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb137" name="#facs_9_r1__p9__lb137" id="#facs_9_r1__p9__lb137" size="800,1253" zone="60,475 172,492 222,466 366,458 616,483 724,459 724,416 333,421 298,439 241,420 60,422" class="linenumbersTransparent linenumbers">0137</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb138" name="#facs_9_r1__p9__lb138" id="#facs_9_r1__p9__lb138" size="800,1253" zone="56,533 185,514 242,538 491,515 681,526 763,508 763,475 460,491 316,469 244,495 195,478 55,495" class="linenumbersTransparent linenumbers">0138</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb139" name="#facs_9_r1__p9__lb139" id="#facs_9_r1__p9__lb139" size="800,1253" zone="50,589 431,601 510,576 690,601 761,588 761,541 593,534 566,552 444,519 50,544" class="linenumbersTransparent linenumbers">0139</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb140" name="#facs_9_r1__p9__lb140" id="#facs_9_r1__p9__lb140" size="800,1253" zone="101,679 252,646 425,667 491,644 578,652 603,646 602,596 554,588 508,609 396,589 172,596 149,615 99,616" class="linenumbersVisible linenumbers" data-lbnr="140">0140</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb141" name="#facs_9_r1__p9__lb141" id="#facs_9_r1__p9__lb141" size="800,1253" zone="504,693 519,699 528,692 535,695 545,691 551,693 561,686 574,695 597,688 592,650 583,648 577,652 571,646 567,648 562,644 557,651 548,646 523,651 517,648 506,659 500,659" class="linenumbersTransparent linenumbers">0141</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb142" name="#facs_9_r1__p9__lb142" id="#facs_9_r1__p9__lb142" size="800,1253" zone="221,1127 642,1099 742,1120 802,1085 801,1044 532,1039 470,1062 342,1038 218,1048" class="linenumbersTransparent linenumbers">0142</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb143" name="#facs_9_r1__p9__lb143" id="#facs_9_r1__p9__lb143" size="800,1253" zone="143,1198 173,1202 173,1153 168,1153 166,1155 158,1153 154,1155 149,1151 143,1152" class="linenumbersTransparent linenumbers">0143</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb144" name="#facs_9_r1__p9__lb144" id="#facs_9_r1__p9__lb144" size="800,1253" zone="117,1218 129,1220 131,1219 136,1222 142,1217 146,1220 151,1220 148,1183 137,1183 129,1180 128,1181 125,1178 115,1178" class="linenumbersTransparent linenumbers">0144</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_9_r1__p9__lb145" name="#facs_9_r1__p9__lb145" id="#facs_9_r1__p9__lb145" size="800,1253" zone="201,1238 220,1237 229,1244 240,1239 244,1239 249,1244 268,1239 274,1190 263,1185 252,1188 247,1184 241,1189 228,1191 216,1179 209,1179" class="linenumbersVisible linenumbers" data-lbnr="145">0145</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>10</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-10"><img id="os-id-10-img" src="https://files.transkribus.eu/Get?id=EJOKJJUZCYMEKGRQWZYWTMQN&amp;fileType=view" onload="loadImage('os-id-10', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__17" data-id="#facs_10_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb146" name="#facs_10_r1__p10__lb146" id="#facs_10_r1__p10__lb146" size="800,1229" zone="22,1200 38,1201 41,1204 44,1201 47,1203 53,1203 53,1174 47,1173 39,1174 37,1172 36,1173 31,1172 27,1175 22,1175" class="linenumbersTransparent linenumbers">0146</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb147" name="#facs_10_r1__p10__lb147" id="#facs_10_r1__p10__lb147" size="800,1229" zone="128,180 172,191 212,167 328,190 433,146 458,164 582,166 598,161 598,108 556,114 517,96 375,127 295,100 248,116 164,94 128,116" class="linenumbersTransparent linenumbers">0147</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb148" name="#facs_10_r1__p10__lb148" id="#facs_10_r1__p10__lb148" size="800,1229" zone="50,372 109,362 162,388 316,367 390,386 466,356 514,376 707,372 709,300 567,312 499,291 450,314 192,321 51,302" class="linenumbersTransparent linenumbers">0148</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb149" name="#facs_10_r1__p10__lb149" id="#facs_10_r1__p10__lb149" size="800,1229" zone="52,420 196,412 227,435 300,436 398,414 703,414 703,387 655,369 604,388 445,359 390,386 362,369 164,387 52,373" class="linenumbersTransparent linenumbers">0149</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb150" name="#facs_10_r1__p10__lb150" id="#facs_10_r1__p10__lb150" size="800,1229" zone="39,490 133,460 321,480 513,462 568,485 720,466 720,428 686,445 612,415 406,418 370,439 320,423 231,437 196,412 40,426" class="linenumbersVisible linenumbers" data-lbnr="150">0150</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb151" name="#facs_10_r1__p10__lb151" id="#facs_10_r1__p10__lb151" size="800,1229" zone="53,515 382,506 726,533 713,477 186,484 134,459 92,490 53,485" class="linenumbersTransparent linenumbers">0151</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb152" name="#facs_10_r1__p10__lb152" id="#facs_10_r1__p10__lb152" size="800,1229" zone="35,575 58,586 97,554 162,570 228,555 339,587 468,557 709,567 709,535 633,518 434,533 295,508 169,528 35,508" class="linenumbersTransparent linenumbers">0152</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb153" name="#facs_10_r1__p10__lb153" id="#facs_10_r1__p10__lb153" size="800,1229" zone="31,633 106,605 212,632 315,609 388,633 481,598 625,619 706,605 695,567 569,577 537,557 341,586 247,562 153,580 99,554 58,586 30,574" class="linenumbersTransparent linenumbers">0153</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb154" name="#facs_10_r1__p10__lb154" id="#facs_10_r1__p10__lb154" size="800,1229" zone="33,661 422,690 529,659 731,663 731,614 519,639 462,616 395,638 308,615 248,642 154,614 33,634" class="linenumbersTransparent linenumbers">0154</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb155" name="#facs_10_r1__p10__lb155" id="#facs_10_r1__p10__lb155" size="800,1229" zone="32,720 188,708 306,737 378,710 495,704 587,728 718,705 717,683 640,670 136,695 31,661" class="linenumbersVisible linenumbers" data-lbnr="155">0155</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb156" name="#facs_10_r1__p10__lb156" id="#facs_10_r1__p10__lb156" size="800,1229" zone="48,780 108,790 222,760 359,779 413,756 520,782 705,776 713,733 618,708 520,725 444,709 306,738 188,713 47,731" class="linenumbersTransparent linenumbers">0156</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb157" name="#facs_10_r1__p10__lb157" id="#facs_10_r1__p10__lb157" size="800,1229" zone="47,846 728,816 727,779 700,773 504,792 428,763 302,785 252,772 197,806 89,782 47,807" class="linenumbersTransparent linenumbers">0157</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb158" name="#facs_10_r1__p10__lb158" id="#facs_10_r1__p10__lb158" size="800,1229" zone="70,892 366,904 482,869 719,882 728,851 406,826 201,865 132,837 69,861" class="linenumbersTransparent linenumbers">0158</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb159" name="#facs_10_r1__p10__lb159" id="#facs_10_r1__p10__lb159" size="800,1229" zone="31,936 229,962 456,954 489,931 529,952 730,957 723,887 31,901" class="linenumbersTransparent linenumbers">0159</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb160" name="#facs_10_r1__p10__lb160" id="#facs_10_r1__p10__lb160" size="800,1229" zone="27,1025 373,994 709,1018 729,1008 729,954 576,957 490,931 426,968 393,949 27,960" class="linenumbersVisible linenumbers" data-lbnr="160">0160</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_10_r1__p10__lb161" name="#facs_10_r1__p10__lb161" id="#facs_10_r1__p10__lb161" size="800,1229" zone="28,1050 101,1050 153,1085 259,1058 356,1086 451,1048 612,1087 661,1054 728,1055 729,1010 339,1022 299,1001 28,1024" class="linenumbersTransparent linenumbers">0161</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>11</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-11"><img id="os-id-11-img" src="https://files.transkribus.eu/Get?id=AFUMKUEQFCBVMSKCGJNVUEPL&amp;fileType=view" onload="loadImage('os-id-11', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__15" data-id="#facs_11_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb162" name="#facs_11_r1__p11__lb162" id="#facs_11_r1__p11__lb162" size="800,1222" zone="134,361 159,351 202,376 235,354 315,370 393,348 449,367 734,357 752,352 752,278 641,306 458,278 406,301 134,297" class="linenumbersTransparent linenumbers">0162</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb163" name="#facs_11_r1__p11__lb163" id="#facs_11_r1__p11__lb163" size="800,1222" zone="131,415 176,395 265,434 307,413 497,432 567,404 677,403 795,430 803,377 669,380 620,357 508,378 434,358 407,376 132,364" class="linenumbersTransparent linenumbers">0163</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb164" name="#facs_11_r1__p11__lb164" id="#facs_11_r1__p11__lb164" size="800,1222" zone="127,452 236,473 403,454 503,465 533,489 688,465 753,483 784,472 785,430 668,404 565,431 127,426" class="linenumbersTransparent linenumbers">0164</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb165" name="#facs_11_r1__p11__lb165" id="#facs_11_r1__p11__lb165" size="800,1222" zone="112,521 181,534 261,511 363,543 532,515 702,536 764,525 765,484 576,471 534,489 400,454 260,482 161,455 113,468" class="linenumbersVisible linenumbers" data-lbnr="165">0165</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb166" name="#facs_11_r1__p11__lb166" id="#facs_11_r1__p11__lb166" size="800,1222" zone="115,597 208,564 350,598 425,581 523,595 557,573 753,599 755,528 525,526 485,547 401,529 356,554 327,531 255,550 203,524 117,524" class="linenumbersTransparent linenumbers">0166</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb167" name="#facs_11_r1__p11__lb167" id="#facs_11_r1__p11__lb167" size="800,1222" zone="111,643 205,649 260,618 351,615 430,649 590,622 718,650 788,639 789,598 677,605 634,583 457,603 400,584 344,600 267,580 112,595" class="linenumbersTransparent linenumbers">0167</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb168" name="#facs_11_r1__p11__lb168" id="#facs_11_r1__p11__lb168" size="800,1222" zone="113,698 258,687 436,708 568,671 637,676 692,712 779,690 779,643 675,634 473,661 360,636 254,662 114,644" class="linenumbersTransparent linenumbers">0168</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb169" name="#facs_11_r1__p11__lb169" id="#facs_11_r1__p11__lb169" size="800,1222" zone="107,759 164,733 272,754 351,728 487,725 545,752 619,737 743,755 757,708 353,697 293,716 192,693 107,712" class="linenumbersTransparent linenumbers">0169</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb170" name="#facs_11_r1__p11__lb170" id="#facs_11_r1__p11__lb170" size="800,1222" zone="106,802 215,821 254,796 295,815 384,793 538,820 739,817 758,813 759,749 557,748 485,769 449,749 415,764 343,747 292,769 236,750 107,760" class="linenumbersVisible linenumbers" data-lbnr="170">0170</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb171" name="#facs_11_r1__p11__lb171" id="#facs_11_r1__p11__lb171" size="800,1222" zone="104,864 313,861 351,880 414,848 488,872 608,851 628,868 773,860 773,836 679,809 588,834 402,801 254,827 105,800" class="linenumbersTransparent linenumbers">0171</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb172" name="#facs_11_r1__p11__lb172" id="#facs_11_r1__p11__lb172" size="800,1222" zone="85,920 384,911 467,933 532,909 803,938 803,850 620,882 404,859 351,880 85,878" class="linenumbersTransparent linenumbers">0172</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb173" name="#facs_11_r1__p11__lb173" id="#facs_11_r1__p11__lb173" size="800,1222" zone="85,962 169,986 493,968 536,989 585,972 736,993 783,974 771,942 639,922 525,945 420,919 276,935 230,916 85,920" class="linenumbersTransparent linenumbers">0173</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb174" name="#facs_11_r1__p11__lb174" id="#facs_11_r1__p11__lb174" size="800,1222" zone="99,1025 222,1042 419,1027 521,1051 765,1029 765,999 535,988 493,968 295,1001 232,980 173,1000 99,983" class="linenumbersTransparent linenumbers">0174</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_11_r1__p11__lb175" name="#facs_11_r1__p11__lb175" id="#facs_11_r1__p11__lb175" size="800,1222" zone="647,1192 659,1191 662,1193 665,1190 674,1190 674,1117 669,1117 667,1119 661,1118 654,1125 647,1126" class="linenumbersVisible linenumbers" data-lbnr="175">0175</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>12</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-12"><img id="os-id-12-img" src="https://files.transkribus.eu/Get?id=RNYTSTKFNHTVNQJUIDLECDWY&amp;fileType=view" onload="loadImage('os-id-12', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__16" data-id="#facs_12_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb176" name="#facs_12_r1__p12__lb176" id="#facs_12_r1__p12__lb176" size="800,1265" zone="13,1213 34,1214 34,1141 27,1142 20,1138 13,1139" class="linenumbersTransparent linenumbers">0176</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb177" name="#facs_12_r1__p12__lb177" id="#facs_12_r1__p12__lb177" size="800,1265" zone="7,1234 10,1234 13,1237 19,1240 22,1240 25,1238 32,1240 35,1216 29,1215 29,1214 26,1215 23,1214 23,1213 20,1214 18,1212 10,1211" class="linenumbersTransparent linenumbers">0177</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb178" name="#facs_12_r1__p12__lb178" id="#facs_12_r1__p12__lb178" size="800,1265" zone="29,374 136,385 248,359 721,385 721,334 636,322 29,317" class="linenumbersTransparent linenumbers">0178</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb179" name="#facs_12_r1__p12__lb179" id="#facs_12_r1__p12__lb179" size="800,1265" zone="33,441 73,419 124,445 191,417 289,449 454,418 719,432 719,404 675,386 615,397 566,375 498,399 395,373 188,396 33,373" class="linenumbersTransparent linenumbers">0179</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb180" name="#facs_12_r1__p12__lb180" id="#facs_12_r1__p12__lb180" size="800,1265" zone="29,477 263,475 304,500 349,471 459,468 610,493 647,467 709,471 709,427 511,459 348,428 320,448 209,432 29,448" class="linenumbersVisible linenumbers" data-lbnr="180">0180</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb181" name="#facs_12_r1__p12__lb181" id="#facs_12_r1__p12__lb181" size="800,1265" zone="24,540 479,549 523,531 702,561 703,498 560,506 503,487 260,509 25,473" class="linenumbersTransparent linenumbers">0181</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb182" name="#facs_12_r1__p12__lb182" id="#facs_12_r1__p12__lb182" size="800,1265" zone="23,589 125,583 233,615 344,589 442,608 522,590 700,627 722,622 724,569 195,538 92,561 24,540" class="linenumbersTransparent linenumbers">0182</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb183" name="#facs_12_r1__p12__lb183" id="#facs_12_r1__p12__lb183" size="800,1265" zone="6,665 76,652 120,673 175,642 273,670 616,646 730,674 730,619 499,593 344,589 233,624 172,593 6,623" class="linenumbersTransparent linenumbers">0183</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb184" name="#facs_12_r1__p12__lb184" id="#facs_12_r1__p12__lb184" size="800,1265" zone="32,722 577,718 680,700 680,660 486,676 453,652 252,656 194,677 69,653 32,673" class="linenumbersTransparent linenumbers">0184</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb185" name="#facs_12_r1__p12__lb185" id="#facs_12_r1__p12__lb185" size="800,1265" zone="35,762 348,758 416,786 567,793 719,768 720,744 674,728 640,746 562,712 403,735 223,711 190,741 117,714 36,721" class="linenumbersVisible linenumbers" data-lbnr="185">0185</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb186" name="#facs_12_r1__p12__lb186" id="#facs_12_r1__p12__lb186" size="800,1265" zone="35,847 169,824 316,850 452,823 493,847 699,856 699,798 622,782 387,771 291,797 200,767 152,788 36,781" class="linenumbersTransparent linenumbers">0186</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb187" name="#facs_12_r1__p12__lb187" id="#facs_12_r1__p12__lb187" size="800,1265" zone="36,902 151,884 300,910 431,884 699,925 700,865 569,868 520,841 455,859 289,852 261,832 37,845" class="linenumbersTransparent linenumbers">0187</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb188" name="#facs_12_r1__p12__lb188" id="#facs_12_r1__p12__lb188" size="800,1265" zone="20,939 168,935 216,972 285,946 390,969 611,961 672,982 690,917 527,904 382,923 231,886 109,909 21,895" class="linenumbersTransparent linenumbers">0188</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb189" name="#facs_12_r1__p12__lb189" id="#facs_12_r1__p12__lb189" size="800,1265" zone="16,990 83,1022 249,1003 424,1027 576,995 687,1014 687,980 620,963 500,951 410,971 345,949 187,971 118,936 17,937" class="linenumbersTransparent linenumbers">0189</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_12_r1__p12__lb190" name="#facs_12_r1__p12__lb190" id="#facs_12_r1__p12__lb190" size="800,1265" zone="27,1089 217,1075 409,1104 652,1071 707,1088 715,1027 113,1029 28,992" class="linenumbersVisible linenumbers" data-lbnr="190">0190</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>13</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-13"><img id="os-id-13-img" src="https://files.transkribus.eu/Get?id=BOLNHSBNNVZRDDKZGXBIJCCI&amp;fileType=view" onload="loadImage('os-id-13', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__18" data-id="#facs_13_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb191" name="#facs_13_r1__p13__lb191" id="#facs_13_r1__p13__lb191" size="800,1245" zone="65,1218 76,1216 81,1220 88,1220 91,1218 96,1221 101,1221 101,1185 88,1186 84,1182 78,1180 65,1180" class="linenumbersTransparent linenumbers">0191</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb192" name="#facs_13_r1__p13__lb192" id="#facs_13_r1__p13__lb192" size="800,1245" zone="99,323 321,300 387,318 437,303 524,332 639,300 765,298 765,267 694,253 509,264 374,228 237,253 100,231" class="linenumbersTransparent linenumbers">0192</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb193" name="#facs_13_r1__p13__lb193" id="#facs_13_r1__p13__lb193" size="800,1245" zone="91,361 181,378 282,352 397,386 458,366 634,380 698,351 769,366 769,330 717,315 592,345 341,308 91,321" class="linenumbersTransparent linenumbers">0193</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb194" name="#facs_13_r1__p13__lb194" id="#facs_13_r1__p13__lb194" size="800,1245" zone="95,449 179,424 358,453 462,424 566,454 691,413 780,424 769,373 554,393 448,368 397,386 326,359 174,384 95,361" class="linenumbersTransparent linenumbers">0194</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb195" name="#facs_13_r1__p13__lb195" id="#facs_13_r1__p13__lb195" size="800,1245" zone="110,483 190,484 293,522 370,486 416,504 475,487 519,511 605,478 714,502 770,479 770,424 718,440 659,418 565,456 110,445" class="linenumbersVisible linenumbers" data-lbnr="195">0195</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb196" name="#facs_13_r1__p13__lb196" id="#facs_13_r1__p13__lb196" size="800,1245" zone="103,544 268,569 382,548 454,572 672,568 723,544 794,560 794,511 646,486 507,517 441,497 294,522 103,487" class="linenumbersTransparent linenumbers">0196</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb197" name="#facs_13_r1__p13__lb197" id="#facs_13_r1__p13__lb197" size="800,1245" zone="116,617 300,622 340,593 389,612 471,592 803,615 803,564 781,556 501,574 327,550 269,576 116,547" class="linenumbersTransparent linenumbers">0197</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb198" name="#facs_13_r1__p13__lb198" id="#facs_13_r1__p13__lb198" size="800,1245" zone="101,692 361,660 470,683 498,661 549,675 671,646 769,674 769,632 591,598 456,632 101,617" class="linenumbersTransparent linenumbers">0198</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb199" name="#facs_13_r1__p13__lb199" id="#facs_13_r1__p13__lb199" size="800,1245" zone="108,732 227,716 343,745 616,725 723,744 773,725 772,674 671,646 572,678 321,663 107,691" class="linenumbersTransparent linenumbers">0199</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb200" name="#facs_13_r1__p13__lb200" id="#facs_13_r1__p13__lb200" size="800,1245" zone="106,789 173,806 344,768 513,799 540,786 568,809 768,798 762,727 442,755 262,723 106,733" class="linenumbersVisible linenumbers" data-lbnr="200">0200</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb201" name="#facs_13_r1__p13__lb201" id="#facs_13_r1__p13__lb201" size="800,1245" zone="110,835 282,871 601,849 781,864 782,808 740,802 590,799 538,824 375,788 334,811 111,788" class="linenumbersTransparent linenumbers">0201</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb202" name="#facs_13_r1__p13__lb202" id="#facs_13_r1__p13__lb202" size="800,1245" zone="128,912 256,907 330,943 480,907 626,921 686,907 686,865 562,881 486,864 128,877" class="linenumbersTransparent linenumbers">0202</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb203" name="#facs_13_r1__p13__lb203" id="#facs_13_r1__p13__lb203" size="800,1245" zone="189,1003 333,992 447,1013 534,972 603,994 733,993 730,908 602,925 480,907 369,946 187,937" class="linenumbersTransparent linenumbers">0203</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb204" name="#facs_13_r1__p13__lb204" id="#facs_13_r1__p13__lb204" size="800,1245" zone="112,1078 140,1086 176,1069 255,1078 313,1061 383,1071 407,1057 457,1062 455,1011 412,1009 361,1038 322,1021 280,1032 224,1009 133,1020 110,1010" class="linenumbersTransparent linenumbers">0204</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb205" name="#facs_13_r1__p13__lb205" id="#facs_13_r1__p13__lb205" size="800,1245" zone="317,1099 326,1098 334,1105 342,1106 356,1095 365,1098 372,1094 390,1100 407,1098 405,1060 398,1059 395,1063 379,1064 374,1068 362,1064 349,1069 337,1068 335,1071 315,1068" class="linenumbersVisible linenumbers" data-lbnr="205">0205</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb206" name="#facs_13_r1__p13__lb206" id="#facs_13_r1__p13__lb206" size="800,1245" zone="414,1140 619,1125 663,1149 696,1136 802,1156 805,1040 752,1077 607,1106 545,1091 509,1099 469,1080 415,1087" class="linenumbersTransparent linenumbers">0206</a></span><span class="transcript-line-contents"></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_13_r1__p13__lb207" name="#facs_13_r1__p13__lb207" id="#facs_13_r1__p13__lb207" size="800,1245" zone="291,1177 498,1165 554,1183 720,1169 767,1182 803,1174 804,1151 715,1152 697,1136 618,1146 576,1129 490,1149 389,1108 293,1101" class="linenumbersTransparent linenumbers">0207</a></span><span class="transcript-line-contents"></span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
             <p style="text-align:center;"></p>
          </div>
          <div class="tei-back">
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_person_id__18" data-bs-keyboard="false" tabindex="-1" aria-labelledby=", " aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">, </h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table class="table">
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    GND ID
-                                    </th>
-                                 <td><a href="https://d-nb.info/gnd/118712411" target="_blank">118712411</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_person_id__18.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
+            EMT - Eleonora Magdalena von Pfalz-Neuburg, Kaiserin
+            https://d-nb.info/gnd/101026641
             
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_person_id__9" data-bs-keyboard="false" tabindex="-1" aria-labelledby=", " aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">, </h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table class="table">
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    GND ID
-                                    </th>
-                                 <td><a href="https://d-nb.info/gnd/101026641" target="_blank">101026641</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_person_id__9.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
             
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_place_id__63" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Wien" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Wien</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table>
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    Geonames
-                                    </th>
-                                 <td><a href="https://sws.geonames.org/2761369/" target="_blank">2761369</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_place_id__63.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
+            JW - Johann Wilhelm von der Pfalz
+            https://d-nb.info/gnd/118712411
+            
+            
+            Wien
+            
+            48.20849 16.372080
+            
+            https://sws.geonames.org/2761369/
+            
             </div>
       </main>
       <footer xmlns="http://www.w3.org/1999/xhtml" class="footer mt-auto py-3 bg-body-tertiary">
@@ -450,5 +405,5 @@
                 new Darkmode().showWidget();
             }
             window.addEventListener('load', addDarkmodeWidget);
-        </script><script xmlns="http://www.w3.org/1999/xhtml" src="js/i18n.js"></script><script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script><script type="text/javascript" src="js/run.js"></script><script type="text/javascript" src="js/osd_scroll.js"></script></body>
+        </script><script xmlns="http://www.w3.org/1999/xhtml" src="js/i18n.js"></script></body>
 </html>

@@ -1,3 +1,163 @@
-#languageSwitcher{
+:root {
+    --bs-border-width: 0px;
+    --emt: #0b2966;
+    --emt-hover: #0b2966b4;
+}
+
+main {
+    padding-top: 2em;
+}
+
+.navbar {
+    border-bottom: 5px solid var(--emt);
+}
+
+a {
+    color: var(--emt)
+}
+
+a:hover {
+    color: var(--emt-hover)
+}
+
+#languageSwitcher {
     max-width: 10%;
+}
+
+.container-md {
+    max-width: 800px;
+}
+
+.footnotes {
+    padding-bottom: 1em;
+}
+
+/*** calendar ***/
+
+#years-table .btn-light:focus,
+#years-table .btn-light.focus {
+    text-decoration: underline;
+    text-decoration-color: #A63437;
+    text-decoration-thickness: 4px
+}
+
+.yearbtn {
+    padding: 2px;
+    font-size: 0.9rem;
+    border: none;
+    background-color: transparent;
+}
+
+.overlay {
+    border: rgba(124, 124, 124, .2) 1px solid;
+    background-color: rgba(245, 234, 37, .5);
+    margin: -15pt;
+    padding: 12pt;
+}
+
+
+/* linebreak-layout */
+
+.transcript-line {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.transcript-line-number {
+    flex: 0;
+}
+
+.transcript-line-contents {
+    flex: 1;
+}
+
+.transcript-line.active {
+    background-color: rgba(245, 234, 37, .5);
+}
+
+
+/* linenumbers */
+
+.linenumbers {
+    margin: 0 1.5em 0 0;
+}
+
+.linenumbersTransparent {
+    color: transparent;
+}
+
+.linenumbersVisible,
+.active .linenumbersTransparent {
+    color: #444;
+}
+
+
+.regest-text {
+    font-style: italic;
+}
+
+.entity {
+    border-radius: 0.5rem;
+    padding: 0 0.3rem;
+}
+
+.entity-person {
+    background-color: #efe1dc;
+}
+
+.entity-place {
+    background-color: #fbd6d0;
+}
+
+.entity-org {
+    background-color: #ffedcc;
+}
+
+.supplied {
+    background-color: #f2f2f2;
+    color: #185de7;
+}
+
+.abbr {
+    color: #185de7;
+}
+
+.add {
+    color: #185de7;
+}
+
+.unclear {
+    color: #378ab8;
+}
+
+.date {
+    color: #d45121;
+}
+
+.unclear-ciphered {
+    font-style: italic;
+    color: #378ab8;
+}
+
+.seg-blackening {
+    text-decoration: line-through;
+    color: #185de7;
+
+}
+
+.image-list-flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.image-list-flex-row>* {
+    width: min(400px, 100%);
+}
+
+.dropdown-item-text {
+    display: block;
+    padding: 0.25rem 1rem;
+    font-weight: bold;
 }

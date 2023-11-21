@@ -35,12 +35,7 @@
       <title xmlns="http://www.w3.org/1999/xhtml">Eleonora Magdalena von Pfalz-Neuburg an Johann Wilhelm von Pfalz-Neuburg, Wien am 1695.01.12</title>
       <link xmlns="http://www.w3.org/1999/xhtml" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
       <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-      <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/style.css" type="text/css"><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script><style>
-                    .navBarNavDropdown ul li:nth-child(2) {
-                        display: none !important;
-                    }
-                </style>
-   </head>
+      <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/style.css" type="text/css"><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script><script src="js/osd_single.js"></script></head>
    <body class="d-flex flex-column h-100">
       <header xmlns="http://www.w3.org/1999/xhtml">
          <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -54,6 +49,7 @@
                            <li><a class="dropdown-item" data-i18n="navbar__cipher" href="chiffre.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__edition" href="richtlinien.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__team" href="team.html"></a></li>
+                           <li><a class="dropdown-item" data-i18n="navbar__blog" href="rss.html"></a></li>
                            <li>
                               <hr class="dropdown-divider">
                            </li>
@@ -62,7 +58,7 @@
                      </li>
                      <li class="nav-item"><a class="nav-link" href="calendar.html" data-i18n="navbar__calendar"></a></li>
                      <li class="nav-item"><a title="Briefverzeichnis" href="toc.html" class="nav-link" data-i18n="navbar__letterindex"></a></li>
-                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__project" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
+                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__register" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
                            <li><a class="dropdown-item" data-i18n="navbar__persons" href="listperson.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__places" href="listplace.html"></a></li>
                         </ul>
@@ -85,176 +81,107 @@
                <div class="col-md-2 col-lg-2 col-sm-12" style="text-align:right">
                   <h1><a href="kasten_blau_44_3f_0008.html"><i class="bi bi-chevron-right" title="weiter"></i></a></h1>
                </div>
-               <div id="editor-widget">
-                  <div xmlns="http://www.w3.org/1999/xhtml" id="aot-navBarNavDropdown" class="navBarNavDropdown dropstart"><a title="Annotationen" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
-                           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path></svg></a><ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                           <full-size opt="fls"></full-size>
-                        </li>
-                        <li class="dropdown-item">
-                           <image-switch opt="es"></image-switch>
-                        </li>
-                        <li class="dropdown-item">
-                           <font-size opt="fs"></font-size>
-                        </li>
-                        <li class="dropdown-item">
-                           <font-family opt="ff"></font-family>
-                        </li>
-                        <li class="dropdown-item" style="border-top: 5px dashed lightgrey !important;">
-                           <annotation-slider opt="ef"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="prs"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="plc"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="wrk"></annotation-slider>
-                        </li>
-                        <li class="dropdown-item">
-                           <annotation-slider opt="org"></annotation-slider>
-                        </li>
-                     </ul>
+            </div>
+            <div class="regest">
+               <h4><span class="badge badge-primary p-1 m-1">Ausfertigung</span><span class="badge badge-primary p-1 m-1">eigenhändig</span></h4>
+               <div class="regest-text">
+                  
+                  <p id="p__1" data-id=""></p>
                   </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>1</h5>
                </div>
             </div>
-            
-            <div id="div__27"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_1">1</span><p id="p__27" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar"><abbr  xmlns:local="http://dse-static.foo.bar" title="unclear">12. Januarijjan 95</abbr>
-                  <br  xmlns:local="http://dse-static.foo.bar">Durchleüchtiger Cuhrfürst, mein herzallerliebster herrh brueder
-                  <br  xmlns:local="http://dse-static.foo.bar">Entlich hab ich ein mahl dißse beygeschloßene relation
-                  <br  xmlns:local="http://dse-static.foo.bar">vom Hamilton gestren empfangen, in welcher er sich zwar beziehet
-                  <br  xmlns:local="http://dse-static.foo.bar">auf eine, so er 8 dag vohrhero geschikt, solche hab ich aber
-                  <br  xmlns:local="http://dse-static.foo.bar">nit bekommen, darumb es nötich ist, das man in
-                  <br  xmlns:local="http://dse-static.foo.bar">disem so wichtigen werkh mit dem schreiben behutsammer
-                  <br  xmlns:local="http://dse-static.foo.bar">gehen, vndt bitte, dero Liebden wollen mihr die ziffra, so sie mit
-                  <br  xmlns:local="http://dse-static.foo.bar">ihm haben, zueschiken, damit hinfüro in selbiger möge
-                  <br  xmlns:local="http://dse-static.foo.bar">geschriben werden. Ich hab mihr nit getraut mit handen in
-                  <br  xmlns:local="http://dse-static.foo.bar">diser materi auszuelaßen, darumb entlich die sach
-                  <br  xmlns:local="http://dse-static.foo.bar"><a name="fna_1" href="#fn1" title="Am Anfang der Zeile befindet sich ein Beilagenstrich."><sup  xmlns:local="http://dse-static.foo.bar">1</sup></a>dem Schellerer vertraut vndt durch ihm dise beygeschloßne
-                  <br  xmlns:local="http://dse-static.foo.bar">antwort schreiben laßen, von niemant vnterschriben, vndt
-                  <br  xmlns:local="http://dse-static.foo.bar">also werde hinfüro dise corespondens continuiren. Dero Liebden werden
-                  <br  xmlns:local="http://dse-static.foo.bar">daraus ersehn, was ich ihm vohr precautiones aufgebe
-                  <br  xmlns:local="http://dse-static.foo.bar">in disem so wichtigen werkh, welche alle <abbr  xmlns:local="http://dse-static.foo.bar" title="unclear">hoscht</abbr> nötich
-                  <br  xmlns:local="http://dse-static.foo.bar">sein, vndt bitte, dero Liebden wollens durch dero befehl an ihn</p>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-1"><img id="os-id-1-img" src="https://files.transkribus.eu/Get?id=NJJCPEMUOLZRYHWJEOAUZKPQ&amp;fileType=view" onload="loadImage('os-id-1', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__27" data-id="#facs_1_r2"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb1" name="#facs_1_r2__p1__lb1" id="#facs_1_r2__p1__lb1" size="800,1238" zone="27,71 37,68 58,84 85,73 100,74 114,87 135,73 144,81 159,81 162,17 143,13 123,24 107,17 99,24 74,15 28,20" class="linenumbersTransparent linenumbers">0001</a></span><span class="transcript-line-contents"><span  xmlns:local="http://dse-static.foo.bar" class="unclear"><abbr title="Aktenvermerk">12. <abbr class="abbr" title="Abgekürzt: jan">Januarij</abbr>  95</abbr></span></span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb2" name="#facs_1_r2__p1__lb2" id="#facs_1_r2__p1__lb2" size="800,1238" zone="85,437 188,415 235,437 276,416 316,440 391,423 733,428 733,390 710,382 614,393 487,367 455,386 350,370 85,382" class="linenumbersTransparent linenumbers">0002</a></span><span class="transcript-line-contents">Durchleüchtiger Cuhrfürst, mein herzallerliebster <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: h">herr</abbr>  brueder
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb3" name="#facs_1_r2__p1__lb3" id="#facs_1_r2__p1__lb3" size="800,1238" zone="21,494 116,471 223,486 286,460 405,482 446,466 512,497 615,472 711,484 727,428 676,420 622,451 398,425 306,445 275,416 236,436 204,415 155,437 110,423 80,448 22,430" class="linenumbersTransparent linenumbers">0003</a></span><span class="transcript-line-contents">Entlich hab ich ein mahl dißse beygeschloßene relation
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb4" name="#facs_1_r2__p1__lb4" id="#facs_1_r2__p1__lb4" size="800,1238" zone="55,513 295,535 339,509 552,542 629,519 693,540 745,522 746,484 643,492 615,472 452,498 340,468 301,493 56,487" class="linenumbersTransparent linenumbers">0004</a></span><span class="transcript-line-contents">vom Hamilton <span  xmlns:local="http://dse-static.foo.bar" class="add">gestren</span> empfangen, in welcher er sich zwar beziehet
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb5" name="#facs_1_r2__p1__lb5" id="#facs_1_r2__p1__lb5" size="800,1238" zone="48,575 157,556 732,573 725,525 660,539 594,519 551,542 502,519 318,516 295,535 49,516" class="linenumbersVisible linenumbers" data-lbnr="5">0005</a></span><span class="transcript-line-contents">auf eine, so er 8 dag vohrhero geschikt, solche hab ich aber
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb6" name="#facs_1_r2__p1__lb6" id="#facs_1_r2__p1__lb6" size="800,1238" zone="58,623 117,607 231,629 296,604 718,626 725,575 585,584 522,564 469,581 444,561 340,585 130,561 58,586" class="linenumbersTransparent linenumbers">0006</a></span><span class="transcript-line-contents">nit bekommen, darumb es nötich ist, das man in
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb7" name="#facs_1_r2__p1__lb7" id="#facs_1_r2__p1__lb7" size="800,1238" zone="65,667 206,658 251,681 427,650 588,683 756,658 757,635 621,614 66,614" class="linenumbersTransparent linenumbers">0007</a></span><span class="transcript-line-contents">disem so wichtigen werkh mit dem schreiben behutsammer
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb8" name="#facs_1_r2__p1__lb8" id="#facs_1_r2__p1__lb8" size="800,1238" zone="62,702 115,725 164,702 351,699 542,725 588,701 753,718 753,658 588,683 473,658 327,655 257,681 205,658 62,664" class="linenumbersTransparent linenumbers">0008</a></span><span class="transcript-line-contents">gehen, vndt bitte, dero Liebden wollen mihr die ziffra, so sie mit
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb9" name="#facs_1_r2__p1__lb9" id="#facs_1_r2__p1__lb9" size="800,1238" zone="67,775 113,759 161,782 232,749 287,765 335,747 511,765 665,750 729,775 728,725 688,710 455,730 424,704 389,722 163,702 116,735 66,726" class="linenumbersTransparent linenumbers">0009</a></span><span class="transcript-line-contents">ihm haben, zueschiken, damit hinfüro in selbiger möge
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb10" name="#facs_1_r2__p1__lb10" id="#facs_1_r2__p1__lb10" size="800,1238" zone="66,826 203,796 261,821 300,801 473,813 534,792 655,818 728,806 704,761 641,752 510,764 484,748 447,769 340,746 275,778 233,751 165,782 120,760 65,779" class="linenumbersVisible linenumbers" data-lbnr="10">0010</a></span><span class="transcript-line-contents">geschriben werden. Ich hab mihr nit getraut mit handen in
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb11" name="#facs_1_r2__p1__lb11" id="#facs_1_r2__p1__lb11" size="800,1238" zone="72,854 120,872 500,842 703,867 730,854 730,807 551,801 485,826 346,799 252,827 131,806 72,826" class="linenumbersTransparent linenumbers">0011</a></span><span class="transcript-line-contents">diser materi auszuelaßen, darumb entlich die sach
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb12" name="#facs_1_r2__p1__lb12" id="#facs_1_r2__p1__lb12" size="800,1238" zone="39,925 220,889 678,917 753,896 753,845 684,874 633,848 497,843 380,876 337,851 38,870" class="linenumbersTransparent linenumbers">0012</a></span><span class="transcript-line-contents"><a name="fna_1" href="#fn1" title="Am Anfang der Zeile befindet sich ein Beilagenstrich."><sup  xmlns:local="http://dse-static.foo.bar">1</sup></a>dem Schellerer vertraut vndt durch ihm dise beygeschloßne
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb13" name="#facs_1_r2__p1__lb13" id="#facs_1_r2__p1__lb13" size="800,1238" zone="58,942 172,965 260,946 304,971 376,943 520,937 584,971 615,948 663,961 737,941 738,905 635,924 519,901 466,925 390,895 302,911 261,893 59,919" class="linenumbersTransparent linenumbers">0013</a></span><span class="transcript-line-contents">antwort schreiben laßen, von niemant vnterschriben, vndt
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb14" name="#facs_1_r2__p1__lb14" id="#facs_1_r2__p1__lb14" size="800,1238" zone="58,992 192,984 261,1011 311,982 444,1004 702,980 753,1007 753,959 700,948 584,971 470,949 399,969 356,951 295,969 261,946 173,965 111,941 58,958" class="linenumbersTransparent linenumbers">0014</a></span><span class="transcript-line-contents">also werde hinfüro dise corespondens continuiren. Dero Liebden werden
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb15" name="#facs_1_r2__p1__lb15" id="#facs_1_r2__p1__lb15" size="800,1238" zone="60,1050 126,1032 194,1061 234,1044 303,1061 394,1028 517,1050 735,1041 735,994 704,982 264,1014 192,984 104,1013 60,990" class="linenumbersVisible linenumbers" data-lbnr="15">0015</a></span><span class="transcript-line-contents">daraus ersehn, was ich ihm vohr precautiones aufgebe
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb16" name="#facs_1_r2__p1__lb16" id="#facs_1_r2__p1__lb16" size="800,1238" zone="68,1079 347,1102 453,1078 619,1102 732,1085 732,1045 649,1035 515,1052 473,1028 339,1039 302,1062 234,1044 205,1066 68,1049" class="linenumbersTransparent linenumbers">0016</a></span><span class="transcript-line-contents">in disem so wichtigen werkh, welche alle <span  xmlns:local="http://dse-static.foo.bar" class="unclear"><abbr title="offensichtlich sinnentstellende Korruptele: höchst">hoscht</abbr></span> nötich
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_1_r2__p1__lb17" name="#facs_1_r2__p1__lb17" id="#facs_1_r2__p1__lb17" size="800,1238" zone="55,1148 118,1155 185,1125 261,1146 570,1131 731,1159 732,1085 589,1103 458,1083 407,1113 362,1092 319,1110 245,1078 130,1100 56,1087" class="linenumbersTransparent linenumbers">0017</a></span><span class="transcript-line-contents">sein, vndt bitte, dero Liebden wollens durch dero befehl an ihn</span></span></p>
+               </div>
             </div>
-            <div id="div__37"><span  xmlns:local="http://dse-static.foo.bar" class="anchor-pb"></span><span  xmlns:local="http://dse-static.foo.bar" class="pb" source="#facs_2">2</span><p id="p__36" class="yes-index">
-                  <br  xmlns:local="http://dse-static.foo.bar">secondiren. Die andre parti ist darhier schon sehr allarmirt
-                  <br  xmlns:local="http://dse-static.foo.bar">vndt duen alles, was möglich, also das vohrnemste das secretum
-                  <br  xmlns:local="http://dse-static.foo.bar">vndt das man hier niks innen werde, <abbr  xmlns:local="http://dse-static.foo.bar" title="unclear">daran</abbr> alles gelegen.
-                  <br  xmlns:local="http://dse-static.foo.bar">Gott wolle alles schiken zue seiner ehr, wies zum besten ist, amen.
-                  <br  xmlns:local="http://dse-static.foo.bar">Auch vntersteh mich dero Liebden zu bitten, sich doch der zwey Landgrauen
-                  <br  xmlns:local="http://dse-static.foo.bar">von Reinfels anzuenemmen vndt die zwey brüeder zue vergleichen,
-                  <br  xmlns:local="http://dse-static.foo.bar">wie ihnen ihr Mayestät aufgedragen. Sie duen gewißlich darmit ein heiligs,
-                  <br  xmlns:local="http://dse-static.foo.bar">gott wollgefälligs werkh vndt das der religion zum besten gereichen
-                  <br  xmlns:local="http://dse-static.foo.bar">wirt, der liebe gott wirt ihnen dis werkh der christligen lieb nit
-                  <br  xmlns:local="http://dse-static.foo.bar">vnuergolten laßen. Auch hatt mihr Langraf Ernst sein
-                  <br  xmlns:local="http://dse-static.foo.bar">wittib dises memorial geschikt, ist gleichwoll dem ganzen
-                  <br  xmlns:local="http://dse-static.foo.bar">haus vndt dem alten herrn vnter der erden ein schandt,
-                  <br  xmlns:local="http://dse-static.foo.bar">wan sie so ehlendt mues herumb zien, ob dero Liebden
-                  <br  xmlns:local="http://dse-static.foo.bar">ihr können verholflich sein, das ihr die zwey Langrauen etwas
-                  <br  xmlns:local="http://dse-static.foo.bar">zue vnterhalt geben. Die hisigen zeitung werden dero Liebden von ihr Durchlaucht,
-                  <br  xmlns:local="http://dse-static.foo.bar">vnser geliebsteng frawf mutter, vernemmen, ich aber nebst
-                  <br  xmlns:local="http://dse-static.foo.bar">ein schön compliment an mein frawf schwegerin, das bitt dero Liebden ihr machen wollen,
-                  <br  xmlns:local="http://dse-static.foo.bar">werde allzeit verbleiben, leben vndt sterben
-                  <br  xmlns:local="http://dse-static.foo.bar">dero Liebden
-                  <br  xmlns:local="http://dse-static.foo.bar">getrewste schwester
-                  <br  xmlns:local="http://dse-static.foo.bar">Eleonora
-                  <br  xmlns:local="http://dse-static.foo.bar">Wien den 12ten jener 1695
-                  <br  xmlns:local="http://dse-static.foo.bar">Des Hamilton brif hab ich jezt nit bey handen,
-                  <br  xmlns:local="http://dse-static.foo.bar">werd ihn mit nechstem überschiken.</p>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
             </div>
-            
+            <div class="row">
+               <div class="col-md-12">
+                  <h5>2</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="os-id-2"><img id="os-id-2-img" src="https://files.transkribus.eu/Get?id=PYBOSRPMQNUUIFKQVBTYFHXK&amp;fileType=view" onload="loadImage('os-id-2', '')"></div>
+               </div>
+               <div class="col-md-6 editionstext">
+                  <p id="p__36" data-id="#facs_2_r1"><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb18" name="#facs_2_r1__p2__lb18" id="#facs_2_r1__p2__lb18" size="800,1235" zone="58,114 197,97 764,113 764,74 724,87 677,64 265,84 231,62 58,62" class="linenumbersTransparent linenumbers">0018</a></span><span class="transcript-line-contents">secondiren. Die andre parti ist darhier schon sehr allarmirt
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb19" name="#facs_2_r1__p2__lb19" id="#facs_2_r1__p2__lb19" size="800,1235" zone="60,154 126,143 173,174 281,146 364,169 480,146 768,149 776,113 60,114" class="linenumbersTransparent linenumbers">0019</a></span><span class="transcript-line-contents">vndt duen alles, was möglich, also das vohrnemste das secretum
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb20" name="#facs_2_r1__p2__lb20" id="#facs_2_r1__p2__lb20" size="800,1235" zone="52,202 280,183 410,210 455,184 612,212 659,193 762,206 762,146 616,162 570,144 487,171 302,174 261,152 172,174 118,146 52,161" class="linenumbersVisible linenumbers" data-lbnr="20">0020</a></span><span class="transcript-line-contents">vndt das man hier niks innen werde, <span  xmlns:local="http://dse-static.foo.bar" class="unclear"><abbr title="unsichere Lesart wegen Korrektur">daran</abbr></span> alles gelegen.
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb21" name="#facs_2_r1__p2__lb21" id="#facs_2_r1__p2__lb21" size="800,1235" zone="56,269 165,235 244,266 402,232 441,250 597,238 630,259 781,249 781,222 703,197 56,210" class="linenumbersTransparent linenumbers">0021</a></span><span class="transcript-line-contents">Gott wolle alles schiken zue seiner ehr, wies zum besten ist, amen.
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb22" name="#facs_2_r1__p2__lb22" id="#facs_2_r1__p2__lb22" size="800,1235" zone="53,298 119,286 189,316 244,289 349,304 384,279 437,306 660,284 725,307 768,299 768,267 713,245 630,260 400,237 240,269 189,250 53,269" class="linenumbersTransparent linenumbers">0022</a></span><span class="transcript-line-contents">Auch vntersteh mich dero Liebden zu bitten, sich doch der zwey Landgrauen
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb23" name="#facs_2_r1__p2__lb23" id="#facs_2_r1__p2__lb23" size="800,1235" zone="53,360 274,331 352,362 451,329 482,348 584,331 774,347 774,303 684,289 564,285 533,306 461,288 363,314 206,308 186,288 110,317 53,303" class="linenumbersTransparent linenumbers">0023</a></span><span class="transcript-line-contents">von Reinfels anzuenemmen vndt die zwey brüeder zue vergleichen,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb24" name="#facs_2_r1__p2__lb24" id="#facs_2_r1__p2__lb24" size="800,1235" zone="60,382 136,410 189,377 329,404 380,376 750,395 772,391 772,353 627,361 447,329 352,362 262,331 218,360 179,338 60,363" class="linenumbersTransparent linenumbers">0024</a></span><span class="transcript-line-contents">wie ihnen ihr Mayestät aufgedragen. Sie duen gewißlich darmit ein heiligs,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb25" name="#facs_2_r1__p2__lb25" id="#facs_2_r1__p2__lb25" size="800,1235" zone="49,455 108,429 196,453 463,422 494,446 604,422 753,434 753,404 644,374 333,406 236,383 138,410 111,390 49,398" class="linenumbersVisible linenumbers" data-lbnr="25">0025</a></span><span class="transcript-line-contents">gott wollgefälligs werkh vndt das der religion zum besten gereichen
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb26" name="#facs_2_r1__p2__lb26" id="#facs_2_r1__p2__lb26" size="800,1235" zone="49,487 202,476 251,499 414,469 480,492 536,470 616,492 756,472 755,435 604,422 477,453 352,432 49,454" class="linenumbersTransparent linenumbers">0026</a></span><span class="transcript-line-contents">wirt, der liebe gott wirt ihnen dis werkh der christligen lieb nit
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb27" name="#facs_2_r1__p2__lb27" id="#facs_2_r1__p2__lb27" size="800,1235" zone="40,523 121,548 146,525 243,545 442,513 630,533 750,515 750,472 488,498 417,474 381,500 353,483 284,504 194,476 106,505 39,485" class="linenumbersTransparent linenumbers">0027</a></span><span class="transcript-line-contents">vnuergolten laßen. Auch hatt mihr Langraf Ernst sein
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb28" name="#facs_2_r1__p2__lb28" id="#facs_2_r1__p2__lb28" size="800,1235" zone="52,573 176,587 330,565 373,589 438,564 494,586 606,558 770,578 769,532 681,520 51,544" class="linenumbersTransparent linenumbers">0028</a></span><span class="transcript-line-contents">wittib dises memorial geschikt, ist gleichwoll dem ganzen
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb29" name="#facs_2_r1__p2__lb29" id="#facs_2_r1__p2__lb29" size="800,1235" zone="48,634 331,615 388,637 444,611 557,633 729,611 728,570 683,565 374,589 337,566 174,587 96,569 48,590" class="linenumbersTransparent linenumbers">0029</a></span><span class="transcript-line-contents">haus vndt dem alten herrn vnter der erden ein schandt,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb30" name="#facs_2_r1__p2__lb30" id="#facs_2_r1__p2__lb30" size="800,1235" zone="55,660 115,673 144,652 191,678 530,657 618,683 648,656 721,663 721,622 628,640 505,616 388,638 333,616 55,631" class="linenumbersVisible linenumbers" data-lbnr="30">0030</a></span><span class="transcript-line-contents">wan sie so ehlendt mues herumb zien, ob dero Liebden
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb31" name="#facs_2_r1__p2__lb31" id="#facs_2_r1__p2__lb31" size="800,1235" zone="59,715 495,700 655,727 768,709 768,668 674,686 384,654 59,673" class="linenumbersTransparent linenumbers">0031</a></span><span class="transcript-line-contents">ihr können verholflich sein, das ihr die zwey Langrauen etwas
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb32" name="#facs_2_r1__p2__lb32" id="#facs_2_r1__p2__lb32" size="800,1235" zone="58,761 246,752 334,775 423,751 492,779 593,759 637,777 754,761 754,715 509,707 448,729 235,696 58,720" class="linenumbersTransparent linenumbers">0032</a></span><span class="transcript-line-contents">zue vnterhalt geben. Die hisigen zeitung werden dero Liebden von ihr Durchlaucht,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb33" name="#facs_2_r1__p2__lb33" id="#facs_2_r1__p2__lb33" size="800,1235" zone="56,808 136,799 193,826 235,805 454,816 564,797 662,829 761,827 745,764 658,783 607,764 481,782 424,750 334,775 248,751 56,761" class="linenumbersTransparent linenumbers">0033</a></span><span class="transcript-line-contents">vnser <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: g">geliebsten</abbr>  <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: f">fraw</abbr>  mutter, vernemmen, ich aber nebst
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb34" name="#facs_2_r1__p2__lb34" id="#facs_2_r1__p2__lb34" size="800,1235" zone="56,858 112,873 217,849 298,870 399,849 439,873 613,849 667,872 743,853 743,822 661,829 563,798 512,822 420,803 196,827 137,800 56,809" class="linenumbersTransparent linenumbers">0034</a></span><span class="transcript-line-contents">ein schön compliment an mein <abbr  xmlns:local="http://dse-static.foo.bar" class="abbr" title="Abgekürzt: f">fraw</abbr>  schw<span  xmlns:local="http://dse-static.foo.bar" class="supplied">e</span>ge<span  xmlns:local="http://dse-static.foo.bar" class="supplied">ri</span>n, das bitt dero Liebden ihr machen wollen,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb35" name="#facs_2_r1__p2__lb35" id="#facs_2_r1__p2__lb35" size="800,1235" zone="59,905 108,912 163,895 219,921 329,896 356,920 550,927 537,849 422,878 383,853 331,849 279,870 217,848 198,865 150,852 128,871 59,876" class="linenumbersVisible linenumbers" data-lbnr="35">0035</a></span><span class="transcript-line-contents">werde allzeit verbleiben, leben vndt st<span  xmlns:local="http://dse-static.foo.bar" class="supplied">er</span>ben
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb36" name="#facs_2_r1__p2__lb36" id="#facs_2_r1__p2__lb36" size="800,1235" zone="242,962 251,962 253,960 259,964 269,957 280,962 290,961 282,902 272,903 268,906 258,905 251,913 235,910" class="linenumbersTransparent linenumbers">0036</a></span><span class="transcript-line-contents">dero Liebden
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb37" name="#facs_2_r1__p2__lb37" id="#facs_2_r1__p2__lb37" size="800,1235" zone="443,1025 462,1013 486,1016 502,1031 546,1036 562,1026 585,1035 614,1023 638,1028 656,1020 656,956 608,960 572,941 548,953 519,941 444,942" class="linenumbersTransparent linenumbers">0037</a></span><span class="transcript-line-contents">getrewste schwester
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb38" name="#facs_2_r1__p2__lb38" id="#facs_2_r1__p2__lb38" size="800,1235" zone="459,1065 467,1067 474,1060 488,1065 496,1058 517,1055 550,1059 558,1053 613,1063 614,1028 592,1029 585,1035 563,1026 547,1036 538,1032 532,1037 510,1029 504,1033 488,1017 460,1014" class="linenumbersTransparent linenumbers">0038</a></span><span class="transcript-line-contents">Eleonora
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb39" name="#facs_2_r1__p2__lb39" id="#facs_2_r1__p2__lb39" size="800,1235" zone="63,1045 100,1036 145,1051 157,1038 214,1029 239,1043 324,1031 324,957 195,965 182,955 164,962 115,949 63,950" class="linenumbersTransparent linenumbers">0039</a></span><span class="transcript-line-contents">Wien den 12ten jener 1695
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb40" name="#facs_2_r1__p2__lb40" id="#facs_2_r1__p2__lb40" size="800,1235" zone="61,1090 134,1087 183,1104 220,1085 297,1091 333,1078 349,1089 362,1077 415,1107 442,1092 441,1029 363,1044 313,1030 279,1048 213,1030 170,1036 146,1055 123,1040 104,1056 60,1041" class="linenumbersVisible linenumbers" data-lbnr="40">0040</a></span><span class="transcript-line-contents">Des Hamilton brif hab ich jezt nit bey handen,
+                           </span></span><span class="transcript-line"><span class="transcript-line-number"><a href="#facs_2_r1__p2__lb41" name="#facs_2_r1__p2__lb41" id="#facs_2_r1__p2__lb41" size="800,1235" zone="50,1149 142,1154 195,1129 237,1128 373,1145 362,1077 349,1090 330,1077 281,1098 251,1087 178,1104 94,1090 48,1104" class="linenumbersTransparent linenumbers">0041</a></span><span class="transcript-line-contents">werd ihn mit nechstem überschiken.</span></span></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <hr>
+               </div>
+            </div>
             <p style="text-align:center;">
                <div class="footnotes" id="note__16"><a name="fn1"><a href="#fna_1"><span style="font-size:7pt;vertical-align:super; margin-right: 0.4em">1</span></a></a>Am Anfang der Zeile befindet sich ein Beilagenstrich.</div>
             </p>
          </div>
          <div class="tei-back">
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_person_id__18" data-bs-keyboard="false" tabindex="-1" aria-labelledby=", " aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">, </h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table class="table">
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    GND ID
-                                    </th>
-                                 <td><a href="https://d-nb.info/gnd/118712411" target="_blank">118712411</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_person_id__18.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
+            EMT - Eleonora Magdalena von Pfalz-Neuburg, Kaiserin
+            https://d-nb.info/gnd/101026641
             
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_person_id__9" data-bs-keyboard="false" tabindex="-1" aria-labelledby=", " aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">, </h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table class="table">
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    GND ID
-                                    </th>
-                                 <td><a href="https://d-nb.info/gnd/101026641" target="_blank">101026641</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_person_id__9.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
             
-            <div  xmlns:local="http://dse-static.foo.bar" class="modal fade" id="emt_place_id__63" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Wien" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Wien</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                     <div class="modal-body">
-                        <table>
-                           <tbody>
-                              <tr>
-                                 <th>
-                                    Geonames
-                                    </th>
-                                 <td><a href="https://sws.geonames.org/2761369/" target="_blank">2761369</a></td>
-                              </tr>
-                              <tr>
-                                 <th></th>
-                                 <td>
-                                    Anzahl der Erwähnungen limitiert, klicke <a href="emt_place_id__63.html">hier</a> für eine vollständige Auflistung
-                                    </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                     <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
-                  </div>
-               </div>
-            </div>
+            JW - Johann Wilhelm von der Pfalz
+            https://d-nb.info/gnd/118712411
+            
+            
+            Wien
+            
+            48.20849 16.372080
+            
+            https://sws.geonames.org/2761369/
+            
             </div>
       </main>
       <footer xmlns="http://www.w3.org/1999/xhtml" class="footer mt-auto py-3 bg-body-tertiary">
@@ -264,5 +191,5 @@
                 new Darkmode().showWidget();
             }
             window.addEventListener('load', addDarkmodeWidget);
-        </script><script xmlns="http://www.w3.org/1999/xhtml" src="js/i18n.js"></script><script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script><script type="text/javascript" src="js/run.js"></script><script type="text/javascript" src="js/osd_scroll.js"></script></body>
+        </script><script xmlns="http://www.w3.org/1999/xhtml" src="js/i18n.js"></script></body>
 </html>
