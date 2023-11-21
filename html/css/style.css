@@ -1,4 +1,26 @@
-#languageSwitcher{
+:root {
+    --bs-border-width: 0px;
+    --emt: #0b2966;
+    --emt-hover: #0b2966b4;
+}
+
+main {
+    padding-top: 2em;
+}
+
+.navbar {
+    border-bottom: 5px solid var(--emt);
+}
+
+a {
+    color: var(--emt)
+}
+
+a:hover {
+    color: var(--emt-hover)
+}
+
+#languageSwitcher {
     max-width: 10%;
 }
 
@@ -12,7 +34,8 @@
 
 /*** calendar ***/
 
-#years-table .btn-light:focus, #years-table .btn-light.focus {
+#years-table .btn-light:focus,
+#years-table .btn-light.focus {
     text-decoration: underline;
     text-decoration-color: #A63437;
     text-decoration-thickness: 4px
@@ -26,8 +49,8 @@
 }
 
 .overlay {
-    border: rgba(124,124,124,.2) 1px solid;
-    background-color: rgba(245,234,37,.5);
+    border: rgba(124, 124, 124, .2) 1px solid;
+    background-color: rgba(245, 234, 37, .5);
     margin: -15pt;
     padding: 12pt;
 }
@@ -49,22 +72,23 @@
 }
 
 .transcript-line.active {
-    background-color: rgba(245,234,37,.5);
+    background-color: rgba(245, 234, 37, .5);
 }
 
 
 /* linenumbers */
 
 .linenumbers {
-  margin: 0 1.5em 0 0;
+    margin: 0 1.5em 0 0;
 }
 
 .linenumbersTransparent {
     color: transparent;
 }
 
-.linenumbersVisible, .active .linenumbersTransparent {
-  color: #444;
+.linenumbersVisible,
+.active .linenumbersTransparent {
+    color: #444;
 }
 
 
@@ -76,6 +100,7 @@
     border-radius: 0.5rem;
     padding: 0 0.3rem;
 }
+
 .entity-person {
     background-color: #efe1dc;
 }
@@ -92,12 +117,15 @@
     background-color: #f2f2f2;
     color: #185de7;
 }
+
 .abbr {
     color: #185de7;
 }
+
 .add {
     color: #185de7;
 }
+
 .unclear {
     color: #378ab8;
 }
@@ -123,7 +151,8 @@
     align-items: flex-start;
     justify-content: space-around;
 }
-.image-list-flex-row > * {
+
+.image-list-flex-row>* {
     width: min(400px, 100%);
 }
 

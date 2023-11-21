@@ -38,7 +38,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item" data-i18n="navbar__blog"
-                                            href="blog.html" />
+                                            href="rss.html" />
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider" />
@@ -57,7 +57,7 @@
                                 <a title="Briefverzeichnis" href="toc.html" class="nav-link" data-i18n="navbar__letterindex"></a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__project" aria-expanded="false" />
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__register" aria-expanded="false" />
                                 <ul class=" dropdown-menu" role="menu">
                                     <li>
                                         <a class="dropdown-item" data-i18n="navbar__persons"
