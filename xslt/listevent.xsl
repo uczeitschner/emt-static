@@ -27,13 +27,62 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
+                <link rel="stylesheet" href="css/listevent.css" type="text/css"></link>
             </head>
             
             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar"/>
                 <main>
+                    <div class="card-body text-center">
+                        <ul style="margin-top:1em;padding-left:0;word-wrap:break-word;word-break:break-word;">
+                            <xsl:for-each-group select="//tei:event" group-by="tokenize(./@notBefore, '-')[1]">                                    
+                                <li style="display:inline;list-style:none;margin-left:1em;">
+                                    <a href="#{current-grouping-key()}" title="jump to date">
+                                        <xsl:value-of select="current-grouping-key()"/>
+                                    </a>
+                                </li>
+                            </xsl:for-each-group>
+                        </ul>
+                    </div>
+                    
+                    <div class="row">
+                        <xsl:for-each-group select="//tei:event" group-by="tokenize(./@notBefore, '-')[1]">
+                            <div class="timeline-wrapper" id="{current-grouping-key()}" style="padding-top:5em;">
+                                <div class="text-center">                                            
+                                    <h2 id="timeline-heading">
+                                        <xsl:value-of select="current-grouping-key()"/>
+                                        <a href="#page" title="jump to the top" style="color:#fff; font-size:12px;">
+                                            <small>TOP</small>
+                                        </a>                                            
+                                    </h2>
+                                </div>
+                                <xsl:for-each select="current-group()">
+                                    <div class="row timeline">
+                                        <div class="col-md-5">
+                                            bio element
+                                        </div>
+                                        <div class="col-md-2">
+                                            <xsl:variable name="d" as="xs:date" select="./@notBefore"/>
+                                            <xsl:variable name="date-formated" select="format-date($d, '[MNn] [D1o]', 'en', (), ())"/>
+                                            <div class="timeline-circle text-center" data="{$date-formated}" />
+                                            <!--<xsl:call-template name="bio-circle"/>-->
+                                        </div>
+                                    </div>
+                                </xsl:for-each>
+                            </div>
+                        </xsl:for-each-group>
+                    </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
+                <script type="text/javascript">
+                    $('.timeline-circle').mouseover(function() {                                        
+                    var date = $(this).attr('data');
+                    $(this).html(date);                                        
+                    });
+                    $('.timeline-circle').mouseout(function() {
+                    $(this).html("");
+                    });
+                </script>
             </body>
         </html>
     </xsl:template>
