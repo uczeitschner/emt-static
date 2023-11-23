@@ -13,14 +13,12 @@
     <xsl:import href="partials/html_navbar.xsl"/>
     <xsl:import href="partials/html_head.xsl"/>
     <xsl:import href="partials/html_footer.xsl"/>
-
+    
+    <xsl:import href="partials/biography-el.xsl"/>
     
     
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="'Ereignisse'"/>
-        
-        
-        
         <html class="h-100">
             
             <head>
@@ -28,6 +26,12 @@
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
                 <link rel="stylesheet" href="css/listevent.css" type="text/css"></link>
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+                    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+                    crossorigin=""/>
+                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+                    crossorigin=""></script>
             </head>
             
             <body class="d-flex flex-column h-100">
@@ -58,8 +62,11 @@
                                 </div>
                                 <xsl:for-each select="current-group()">
                                     <div class="row timeline">
-                                        <div class="col-md-5">
-                                            bio element
+                                        
+                                        <div class="col-md-5">    
+                                            <xsl:call-template name="bio-el">
+                                                <xsl:with-param name="location" select="'left'"/>
+                                            </xsl:call-template>
                                         </div>
                                         <div class="col-md-2">
                                             <xsl:variable name="d" as="xs:date" select="./@notBefore"/>
@@ -83,6 +90,7 @@
                     $(this).html("");
                     });
                 </script>
+                <script type="text/javascript" src="js/leaflet_bio.js"/>
             </body>
         </html>
     </xsl:template>
