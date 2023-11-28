@@ -14,6 +14,7 @@
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
     <xsl:import href="./partials/osd-container.xsl"/>
+    <xsl:import href="./partials/entities.xsl"/>
 
 
     <xsl:variable name="prev">

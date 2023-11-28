@@ -94,8 +94,8 @@
                 <xsl:value-of select="concat('entity entity-', $entityType)"/>
             </xsl:attribute>
             <xsl:element name="a">
-                <xsl:attribute name="data-toggle">modal</xsl:attribute>
-                <xsl:attribute name="data-target">
+                <xsl:attribute name="data-bs-toggle">modal</xsl:attribute>
+                <xsl:attribute name="data-bs-target">
                     <xsl:value-of select="data(@ref)"/>
                     <!-- <xsl:value-of select="concat('#', @key)"/> -->
                 </xsl:attribute>
