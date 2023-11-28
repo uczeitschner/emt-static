@@ -41,6 +41,7 @@
                                 <tr>
                                     <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-visible="false" tabulator-download="false">itemid</th>
                                     <th scope="col" tabulator-headerFilter="input">Name</th>
+                                    <th scope="col" tabulator-headerFilter="input">Lebensdaten</th>
                                     <th scope="col" tabulator-headerFilter="input">Erwähnungen</th>
                                     <th scope="col" tabulator-headerFilter="input">ID</th>
                                 </tr>
@@ -56,6 +57,9 @@
                                         </td>
                                         <td>
                                             <xsl:value-of select=".//tei:persName[1]/text()"/>
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select=".//tei:birth[1]/tei:date[1]/text()"/> - <xsl:value-of select=".//tei:death[1]/tei:date[1]/text()"/>
                                         </td>
                                         <td>
                                             <xsl:value-of select="count(.//tei:note[@type='mentions'])"/>
