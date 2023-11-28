@@ -1,11 +1,11 @@
 // holds shared config for all tabulator-js tables
 
 var config = {
-    height: 800,
-    layout: "fitColumns",
+    height: 1000,
+    layout: "fitDataStretch",
     tooltips: true,
     dataLoader: true,
     pagination: "local",
     paginationSize: 15,
-    paginationCounter: "rows"
+    paginationCounter: "rows",
     };

@@ -34,11 +34,11 @@
             <xsl:call-template name="nav_bar"/>
                 <main>
                     <div class="container">
-                        <h1>Inhaltsverzeichnis</h1>
+                        <h1 class="text-center pb-4 pt-3">Inhaltsverzeichnis</h1>
                         <table class="table" id="myTable">
                             <thead>
                                 <tr>
-                                    <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
+                                    <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false" tabulator-visible="false">itemId</th>
                                     <th scope="col" tabulator-headerFilter="input">Sender</th>
                                     <th scope="col" tabulator-headerFilter="input">Empfänger</th>
                                     <th scope="col" tabulator-headerFilter="input">Datum</th>
@@ -54,16 +54,8 @@
                                     </xsl:variable>
                                     <tr>
                                         <td>
-                                            <a>
-                                                <xsl:attribute name="href">
-                                                  <xsl:value-of
-                                                  select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"
-                                                  />
-                                                </xsl:attribute>
-                                                <i class="bi bi-link-45deg"/>
-                                            </a>
+                                            <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')" />
                                         </td>
-                                        
                                         <td>
                                             <xsl:value-of select=".//tei:correspAction[@type='sent']/tei:persName/text()"/>
                                         </td>
