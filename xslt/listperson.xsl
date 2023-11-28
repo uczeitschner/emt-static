@@ -10,8 +10,8 @@
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
-    <xsl:import href="partials/tabulator_dl_buttons.xsl"/>
-    <xsl:import href="partials/tabulator_js.xsl"/>
+    <xsl:import href="./partials/tabulator_dl_buttons.xsl"/>
+    <xsl:import href="./partials/tabulator_js.xsl"/>
     <xsl:import href="./partials/person.xsl"/>
 
     <xsl:template match="/">
@@ -32,16 +32,16 @@
                 <main>
                     <div class="container">
 
-                        <h1>
+                        <h1 class="text-center pb-4 pt-3">
                             <xsl:value-of select="$doc_title"/>
                         </h1>
 
                         <table class="table" id="myTable">
                             <thead>
                                 <tr>
-                                    <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
-                                    <th scope="col" tabulator-headerFilter="input">Nachname</th>
-                                    <th scope="col" tabulator-headerFilter="input">Vorname</th>
+                                    <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-visible="false" tabulator-download="false">itemid</th>
+                                    <th scope="col" tabulator-headerFilter="input">Name</th>
+                                    <th scope="col" tabulator-headerFilter="input">Erwähnungen</th>
                                     <th scope="col" tabulator-headerFilter="input">ID</th>
                                 </tr>
                             </thead>
@@ -52,18 +52,13 @@
                                     </xsl:variable>
                                     <tr>
                                         <td>
-                                            <a>
-                                              <xsl:attribute name="href">
-                                              <xsl:value-of select="concat($id, '.html')"/>
-                                              </xsl:attribute>
-                                              <i class="bi bi-link-45deg"/>
-                                            </a>
+                                            <xsl:value-of select="concat($id, '.html')"/>
                                         </td>
                                         <td>
-                                            <xsl:value-of select=".//tei:surname/text()"/>
+                                            <xsl:value-of select=".//tei:persName[1]/text()"/>
                                         </td>
                                         <td>
-                                            <xsl:value-of select=".//tei:forename/text()"/>
+                                            <xsl:value-of select="count(.//tei:note[@type='mentions'])"/>
                                         </td>
                                         <td>
                                             <xsl:value-of select="$id"/>
@@ -83,7 +78,7 @@
 
         <xsl:for-each select=".//tei:person[@xml:id]">
             <xsl:variable name="filename" select="concat(./@xml:id, '.html')"/>
-            <xsl:variable name="name" select="normalize-space(string-join(./tei:persName[1]//text()))"></xsl:variable>
+            <xsl:variable name="name" select="./tei:persName[1]/text()"></xsl:variable>
             <xsl:result-document href="{$filename}">
                 <html  class="h-100">
                     <head>
