@@ -33,3 +33,10 @@ echo "update imprint"
 
 echo "fetch rss feed"
 ./dl_rssfeed.sh
+
+rm -rf ./html/bio-pics
+curl -LO https://github.com/emt-project/emt-bio-pics/archive/refs/heads/main.zip
+unzip main
+mv ./emt-bio-pics-main/bio-pics ./html/bio-pics
+rm main.zip
+rm -rf ./emt-bio-pics-main
