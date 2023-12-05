@@ -5,10 +5,14 @@ from typesense.api_call import ObjectNotFound
 from acdh_cfts_pyutils import TYPESENSE_CLIENT as client
 from acdh_cfts_pyutils import CFTS_COLLECTION
 from acdh_tei_pyutils.tei import TeiReader
+from acdh_tei_pyutils.utils import extract_fulltext
 from tqdm import tqdm
 
 
 files = glob.glob("./data/editions/*.xml")
+tag_blacklist = [
+    "{http://www.tei-c.org/ns/1.0}abbr"
+]
 
 
 try:
@@ -110,15 +114,7 @@ for x in tqdm(files, total=len(files)):
     if place:
         record["places"].append(place)
         cfts_record["places"] = record["places"]
-    # record['orgs'] = [
-    #      " ".join(" ".join(x.xpath('.//text()')).split()) for x in doc.any_xpath('.//tei:back//tei:org[@xml:id]/tei:orgName[1]')
-    # ]
-    # cfts_record['orgs'] = record['orgs']
-    # record['works'] = [
-    #      " ".join(" ".join(x.xpath('.//text()')).split()) for x in doc.any_xpath('.//tei:back//tei:listBibl//tei:bibl[@xml:id]/tei:title[1]')
-    # ]
-    # cfts_record['works'] = record['works']
-    record["full_text"] = " ".join("".join(body.itertext()).split())
+    record["full_text"] = extract_fulltext(body, tag_blacklist=tag_blacklist)
     cfts_record["full_text"] = record["full_text"]
     records.append(record)
     cfts_records.append(cfts_record)
