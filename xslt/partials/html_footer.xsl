@@ -17,12 +17,12 @@
                     
                 </div>
                 <div class="row justify-content-between">
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <a href="https://www.oeaw.ac.at/ihb/" target="_blank" rel="noopener" aria-label="IHB">
                             <img src="logos/ihb-logo-en-text.png" alt="IHB" title="Institut for Habsburg and Balkan Studies"/>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         Institute for Habsburg and Balkan Studies<br/>
                         Dominikanerbastei 16<br/>
                         1010 Vienna (Austria)<br/>
@@ -30,12 +30,12 @@
                 </div>
                 
                 <div class="row justify-content-between">
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <a href="https://www.oeaw.ac.at/acdh/" target="_blank" rel="noopener" aria-label="ACDH">
                             <img src="logos/acdh_logo_with_text.svg" alt="ACDH" title="Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH) of the Austrian Academy of Sciences"/>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         Austrian Centre for Digital Humanities and Cultural Heritage<br/>
                         Bäckerstraße 13<br/>
                         1010 Vienna<br/>
