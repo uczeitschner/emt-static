@@ -9,14 +9,15 @@
         <footer class="footer mt-auto py-3 bg-body-tertiary">
             
             <div class="container">
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center pb-4">
                     
                         <a href="https://www.oeaw.ac.at/" target="_blank" rel="noopener" aria-label="OEAW">
                             <img src="logos/oeaw-logo-transparent.png" alt="OEAW" title="Austrian Academy of Sciences"/>
                         </a>
                     
                 </div>
-                <div class="row justify-content-between">
+                
+                <div class="row justify-content-between pb-4">
                     <div class="col-sm-4">
                         <a href="https://www.oeaw.ac.at/ihb/" target="_blank" rel="noopener" aria-label="IHB">
                             <img src="logos/ihb-logo-en-text.png" alt="IHB" title="Institut for Habsburg and Balkan Studies"/>
@@ -29,7 +30,7 @@
                     </div>
                 </div>
                 
-                <div class="row justify-content-between">
+                <div class="row justify-content-between pb-4">
                     <div class="col-sm-4">
                         <a href="https://www.oeaw.ac.at/acdh/" target="_blank" rel="noopener" aria-label="ACDH">
                             <img src="logos/acdh_logo_with_text.svg" alt="ACDH" title="Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH) of the Austrian Academy of Sciences"/>
@@ -42,12 +43,10 @@
                     </div>
                 </div>
                 
-                <div class="d-flex justify-content-center mt-5">
-                    
+                <div class="d-flex justify-content-center">
                         <a href="https://www.fwf.ac.at/" target="_blank" rel="noopener" aria-label="FWF">
                             <img src="logos/fwf-logo-transparent.png" alt="FWF" title="FWF Science-Fond" style="max-width: 300px"/>
                         </a>
-                    
                 </div>
                 
             </div>
