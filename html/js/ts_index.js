@@ -24,40 +24,31 @@ const search = instantsearch({
 
 search.addWidgets([
   instantsearch.widgets.searchBox({
-      container: '#searchbox',
-      autofocus: true,
-      cssClasses: {
-        form: 'form-inline',
-        input: 'form-control col-md-11',
-        submit: 'btn',
-        reset: 'btn'
-      },
+    container: '#searchbox',
+    autofocus: true,
+    cssClasses: {
+      form: 'form-inline',
+      input: 'form-control col-md-11',
+      submit: 'btn',
+      reset: 'btn'
+    },
   }),
 
   instantsearch.widgets.hits({
-      container: '#hits',
-      templates: {
-        empty: 'Keine Ergebnisse',
-        item: `
-            <h4><a href="{{ id }}.html">{{ title }}</a></h4>
-            <p>{{#helpers.snippet}}{ "attribute": "full_text" }{{/helpers.snippet}}</p>
-            <h5><span class="badge badge-primary">{{ project }}</span></h5>
-            <div>
-            {{#persons}}
-            <span class="badge badge-secondary">{{ . }}</span>
-            {{/persons}}
-            </div>
-            {{#keywords}}
-            <span class="badge badge-success">{{ . }}</span>
-            {{/keywords}}
-            <div>
-            {{#places}}
-            <span class="badge badge-info">{{ . }}</span>
-            {{/places}}
-            </div>
-            </div>
-        `
-    }
+    container: '#hits',
+    cssClasses: {
+      item: "w-100"
+    },
+    templates: {
+      empty: "Keine Resultate für <q>{{ query }}</q>",
+      item(hit, { html, components }) {
+        return html`
+      <h4><a href='${hit.id}.html'>${hit.title}</a></h4>
+      <p>${hit._snippetResult.full_text.matchedWords.length > 0 ? components.Snippet({ hit, attribute: 'full_text' }) : ''}</p>
+      <p>${hit.persons.map((item) => html`<a href='${item.id}'><span class="badge rounded-pill m-1 bg-danger">${item}</span></a>`)}</p>
+      <p>${hit.places.map((item) => html`<a href='${item.id}'><span class="badge rounded-pill m-1 bg-info">${item}</span></a>`)}</p>`
+      }
+    },
   }),
 
   instantsearch.widgets.stats({
@@ -78,40 +69,40 @@ search.addWidgets([
         gefunden in {{processingTimeMS}}ms
       `,
     }
-}),
-
-  instantsearch.widgets.refinementList({
-      container: '#refinement-list-places',
-      attribute: 'places',
-      searchable: true,
-      searchablePlaceholder: 'Suche',
-      cssClasses: {
-        searchableInput: 'form-control form-control-sm mb-2 border-light-2',
-        searchableSubmit: 'd-none',
-        searchableReset: 'd-none',
-        showMore: 'btn btn-secondary btn-sm align-content-center',
-        list: 'list-unstyled',
-        count: 'badge ml-2 badge-info',
-        label: 'd-flex align-items-center text-capitalize',
-        checkbox: 'mr-2',
-      }
   }),
 
   instantsearch.widgets.refinementList({
-      container: '#refinement-list-persons',
-      attribute: 'persons',
-      searchable: true,
-      searchablePlaceholder: 'Suche',
-      cssClasses: {
-        searchableInput: 'form-control form-control-sm mb-2 border-light-2',
-        searchableSubmit: 'd-none',
-        searchableReset: 'd-none',
-        showMore: 'btn btn-secondary btn-sm align-content-center',
-        list: 'list-unstyled',
-        count: 'badge ml-2 badge-secondary',
-        label: 'd-flex align-items-center text-capitalize',
-        checkbox: 'mr-2',
-      }
+    container: '#refinement-list-places',
+    attribute: 'places',
+    searchable: true,
+    searchablePlaceholder: 'Suche',
+    cssClasses: {
+      searchableInput: 'form-control form-control-sm mb-2 border-light-2',
+      searchableSubmit: 'd-none',
+      searchableReset: 'd-none',
+      showMore: 'btn btn-secondary btn-sm align-content-center',
+      list: 'list-unstyled',
+      count: 'badge m-2 badge-info',
+      label: 'd-flex align-items-center text-capitalize',
+      checkbox: 'm-2',
+    }
+  }),
+
+  instantsearch.widgets.refinementList({
+    container: '#refinement-list-persons',
+    attribute: 'persons',
+    searchable: true,
+    searchablePlaceholder: 'Suche',
+    cssClasses: {
+      searchableInput: 'form-control form-control-sm mb-2 border-light-2',
+      searchableSubmit: 'd-none',
+      searchableReset: 'd-none',
+      showMore: 'btn btn-secondary btn-sm align-content-center',
+      list: 'list-unstyled',
+      count: 'badge m-2 badge-secondary',
+      label: 'd-flex align-items-center text-capitalize',
+      checkbox: 'm-2',
+    }
   }),
   instantsearch.widgets.refinementList({
     container: '#refinement-list-sender',
@@ -124,27 +115,27 @@ search.addWidgets([
       searchableReset: 'd-none',
       showMore: 'btn btn-secondary btn-sm align-content-center',
       list: 'list-unstyled',
-      count: 'badge ml-2 badge-secondary',
+      count: 'badge m-2 badge-secondary',
       label: 'd-flex align-items-center text-capitalize',
-      checkbox: 'mr-2',
+      checkbox: 'm-2',
     }
-}),
-instantsearch.widgets.refinementList({
-  container: '#refinement-list-receiver',
-  attribute: 'receiver',
-  searchable: true,
-  searchablePlaceholder: 'Suche',
-  cssClasses: {
-    searchableInput: 'form-control form-control-sm mb-2 border-light-2',
-    searchableSubmit: 'd-none',
-    searchableReset: 'd-none',
-    showMore: 'btn btn-secondary btn-sm align-content-center',
-    list: 'list-unstyled',
-    count: 'badge ml-2 badge-secondary',
-    label: 'd-flex align-items-center text-capitalize',
-    checkbox: 'mr-2',
-  }
-}),
+  }),
+  instantsearch.widgets.refinementList({
+    container: '#refinement-list-receiver',
+    attribute: 'receiver',
+    searchable: true,
+    searchablePlaceholder: 'Suche',
+    cssClasses: {
+      searchableInput: 'form-control form-control-sm mb-2 border-light-2',
+      searchableSubmit: 'd-none',
+      searchableReset: 'd-none',
+      showMore: 'btn btn-secondary btn-sm align-content-center',
+      list: 'list-unstyled',
+      count: 'badge m-2 badge-secondary',
+      label: 'd-flex align-items-center text-capitalize',
+      checkbox: 'm-2',
+    }
+  }),
 
   // instantsearch.widgets.refinementList({
   //     container: '#refinement-list-keywords',
@@ -157,46 +148,46 @@ instantsearch.widgets.refinementList({
   //       searchableReset: 'd-none',
   //       showMore: 'btn btn-secondary btn-sm align-content-center',
   //       list: 'list-unstyled',
-  //       count: 'badge ml-2 badge-success',
+  //       count: 'badge m-2 badge-success',
   //       label: 'd-flex align-items-center text-capitalize',
-  //       checkbox: 'mr-2',
+  //       checkbox: 'm-2',
   //     }
   // }),
-  
+
   instantsearch.widgets.rangeInput({
-      container: "#range-input",
-      attribute: "year",
-      templates: {
-        separatorText: 'bis',
-        submitText: 'Suchen',
-      },
-      cssClasses: {
-        form: 'form-inline',
-        input: 'form-control',
-        submit: 'btn'
-      }
-    }),
+    container: "#range-input",
+    attribute: "year",
+    templates: {
+      separatorText: 'bis',
+      submitText: 'Suchen',
+    },
+    cssClasses: {
+      form: 'form-inline',
+      input: 'form-control',
+      submit: 'btn'
+    }
+  }),
 
   instantsearch.widgets.pagination({
-      container: '#pagination',
-      padding: 2,
-      cssClasses: {
-        list: 'pagination',
-        item: 'page-item',
-        link: 'page-link'
-      }
+    container: '#pagination',
+    padding: 2,
+    cssClasses: {
+      list: 'pagination',
+      item: 'page-item',
+      link: 'page-link'
+    }
   }),
   instantsearch.widgets.clearRefinements({
-      container: '#clear-refinements',
-      templates: {
-        resetLabel: 'Filter zurücksetzen',
-      },
-      cssClasses: {
-        button: 'btn'
-      }
+    container: '#clear-refinements',
+    templates: {
+      resetLabel: 'Filter zurücksetzen',
+    },
+    cssClasses: {
+      button: 'btn'
+    }
   }),
 
-    
+
 
   instantsearch.widgets.currentRefinements({
     container: '#current-refinements',
@@ -211,7 +202,7 @@ instantsearch.widgets.refinementList({
 
 search.addWidgets([
   instantsearch.widgets.configure({
-      attributesToSnippet: ['full_text'],
+    attributesToSnippet: ['full_text'],
   })
 ]);
 
