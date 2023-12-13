@@ -132,15 +132,17 @@
                                         select="data((./tei:pb/@source)[1])"/>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h5>
-                                                <xsl:value-of select="$pbFolio"/>
-                                            </h5>
+                                            <div class="float-end">
+                                                <h5>
+                                                    <xsl:value-of select="$pbFolio"/>
+                                                </h5>
+                                            </div>
                                         </div>
                                     </div>
                                     
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div id="{$openSeadragonId}">
+                                              <div id="{$openSeadragonId}">
                                                 <img id="{$openSeadragonId}-img" src="{normalize-space($facs-url)}" onload="loadImage('{$openSeadragonId}', '{$rotation}')"></img>
                                                 <!-- cosy spot for OSD viewer  -->
                                             </div>

@@ -5,7 +5,6 @@ function loadImage(container_id, rotation) {
     /* get container holding the image and set height and padding */
     var container = document.getElementById(container_id);
     container.style.height = "700px";
-    container.style.padding ="2em";
     /* get image src (url) */
     var image = document.getElementById(`${container_id}-img`);
     var imageURL = {
