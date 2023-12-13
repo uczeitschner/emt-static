@@ -50,8 +50,6 @@
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container">
-
-
                         <div class="row">
                             <div class="col-md-2 col-lg-2 col-sm-12">
                                 <xsl:if test="ends-with($prev,'.html')">
@@ -74,6 +72,22 @@
                                         <i class="bi bi-download" title="TEI/XML"/>
                                     </a>
                                 </h3>
+                                <p class="text-center">
+                                    <small>
+                                        <span>
+                                            <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:repository" />
+                                        </span>
+                                        (<span>
+                                            <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:settlement" />
+                                        </span>,
+                                        <span>
+                                            <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:country" />
+                                        </span>):
+                                        <span>
+                                            <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:idno" />
+                                        </span>
+                                    </small>
+                                </p>
                             </div>
                             <div class="col-md-2 col-lg-2 col-sm-12" style="text-align:right">
                                 <xsl:if test="ends-with($next, '.html')">
