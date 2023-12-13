@@ -19,6 +19,7 @@ for x in tqdm(files, total=len(files)):
         os.remove(x)
 
 if len(faulty) > 0:
+    print(f"found {len(faulty)} not well formed letters")
     print(f"writing report to '{faulty_file_name}'")
 else:
     print(f"no faulty files found, good job!!!!")
