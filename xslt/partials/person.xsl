@@ -58,14 +58,26 @@
                                 </td>
                             </tr>
                         </xsl:if>
-                        <xsl:if test="./tei:idno[@type='GEONAMES']/text()">
+                        <xsl:if test="./tei:idno[@type='NDB']/text()">
                             <tr>
                                 <th>
-                                    Geonames ID
+                                    NDB
                                 </th>
                                 <td>
-                                    <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
-                                        <xsl:value-of select="tokenize(./tei:idno[@type='GEONAMES'], '/')[4]"/>
+                                    <a href="{./tei:idno[@type='NDB']}" target="_blank">
+                                        <xsl:value-of select="./tei:idno[@type='NDB']/text()"/>
+                                    </a>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="./tei:idno[@type='URL']/text()">
+                            <tr>
+                                <th>
+                                    weitere Links
+                                </th>
+                                <td>
+                                    <a href="{./tei:idno[@type='URL']}" target="_blank">
+                                        <xsl:value-of select="./tei:idno[@type='URL']/text()"/>
                                     </a>
                                 </td>
                             </tr>
