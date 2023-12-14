@@ -15,6 +15,7 @@
     <xsl:import href="./partials/html_footer.xsl"/>
     <xsl:import href="./partials/osd-container.xsl"/>
     <xsl:import href="./partials/entities.xsl"/>
+    <xsl:import href="./partials/html_title_navigation.xsl"/>
 
 
     <xsl:variable name="prev">
@@ -50,58 +51,9 @@
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-2 col-lg-2 col-sm-12">
-                                <xsl:if test="ends-with($prev,'.html')">
-                                    <h1>
-                                        <a>
-                                            <xsl:attribute name="href">
-                                                <xsl:value-of select="$prev"/>
-                                            </xsl:attribute>
-                                            <i class="bi bi-chevron-left" title="zurück"/>
-                                        </a>
-                                    </h1>
-                                </xsl:if>
-                            </div>
-                            <div class="col-md-8 col-lg-8 col-sm-12">
-                                <h1 align="center">
-                                    <xsl:value-of select="$doc_title"/>
-                                </h1>
-                                <h3 align="center">
-                                    <a href="{$teiSource}">
-                                        <i class="bi bi-download" title="TEI/XML"/>
-                                    </a>
-                                </h3>
-                                <p class="text-center">
-                                    <small>
-                                        <span>
-                                            <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:repository" />
-                                        </span>
-                                        (<span>
-                                            <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:settlement" />
-                                        </span>,
-                                        <span>
-                                            <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:country" />
-                                        </span>):
-                                        <span>
-                                            <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:idno" />
-                                        </span>
-                                    </small>
-                                </p>
-                            </div>
-                            <div class="col-md-2 col-lg-2 col-sm-12" style="text-align:right">
-                                <xsl:if test="ends-with($next, '.html')">
-                                    <h1>
-                                        <a>
-                                            <xsl:attribute name="href">
-                                                <xsl:value-of select="$next"/>
-                                            </xsl:attribute>
-                                            <i class="bi bi-chevron-right" title="weiter"/>
-                                        </a>
-                                    </h1>
-                                </xsl:if>
-                            </div>
-                        </div>
+                        <xsl:call-template name="header-nav">
+                            <xsl:with-param name="doc_title" select="$doc_title"/>
+                        </xsl:call-template>
                         
                         <div class="regest">
                             <h4><xsl:for-each select=".//tei:ab[@type='abstract-terms']/tei:term">
