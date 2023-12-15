@@ -7,8 +7,13 @@
     <xsl:template match="tei:person" name="person_detail">
         <div class="row">
             <xsl:if test="./tei:figure">
-                <div class="col">
-                    <img src="{concat('bio-pics/', .//tei:graphic[1]/@url)}"></img>
+                <div class="col d-flex justify-content-center">
+                    <figure class="figure">
+                        <img src="{concat('bio-pics/', .//tei:graphic[1]/@url)}" class="figure-img img-fluid rounded"></img>
+                        <figcaption class="figure-caption">
+                            Das <abbr title="{.//tei:caption/text()}">Bild</abbr> wurde automatisiert aus Wikidata übernommen.<br />
+                        </figcaption>
+                    </figure>
                 </div>
             </xsl:if>
             <div class="col">
@@ -34,6 +39,18 @@
                                 </td>
                             </tr>
                         </xsl:if>
+                        <xsl:if test="./tei:idno[@type='NDB']/text()">
+                            <tr>
+                                <th>
+                                    Deutsche Biographie
+                                </th>
+                                <td>
+                                    <a href="{./tei:idno[@type='NDB']}" target="_blank">
+                                        <xsl:value-of select="./tei:idno[@type='NDB']/text()"/>
+                                    </a>
+                                </td>
+                            </tr>
+                        </xsl:if>
                         <xsl:if test="./tei:idno[@type='GND']/text()">
                             <tr>
                                 <th>
@@ -42,30 +59,6 @@
                                 <td>
                                     <a href="{./tei:idno[@type='GND']}" target="_blank">
                                         <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
-                                    </a>
-                                </td>
-                            </tr>
-                        </xsl:if>
-                        <xsl:if test="./tei:idno[@type='WIKIDATA']/text()">
-                            <tr>
-                                <th>
-                                    Wikidata ID
-                                </th>
-                                <td>
-                                    <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                        <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
-                                    </a>
-                                </td>
-                            </tr>
-                        </xsl:if>
-                        <xsl:if test="./tei:idno[@type='NDB']/text()">
-                            <tr>
-                                <th>
-                                    NDB
-                                </th>
-                                <td>
-                                    <a href="{./tei:idno[@type='NDB']}" target="_blank">
-                                        <xsl:value-of select="./tei:idno[@type='NDB']/text()"/>
                                     </a>
                                 </td>
                             </tr>
@@ -82,6 +75,19 @@
                                 </td>
                             </tr>
                         </xsl:if>
+                        <xsl:if test="./tei:idno[@type='WIKIDATA']/text()">
+                            <tr>
+                                <th>
+                                    Wikidata ID
+                                </th>
+                                <td>
+                                    <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
+                                        <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                    </a>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                        
                         <xsl:if test=".//tei:note[@type='mentions']">
                             <tr>
                                 <th>
