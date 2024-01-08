@@ -15,8 +15,8 @@ curl -LO https://github.com/emt-project/emt-entities/archive/refs/heads/main.zip
 unzip main
 rm main.zip
 mv ./emt-entities-main/indices ./data/indices
-mv ./emt-entities-main/json_dumps/storymap.json ./html/js-data/
-mv ./emt-entities-main/json_dumps/timeline.json ./html/js-data/
+mv ./emt-entities-main/json_dumps/storymap.json ./html/js-data
+mv ./emt-entities-main/json_dumps/timeline.json ./html/js-data
 rm -rf ./emt-entities-main
 
 echo "fetching transkriptions from emt-para-text"
