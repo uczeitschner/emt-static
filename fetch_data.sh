@@ -14,9 +14,10 @@ rm -rf data/indices
 curl -LO https://github.com/emt-project/emt-entities/archive/refs/heads/main.zip
 unzip main
 rm main.zip
+mkdir html/js-data
 mv ./emt-entities-main/indices ./data/indices
-mv ./emt-entities-main/json_dumps/storymap.json ./html/js-data
-mv ./emt-entities-main/json_dumps/timeline.json ./html/js-data
+mv ./emt-entities-main/json_dumps/storymap.json ./html/js-data/storymap.json
+mv ./emt-entities-main/json_dumps/timeline.json ./html/js-data/timeline.json
 rm -rf ./emt-entities-main
 
 echo "fetching transkriptions from emt-para-text"
