@@ -11,17 +11,17 @@
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
     <xsl:import href="./partials/shared.xsl"/>
-
-
+    
+    
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
         </xsl:variable>
-
-
-    
+        
+        
+        
         <html class="h-100">
-    
+            
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
@@ -29,7 +29,7 @@
             </head>
             
             <body class="d-flex flex-column h-100">
-            <xsl:call-template name="nav_bar"/>
+                <xsl:call-template name="nav_bar"/>
                 <main>
                     <div class="container-md">                        
                         <h1 class="display-3 text-center">
@@ -46,21 +46,21 @@
                                     </xsl:attribute>
                                     <xsl:element name="a">
                                         <xsl:attribute name="name">
-                                          <xsl:text>fn</xsl:text>
-                                          <xsl:number level="any" format="1"
-                                              count="tei:note"/>
+                                            <xsl:text>fn</xsl:text>
+                                            <xsl:number level="any" format="1"
+                                                count="tei:note"/>
                                         </xsl:attribute>
                                     </xsl:element>
                                     <a>
                                         <xsl:attribute name="href">
-                                        <xsl:text>#fna_</xsl:text>
-                                        <xsl:number level="any" format="1"
-                                            count="tei:note"/>
+                                            <xsl:text>#fna_</xsl:text>
+                                            <xsl:number level="any" format="1"
+                                                count="tei:note"/>
                                         </xsl:attribute>
                                         <span
                                             style="font-size:7pt;vertical-align:super; margin-right: 0.4em">
-                                        <xsl:number level="any" format="1"
-                                            count="tei:note"/>
+                                            <xsl:number level="any" format="1"
+                                                count="tei:note"/>
                                         </span>
                                     </a>
                                     <xsl:for-each select="./tei:p">
@@ -75,8 +75,8 @@
             </body>
         </html>
     </xsl:template>
-
- <!--   <xsl:template match="tei:graphic" name="img">
+    
+    <!--   <xsl:template match="tei:graphic" name="img">
         <img src="{'img/'||tokenize(data(@url), '/')[last()]}" class="pb-1"/>
     </xsl:template>-->
     
@@ -111,17 +111,17 @@
             <xsl:otherwise><xsl:apply-templates/></xsl:otherwise>
         </xsl:choose>
         
-       
+        
     </xsl:template>
     
     <xsl:template match="tei:list">
         <ul><xsl:apply-templates/></ul>
     </xsl:template>
-
+    
     <xsl:template match="tei:item">
         <li><xsl:apply-templates/></li>
     </xsl:template>
-   
+    
     <xsl:template match="tei:head">
         <xsl:variable name="level">
             <xsl:value-of select="count(ancestor-or-self::tei:div)"/>
@@ -133,8 +133,8 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-   
-   
+    
+    
     <xsl:template match="tei:p">
         <p id="{generate-id()}">
             <xsl:if test="@ana">

@@ -69,6 +69,19 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__events" aria-expanded="false" />
+                                <ul class=" dropdown-menu" role="menu">
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar_timeline"
+                                        href="timeline.html" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar_storymap"
+                                        href="storymap.html" />
+                                    </li>
+                                </ul>
+                            </li>
                                     
                         </ul>
                         <a title="Suche" href="search.html" class="nav-link pe-3" data-i18n="navbar__search"></a>

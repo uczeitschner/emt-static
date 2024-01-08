@@ -13,8 +13,10 @@ rm -rf data/indices
 
 curl -LO https://github.com/emt-project/emt-entities/archive/refs/heads/main.zip
 unzip main
-mv ./emt-entities-main/indices ./data/indices
 rm main.zip
+mv ./emt-entities-main/indices ./data/indices
+mv ./emt-entities-main/json_dumps/storymap.json ./html/js-data/
+mv ./emt-entities-main/json_dumps/timeline.json ./html/js-data/
 rm -rf ./emt-entities-main
 
 echo "fetching transkriptions from emt-para-text"
@@ -34,9 +36,10 @@ echo "update imprint"
 echo "fetch rss feed"
 ./dl_rssfeed.sh
 
+echo "fetch bio-pics"
 rm -rf ./html/bio-pics
 curl -LO https://github.com/emt-project/emt-bio-pics/archive/refs/heads/main.zip
 unzip main
-mv ./emt-bio-pics-main/bio-pics ./html/bio-pics
 rm main.zip
+mv ./emt-bio-pics-main/bio-pics ./html/bio-pics
 rm -rf ./emt-bio-pics-main
