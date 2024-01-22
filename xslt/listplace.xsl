@@ -38,6 +38,7 @@
                                 <tr>
                                     <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
                                     <th scope="col" tabulator-headerFilter="input">Ortsname</th>
+                                    <th scope="col" tabulator-headerFilter="input">Absendort</th>
                                     <th scope="col" tabulator-headerFilter="input">Lat</th>
                                     <th scope="col" tabulator-headerFilter="input">Long</th>
                                     <th scope="col" tabulator-headerFilter="input">ID</th>
@@ -59,6 +60,12 @@
                                         </td>
                                         <td>
                                             <xsl:value-of select=".//tei:placeName[1]/text()"/>
+                                        </td>
+                                        <td>
+                                            <xsl:choose>
+                                                <xsl:when test=".//tei:state[@type='sender']">Absendeort</xsl:when>
+                                                <xsl:otherwise/>
+                                            </xsl:choose>
                                         </td>
                                         <td>
                                             <xsl:choose>

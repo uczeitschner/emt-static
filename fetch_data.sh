@@ -44,3 +44,4 @@ unzip main
 rm main.zip
 mv ./emt-bio-pics-main/bio-pics ./html/bio-pics
 rm -rf ./emt-bio-pics-main
+python delete_faulty_files.py

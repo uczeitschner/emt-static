@@ -10,9 +10,7 @@ from tqdm import tqdm
 
 
 files = glob.glob("./data/editions/*.xml")
-tag_blacklist = [
-    "{http://www.tei-c.org/ns/1.0}abbr"
-]
+tag_blacklist = ["{http://www.tei-c.org/ns/1.0}abbr"]
 
 
 try:

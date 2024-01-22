@@ -43,6 +43,8 @@
                                     <th scope="col" tabulator-headerFilter="input">Name</th>
                                     <th scope="col" tabulator-headerFilter="input">Lebensdaten</th>
                                     <th scope="col" tabulator-headerFilter="input">Erwähnungen</th>
+                                    <th scope="col" tabulator-headerFilter="input">Sender</th>
+                                    <th scope="col" tabulator-headerFilter="input">Emfpänger</th>
                                     <th scope="col" tabulator-headerFilter="input">ID</th>
                                 </tr>
                             </thead>
@@ -63,6 +65,18 @@
                                         </td>
                                         <td>
                                             <xsl:value-of select="count(.//tei:note[@type='mentions'])"/>
+                                        </td>
+                                        <td>
+                                            <xsl:choose>
+                                                <xsl:when test=".//tei:state[@type='sender']">Sender</xsl:when>
+                                                <xsl:otherwise/>
+                                            </xsl:choose>
+                                        </td>
+                                        <td>
+                                            <xsl:choose>
+                                                <xsl:when test=".//tei:state[@type='receiver']">Emfänger</xsl:when>
+                                                <xsl:otherwise/>
+                                            </xsl:choose>
                                         </td>
                                         <td>
                                             <xsl:value-of select="$id"/>

@@ -11,7 +11,7 @@ non_dateable = []
 broken = []
 items = []
 thread_ids = set()
-date_marker = "1677-01-01"  # Extreme lower boundary of dates. This variable is used for storing the "previous date" to date undated letters
+date_marker = "1677-01-01"  # Extreme lower boundary of dates.
 print(f"fetching data from {len(files)} files")
 for x in tqdm(files, total=len(files)):
     try:

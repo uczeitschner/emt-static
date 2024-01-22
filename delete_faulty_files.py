@@ -22,7 +22,7 @@ if len(faulty) > 0:
     print(f"found {len(faulty)} not well formed letters")
     print(f"writing report to '{faulty_file_name}'")
 else:
-    print(f"no faulty files found, good job!!!!")
+    print("no faulty files found, good job!!!!")
     faulty.append(["no faulty files found", "good job!"])
 with open(faulty_file_name, "w", newline="") as csvfile:
     my_writer = csv.writer(csvfile, delimiter=",")
