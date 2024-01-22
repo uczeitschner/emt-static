@@ -32,7 +32,7 @@
                 <main>
                     <div class="container">
 
-                        <h1 class="text-center display-3">
+                        <h1 class="text-center display-3 p-3">
                             <xsl:value-of select="$doc_title"/>
                         </h1>
 

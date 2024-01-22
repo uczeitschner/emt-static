@@ -25,15 +25,14 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">                        
-                        <div class="card">
-                            <div class="card-header d-flex flex-row flex-nowrap justify-content-center align-items-baseline">
-                                <h1 style="display:inline-block;margin-bottom:0;padding-right:5px;">
+                        
+                        <h1 class="text-center display-3 p-3">
                                     Kalender</h1>
                                 <a style="padding-left:5px;" href="js-data/calendarData.js">
                                     <i class="fas fa-download" title="Data"/>
                                 </a>
-                            </div>
-                            <div class="card-body containingloader">
+                           
+                            <div class="containingloader">
                                 <div class="row">
                                     <div class="col-sm-2 yearscol">
                                         <div class="row">
@@ -49,14 +48,16 @@
                                                 <p style="text-align:center;font-weight:bold;margin-top:1rem;margin-bottom:0;" data-i18n="calendar__legendtitle"></p>
                                             </div>
                                         </div>
-                                        <div class="row d-flex flex-row flex-nowrap align-items-baseline mt-2" id="calendar-legend">
-                                            <span style="position: relative; height: 0.64rem; width: 0.64rem; background-color: #A63437; border-radius: 50%; margin-right: 0.5rem;"></span>
-                                            <span style="flex: 1;" data-i18n="calendar__legendextant"></span>
-                                        </div>
-                                        <div class="row d-flex flex-row flex-nowrap  align-items-baseline" id="calendar-legend">
-                                            <span style="display: inline-block; position: relative; height: 0.64rem; width: 0.64rem; background-color: #BADA55; border-radius: 50%; margin-right: 0.5rem;"></span>
-                                            <span style="flex: 1;" data-i18n="calendar__legendrefd"></span>
-                                        </div>
+                                     
+                                            <div class="row d-flex flex-row flex-nowrap align-items-baseline mt-2" id="calendar-legend">
+                                                <span style="position: relative; height: 0.64rem; width: 0.64rem; background-color: #A63437; border-radius: 50%; margin-right: 1rem;"></span>
+                                                <span style="flex: 1;" data-i18n="calendar__legendextant"></span>
+                                            </div>
+                                            <div class="row d-flex flex-row flex-nowrap  align-items-baseline" id="calendar-legend">
+                                                <span style="display: inline-block; position: relative; height: 0.64rem; width: 0.64rem; background-color: #BADA55; border-radius: 50%; margin-right: 1rem;"></span>
+                                                <span style="flex: 1;" data-i18n="calendar__legendrefd"></span>
+                                            </div>
+                                        
                                     </div>
                                     <div class="col-sm-10">
                                         <div id="calendar"/>
@@ -64,11 +65,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                </div>
                     <script type="text/javascript" src="./js/calendar.js" charset="UTF-8"/>
                     <div id="loadModal"/>
                     <xsl:call-template name="html_footer"/>
-                </div>
+               
             </body>
         </html>
     </xsl:template>

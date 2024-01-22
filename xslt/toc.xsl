@@ -34,7 +34,7 @@
             <xsl:call-template name="nav_bar"/>
                 <main>
                     <div class="container">
-                        <h1 class="text-center pb-4 pt-3"><xsl:value-of select="$doc_title"/></h1>
+                        <h1 class="text-center display-3 p-3"><xsl:value-of select="$doc_title"/></h1>
                         <table class="table" id="myTable">
                             <thead>
                                 <tr>
