@@ -110,56 +110,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <h2 class="text-center display-4 pt-5">Blog</h2>
-                        <p class="text-center">Paralell zur Edition der Briefe betreibt das
-                            Projektteam auch einen Blog. Der Blog liefert aus einem derzeit
-                            laufenden Forschungsprojekt Material und Diskussionen, die die
-                            politische und repräsentative Rolle dieser Frauen vor Augen führen.
-                            Untenstehend finden Sie Auszüge zu den vier letzen Post.</p>
-                        <div class="row">
-                            <xsl:for-each select="subsequence(.//item, 1, 4)">
-                                <div class="col">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">
-                                                <xsl:value-of select="./title"/>
-                                            </h5>
-                                            <h6 class="card-subtitle mb-2 text-body-secondary">
-                                                <i class="bi bi-person pe-2"/>
-                                                <xsl:value-of select="./dc:creator"
-                                                  disable-output-escaping="yes"/>
-                                            </h6>
-                                            <xsl:for-each select="./category">
-                                                <span class="badge bg-primary p-1 m-1">
-                                                  <xsl:value-of select="."
-                                                  disable-output-escaping="yes"/>
-                                                </span>
-                                            </xsl:for-each>
-                                            <p class="card-text"><xsl:value-of
-                                                  select="substring(./description, 1, 300)"
-                                                  disable-output-escaping="yes"/>...</p>
-                                            <a class="card-link">
-                                                <xsl:attribute name="href"><xsl:value-of
-                                                  select="./link/text()"/></xsl:attribute> Zum
-                                                Blogpost </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--<div class="card">
-                                    <div class="card-header" style="text-align:center">
-                                        <h2></h2>
-                                        <h3><xsl:value-of select="./dc:creator" disable-output-escaping="yes"/></h3>
-                                        <xsl:for-each select="./category">
-                                            <span class="badge badge-primary p-1 m-1"><xsl:value-of select="." disable-output-escaping="yes"/></span>
-                                        </xsl:for-each>
-                                    </div>
-                                    <div class="card-body">
-                                        <xsl:value-of select="./description" disable-output-escaping="yes"/>
-                                    </div>
-                                </div>-->
-                            </xsl:for-each>
-                        </div>
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
