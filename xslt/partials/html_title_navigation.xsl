@@ -62,10 +62,8 @@
                     </a>
                 </h3>
                 <p class="text-center">
-                    <small><xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:repository" />
-                        (<xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:settlement" />,
-                        <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:country" />):
-                        
+                    <small><xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:repository" /><xsl:text> </xsl:text>
+                        <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:settlement" />,                         
                         <xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:idno" />
                         
                     </small>
