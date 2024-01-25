@@ -63,7 +63,7 @@
                                             <xsl:value-of select=".//tei:correspAction[@type='received']/tei:persName/text()"/>
                                         </td>
                                         <td>
-                                            <xsl:value-of select="data(.//tei:origDate/@when-iso)[1]"/>
+                                            <xsl:value-of select="data(.//tei:correspAction[@type='sent']//tei:date/@when-iso)[1]"/>
                                         </td>
                                         <td>
                                             <xsl:value-of select=".//tei:correspAction[@type='sent']/tei:placeName/text()"/>
