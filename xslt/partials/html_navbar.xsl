@@ -5,10 +5,10 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all" version="2.0">
     <xsl:template match="/" name="nav_bar">
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <!--<img src="{$project_logo}" alt="Project Logo"/>--> EMT
+                        Familiensache
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -67,22 +67,12 @@
                                         <a class="dropdown-item" data-i18n="navbar__places"
                                         href="listplace.html" />
                                     </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__events" aria-expanded="false" />
-                                <ul class=" dropdown-menu" role="menu">
                                     <li>
                                         <a class="dropdown-item" data-i18n="navbar_timeline"
                                         href="timeline.html" />
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item" data-i18n="navbar_storymap"
-                                        href="storymap.html" />
-                                    </li>
                                 </ul>
-                            </li>
-                                    
+                            </li>                                    
                         </ul>
                         <a title="Suche" href="search.html" class="nav-link pe-3" data-i18n="navbar__search"></a>
                         <select class="form-select" name="language" id="languageSwitcher"></select>

@@ -2,6 +2,56 @@
     --bs-border-width: 0px;
     --emt: #0b2966;
     --emt-hover: #0b2966b4;
+    --emt-bg: #ecdecc;
+    --emt-bg-dark: #c99b6d;
+    --emt-font-color: #61441f;
+    --emt-orange: #ff914d;
+}
+
+  .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 100vw; /* Ensure the container doesn't exceed the viewport width */
+      height: auto;
+      overflow: hidden;
+    }
+        .img-fluid {
+      width: 100%; /* Make the image take up the full width of its container */
+      height: auto;
+    }
+
+.image-text {
+    position: absolute;
+    top: 28%;
+    /* Adjust the top position as needed */
+    left: 40%;
+    width: 60%;
+    /* Center the text horizontally */
+    transform: translate(-50%, -50%);
+    /* Center the text vertically */
+}
+
+.hr-custom {
+    border-width: 5px;
+    border-color: var(--emt-orange);
+    opacity: initial;
+    margin: 0%;
+
+}
+
+.button-custom {
+    font-size: larger;
+    color: var(--emt-font-color);
+    text-transform: uppercase;
+    border-color: var(--emt-font-color);
+    border-style: outset;
+    border-radius: unset;
+    border-width: 1px;
+}
+
+.button-custom:hover {
+    background-color: var(--emt-bg-dark);
+    border-color: var(--emt-bg-dark);
 }
 
 main {
@@ -12,8 +62,26 @@ figcaption {
     font-size: smaller;
 }
 
-.navbar {
-    border-bottom: 5px solid var(--emt);
+body {
+    background-color: var(--emt-bg);
+    color: var(--emt-font-color);
+}
+
+footer {
+    background-color: var(--emt-bg-dark);
+}
+
+.card {
+    background-color: var(--emt-bg);
+    color: var(--emt-font-color);
+}
+
+.nav-item {
+    font-size: x-large;
+}
+
+.navbar-brand {
+    font-size: xx-large
 }
 
 a {
