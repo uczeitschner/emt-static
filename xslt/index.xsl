@@ -34,7 +34,7 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/banner_2.jpg" class="d-block w-100" alt="..."/>
+                            <img src="img/banner.jpg" class="d-block w-100" alt="..."/>
                         </div>
                     </div>
                 </div>
@@ -44,13 +44,14 @@
                     <div class="row p-3">
                         <div class="col-2"/>
                         <div class="col-8">
+                            <h1 class="display-1 text-center">Familiensache</h1>
                             <p class="text-center fs-4">Zwischen 1677 und 1716 gingen eine Unzahl
                                 von Briefen hin und her zwischen Wien, Düsseldorf und Heidelberg:
                                 Kaiserin Eleonora Magdalena korrespondierte mit Vater bzw. Bruder,
                                 den Kurfürsten von der Pfalz. Erstmals wird hier die umfangreiche
                                 Korrespondenz im Volltext zugänglich gemacht. </p>
                             <div class="d-grid gap-2 col-6 mx-auto p-3">
-                                <a href="about.html" type="button"
+                                <a href="projekt.html" type="button"
                                     class="btn btn-outline-secondary btn-lg button-custom">Über das
                                     Projekt</a>
                             </div>
@@ -59,11 +60,58 @@
                     </div>
                     <div class="container">
                         <hr class="hr-custom"/>
+                        <div class="row">
+                            <div class="col-md-7 p-3">
+                                <img src="img/slider_karlsruhe_778811_00085.jpg" class="img-fluid" alt="Responsive Image" />
+                            </div>
+                            <div class="col-md-5">
+                                <div class="pt-5 pb-5 text-end">
+                                    <h2 class="display-3">Briefverzeichnis</h2>
+                                    <p class="fs-4">In die erschlossenen Korrespondenzen kann
+                                        über eine tabellarische sowie eine kalendarische Ansicht
+                                        eingestiegen werden.</p>
+                                    <div>
+                                        <a href="toc.html" type="button"
+                                            class="btn btn-outline-secondary btn-lg button-custom">Zum Verzeichnis</a>
+                                    </div></div>
+                            </div>
+                        </div>
                     </div>
-                    
+                    <div class="container">
+                        <hr class="hr-custom"/>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="pt-5 pb-5">
+                                    <h2 class="display-3">Biographien</h2>
+                                    <p class="text-start fs-4">Biographische Skizzen zu <a href="philippwilhelm.html">Philipp Wilhelm</a>, <a href="eleonora.html">Eleonara</a> und <a href="johannwilhelm.html">Johann Wilhelm</a> von Pfalz-Neuburg.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-7 p-3">
+                                <img src="img/biographien.jpg" class="img-fluid" alt="Responsive Image" />
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="image-container">
-                        <img src="img/slider_karlsruhe_778811_00085.jpg" class="img-fluid" alt="Responsive Image" />
+                        <img src="img/brief.jpg" class="img-fluid" alt="Responsive Image" />
+                            <div class="image-text">
+                                <h2 class="display-3"> Briefverzeichnis </h2>
+                                <p class="text-start fs-4">In die erschlossenen Korrespondenzen kann
+                                    über eine tabellarische sowie eine kalendarische Ansicht
+                                    eingestiegen werden. </p>
+                                <div class="d-grid gap-2 col-3  p-3">
+                                    <a href="toc.html" type="button"
+                                        class="btn btn-outline-secondary btn-lg button-custom">Zum Verzeichnis</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <hr class="hr-custom"/>
+                    </div>
+                    <div>
+                        <div class="image-container">
+                            <img src="img/biographien.jpg" class="img-fluid" alt="Responsive Image" />
                             <div class="image-text">
                                 <h2 class="display-3"> Briefverzeichnis </h2>
                                 <p class="text-start fs-4">In die erschlossenen Korrespondenzen kann
@@ -72,48 +120,6 @@
                             </div>
                         </div>
                     </div>
-
-                    
-
-                    <hr class="hr-custom"/>
-                    <h2 class="text-center display-4 p-5">Biographien</h2>
-                    <div class="row justify-content-center">
-
-                        <div class="col">
-                            <div class="card" style="width: 18rem;">
-                                <a href="philippwilhelm.html">
-                                    <img src="img/johann_wilhelm.jpg" class="card-img-top"
-                                        alt="Portrait von Johann Wilhelm von Pfalz-Neuburg"/>
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Johann Wilhelm von Pfalz-Neuburg</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 18rem;">
-                                <a href="eleonora.html">
-                                    <img src="img/eleonora_magdalena.jpg" class="card-img-top"
-                                        alt="Portrait von Eleonora Magdalena von Pfalz-Neuburg"/>
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Eleonora Magdalena von Pfalz-Neuburg</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 18rem;">
-                                <a href="johannwilhelm.html">
-                                    <img src="img/philip_wilhelm.jpg" class="card-img-top"
-                                        alt="Portrait von Philip Wilhelm von Pfalz-Neuburg"/>
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Philip Wilhelm von Pfalz-Neuburg</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </main>
                 <xsl:call-template name="html_footer"/>
             </body>

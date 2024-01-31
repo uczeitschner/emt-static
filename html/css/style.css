@@ -8,21 +8,25 @@
     --emt-orange: #ff914d;
 }
 
-  .image-container {
-      position: relative;
-      width: 100%;
-      max-width: 100vw; /* Ensure the container doesn't exceed the viewport width */
-      height: auto;
-      overflow: hidden;
-    }
-        .img-fluid {
-      width: 100%; /* Make the image take up the full width of its container */
-      height: auto;
-    }
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    /* Ensure the container doesn't exceed the viewport width */
+    height: auto;
+    overflow: hidden;
+    min-height: 600px;
+}
+
+.img-fluid {
+    width: 100%;
+    /* Make the image take up the full width of its container */
+    height: auto;
+}
 
 .image-text {
     position: absolute;
-    top: 28%;
+    top: 35%;
     /* Adjust the top position as needed */
     left: 40%;
     width: 60%;
@@ -67,6 +71,10 @@ body {
     color: var(--emt-font-color);
 }
 
+nav {
+    background-color: var(--emt-bg-dark);
+}
+
 footer {
     background-color: var(--emt-bg-dark);
 }
@@ -85,11 +93,11 @@ footer {
 }
 
 a {
-    color: var(--emt)
+    color: var(--emt-orange)
 }
 
 a:hover {
-    color: var(--emt-hover)
+    color: var(--emt-bg-dark)
 }
 
 #languageSwitcher {
