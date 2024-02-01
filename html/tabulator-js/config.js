@@ -5,7 +5,4 @@ var config = {
     layout: "fitDataStretch",
     tooltips: true,
     dataLoader: true,
-    pagination: "local",
-    paginationSize: 15,
-    paginationCounter: "rows",
     };
