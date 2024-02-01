@@ -58,11 +58,13 @@
                         </div>
                         <div class="col-2"/>
                     </div>
+                    
+                    <!--  Briefverzeichnis   -->
                     <div class="container">
                         <hr class="hr-custom"/>
                         <div class="row">
                             <div class="col-md-7 p-3">
-                                <img src="img/slider_karlsruhe_778811_00085.jpg" class="img-fluid" alt="Responsive Image" />
+                                <img src="img/brief.jpg" class="img-fluid" alt="Bild eines Briefes" />
                             </div>
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5 text-end">
@@ -77,6 +79,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--  Biographien   -->
                     <div class="container">
                         <hr class="hr-custom"/>
                         <div class="row">
@@ -87,13 +91,31 @@
                                 </div>
                             </div>
                             <div class="col-md-7 p-3">
-                                <img src="img/biographien.jpg" class="img-fluid" alt="Responsive Image" />
+                                <img src="img/biographien.jpg" class="img-fluid" alt="Symbolbild Biographien" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--  Blog   -->
+                    <div class="container">
+                        <hr class="hr-custom"/>
+                        <div class="row">
+                            <div class="col-md-7 p-3">
+                                <img src="img/blog.jpg" class="img-fluid" alt="Symbolbild Blog" />
+                            </div>
+                            <div class="col-md-5">
+                                <div class="pt-5 pb-5 text-end">
+                                    <h2 class="display-3">Blog</h2>
+                                    <p class="fs-4">Wenn man heute von Kaiserinnen spricht, so denken die meisten, gerade in Wien, eigentlich nur an zwei Frauen: Maria Theresia und Elisabeth, genannt Sissi. Dabei gibt es seit dem Mittelalter eine lange Reihe von Frauen, die diesen Titel trugen und denen damit im Rahmen des Heiligen Römischen Reiches herrschaftliche Befugnisse, zeremonieller Rang und symbolische Bedeutung zukamen. Mit diesen Fürstinnen der Frühen Neuzeit hat sich die Forschung bislang jedoch kaum beschäftigt. Der Blog liefert Einblicke in unser derzeit laufendes Forschungsprojekt und führt die politische und repräsentative Rolle dieser Frauen vor Augen...</p>
+                                    <div>
+                                        <a href="https://kaiserin.hypotheses.org/" type="button"
+                                            class="btn btn-outline-secondary btn-lg button-custom">Zum Blog</a>
+                                    </div></div>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="image-container">
-                        <img src="img/brief.jpg" class="img-fluid" alt="Responsive Image" />
+                        <img src="img/brief.jpg" class="img-fluid" alt="Symbolbild Brief" />
                             <div class="image-text">
                                 <h2 class="display-3"> Briefverzeichnis </h2>
                                 <p class="text-start fs-4">In die erschlossenen Korrespondenzen kann
