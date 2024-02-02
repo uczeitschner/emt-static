@@ -42,6 +42,9 @@
         <title><xsl:value-of select="$html_title"/></title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+        <!--<link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator.min.css" rel="stylesheet"></link>-->
+        <link href="https://unpkg.com/tabulator-tables@5.5.0/dist/css/tabulator_bootstrap5.min.css" rel="stylesheet"></link>
+        <link href="css/tablutor-style.css" rel="stylesheet"></link>
         <link rel="stylesheet" href="css/style.css" type="text/css"></link>
         <!--<link rel="stylesheet" href="css/micro-editor.css" type="text/css"></link>-->
         <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
