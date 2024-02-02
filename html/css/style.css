@@ -7,6 +7,24 @@
     --emt-font-color: #61441f;
     --emt-orange: #ff914d;
 }
+.bio {
+    background-color: var(--emt-bg-dark);
+}
+.image-container2 {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    /* Ensure the container doesn't exceed the viewport width */
+    overflow: auto;
+    height: 600px;
+}
+.image-container-bio {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    /* Ensure the container doesn't exceed the viewport width */
+    overflow: auto;
+}
 
 .image-container {
     position: relative;
@@ -27,12 +45,22 @@
 .image-text {
     position: absolute;
     top: 35%;
-    /* Adjust the top position as needed */
     left: 40%;
-    width: 60%;
     /* Center the text horizontally */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     /* Center the text vertically */
+}
+
+.image-text-bio {
+	position: absolute;
+	top: 54%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	color: white;
+}
+.image-bio-buttons {
+    position: absolute;
+	top: 75%;
 }
 
 .hr-custom {
@@ -56,6 +84,16 @@
 .button-custom:hover {
     background-color: var(--emt-bg-dark);
     border-color: var(--emt-bg-dark);
+}
+
+.button-bio {
+    font-size: larger;
+    color: white;
+    text-transform: uppercase;
+    border-color: white;
+    border-style: outset;
+    border-radius: unset;
+    border-width: 1px;
 }
 
 main {

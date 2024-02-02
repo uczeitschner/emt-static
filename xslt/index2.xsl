@@ -42,69 +42,81 @@
 
 
                     <div class="row p-3">
-                        <div class="col-2"/>
-                        <div class="col-8">
-                            <h1 class="display-1 text-center">Familiensache</h1>
+                        <div class="col-3"/>
+                        <div class="col-6">
                             <p class="text-center fs-4">Zwischen 1677 und 1716 gingen eine Unzahl
                                 von Briefen hin und her zwischen Wien, Düsseldorf und Heidelberg:
                                 Kaiserin Eleonora Magdalena korrespondierte mit Vater bzw. Bruder,
                                 den Kurfürsten von der Pfalz. Erstmals wird hier die umfangreiche
                                 Korrespondenz im Volltext zugänglich gemacht. </p>
-                            <div class="d-grid gap-2 col-6 mx-auto p-3">
+                            <div class="d-grid gap-2 col-5 mx-auto p-3">
                                 <a href="projekt.html" type="button"
                                     class="btn btn-outline-secondary btn-lg button-custom">Über das
                                     Projekt</a>
                             </div>
                         </div>
-                        <div class="col-2"/>
+                        <div class="col-3"/>
                     </div>
 
                     <!--  Briefverzeichnis   -->
-                    <div class="container">
-                        <hr class="hr-custom"/>
-                        <div class="row">
-                            <div class="col-md-7 p-3">
-                                <img src="img/brief.jpg" class="img-fluid" alt="Bild eines Briefes"
-                                />
-                            </div>
-                            <div class="col-md-5">
-                                <div class="pt-5 pb-5 text-end">
-                                    <h2 class="display-3">Briefverzeichnis</h2>
-                                    <p class="fs-4">In die erschlossenen Korrespondenzen kann über
-                                        eine tabellarische sowie eine kalendarische Ansicht
-                                        eingestiegen werden.</p>
-                                    <div>
-                                        <a href="toc.html" type="button"
-                                            class="btn btn-outline-secondary btn-lg button-custom"
-                                            >Zum Verzeichnis</a>
-                                    </div>
+                    <div>
+                        <div class="container">
+                            <hr class="hr-custom"/>
+                        </div>
+                        <div class="image-container2">
+                            <img src="img/brief.jpg" class="img-fluid" alt="Symbolbild Brief"/>
+                            <div class="image-text">
+                                <h2 class="display-3"> Briefverzeichnis </h2>
+                                <p class="text-start fs-4 col-6">In die erschlossenen
+                                    Korrespondenzen kann über eine tabellarische sowie eine
+                                    kalendarische Ansicht eingestiegen werden.</p>
+                                <div class="d-grid gap-2 col-3">
+                                    <a href="toc.html" type="button"
+                                        class="btn btn-outline-secondary btn-lg button-custom">Zum
+                                        Verzeichnis</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!--  Biographien   -->
+
                     <div class="container">
                         <hr class="hr-custom"/>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="pt-5 pb-5">
+                    </div>
+                    <div class="row bio">
+                        <div class="col-2"/>
+                        <div class="col-8">
+                            <div class="image-container-bio">
+                                <img src="img/biographien.jpg" class="img-fluid"
+                                    alt="Symbolbild Brief"/>
+                                <div class="image-text-bio">
                                     <h2 class="display-3">Biographien</h2>
-                                    <p class="text-start fs-4">Biographische Skizzen zu <a
-                                            href="philippwilhelm.html">Philipp Wilhelm</a>, <a
-                                            href="eleonora.html">Eleonara</a> und <a
-                                            href="johannwilhelm.html">Johann Wilhelm</a> von
-                                        Pfalz-Neuburg.</p>
+                                </div>
+                                <div class="image-bio-buttons">
+                                    <div class="row justify-content-evenly">
+                                        <div class="col-md-4">
+                                            <a href="philippwilhelm.html" type="button"
+                                                class="btn btn-outline-secondary btn-lg button-bio"
+                                                >PHILIPP WILHELM VON PFALZ-NEUBURG </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="eleonora.html" type="button"
+                                                class="btn btn-outline-secondary btn-lg button-bio"
+                                                >Eleonora Magdalena Theresia von Pfalz-Neuburg </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="johannwilhelm.html" type="button"
+                                                class="btn btn-outline-secondary btn-lg button-bio"
+                                                >JOHANN WILHELM VON PFALZ-NEUBURG </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-7 p-3">
-                                <img src="img/biographien.jpg" class="img-fluid"
-                                    alt="Symbolbild Biographien"/>
-                            </div>
                         </div>
+                        <div class="col-2"/>
                     </div>
-
-                    <!--  Blog   -->
+                    
                     <div class="container">
                         <hr class="hr-custom"/>
                         <div class="row">
@@ -136,7 +148,7 @@
                         </div>
                     </div>
 
-                    <!-- Kontakt -->
+                    <!--  Kontakt -->
                     <div class="container">
                         <hr class="hr-custom"/>
                         <div class="pt-5 pb-5 text-center">
