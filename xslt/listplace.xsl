@@ -25,6 +25,8 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
             </head>
             
             <body class="d-flex flex-column h-100">
@@ -33,15 +35,15 @@
                     <div class="container">
                         <h1 class="text-center display-3 p-3"><xsl:value-of select="$doc_title"/></h1>
                         <div id="map"/>
-                        <table class="table" id="myTable">
+                        <table class="table" id="placesTable">
                             <thead>
                                 <tr>
                                     <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
-                                    <th scope="col" tabulator-headerFilter="input">Ortsname</th>
-                                    <th scope="col" tabulator-headerFilter="input">Absendeort</th>
-                                    <th scope="col" tabulator-headerFilter="input">Lat</th>
-                                    <th scope="col" tabulator-headerFilter="input">Long</th>
-                                    <th scope="col" tabulator-headerFilter="input">ID</th>
+                                    <th scope="col" tabulator-formatter="html">Ortsname</th>
+                                    <th scope="col" >Absendeort</th>
+                                    <th scope="col" >lat</th>
+                                    <th scope="col" >lng</th>
+                                    <th scope="col" >ID</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -92,7 +94,14 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
-                <xsl:call-template name="tabulator_js"/>
+                <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"/>
+                <script src="js/map_table_cfg.js"/>
+                <script src="js/make_map_and_table.js"/>
+                
+                <script>
+                    build_map_and_table(map_cfg, table_cfg);
+                </script>
+                <!--<xsl:call-template name="tabulator_js"/>-->
             </body>
         </html>
         <xsl:for-each select=".//tei:place[@xml:id]">
