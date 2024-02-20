@@ -7,7 +7,7 @@
         <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
         <script src="tabulator-js/config.js"></script>
         <script>
-            var table = new Tabulator("#myTable", config);
+            var table = new Tabulator("#placesTable", config);
             //trigger download of data.csv file
             document.getElementById("download-csv").addEventListener("click", function(){
             table.download("csv", "data.csv");
