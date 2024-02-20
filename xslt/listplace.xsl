@@ -101,7 +101,7 @@
                 <script>
                     build_map_and_table(map_cfg, table_cfg);
                 </script>
-                <xsl:call-template name="tabulator_js"/>
+                <!--<xsl:call-template name="tabulator_js"/>-->
             </body>
         </html>
         <xsl:for-each select=".//tei:place[@xml:id]">
