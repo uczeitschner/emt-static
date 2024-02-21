@@ -91,7 +91,7 @@
                                 </xsl:for-each>
                             </tbody>
                         </table>
-                        <xsl:call-template name="tabulator_dl_buttons"/>
+<!--                        <xsl:call-template name="tabulator_dl_buttons">/>-->
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
@@ -120,12 +120,18 @@
                         <xsl:call-template name="nav_bar"/>
                         <main>
                             <div class="container">
-                                <h1>
+                                <h1 class="display-3 text-center">
                                     <xsl:value-of select="$name"/>
                                 </h1>
-                                <xsl:call-template name="place_detail"/>
+                                
                                 <xsl:if test="./tei:location/tei:geo">
-                                <div id="map_detail"/>
+                                    <div class="row">
+                                        <div class="col-4"><div id="map_detail"/></div>
+                                        <div class="col-8">
+                                            <xsl:call-template name="place_detail"/>
+                                        </div>
+                                    </div>
+                                
                                 </xsl:if>
                             </div>
                         </main>

@@ -24,15 +24,15 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="staticBackdropLabel"><xsl:value-of select="$label"/></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        
                     </div>
                     <div class="modal-body">
                         <xsl:call-template name="person_detail"/> 
                         <hr />
-                        <a href="{$selfLink}"><i class="bi bi-link-45deg"></i></a>
+                        <a href="{$selfLink}">Link zur Detailansicht <i class="bi bi-link-45deg"></i></a>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
                     </div>
                 </div>
             </div>
@@ -51,15 +51,15 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="staticBackdropLabel"><xsl:value-of select="$label"/></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        
                     </div>
                     <div class="modal-body">
                         <xsl:call-template name="place_detail"/>
                         <hr />
-                        <a href="{$selfLink}"><i class="bi bi-link-45deg"></i></a>
+                        <a href="{$selfLink}">Link zur Detailansicht <i class="bi bi-link-45deg"></i></a>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
                     </div>
                 </div>
             </div>
