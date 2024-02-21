@@ -100,7 +100,7 @@
                 <script src="js/make_map_and_table.js"/>
                 
                 <script>
-                    build_map_and_table(map_cfg, table_cfg);
+                    build_map_and_table(map_cfg, table_cfg, wms_cfg=null, tms_cfg=tms_cfg);
                 </script>
                 <!--<xsl:call-template name="tabulator_js"/>-->
             </body>
