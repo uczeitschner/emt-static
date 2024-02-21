@@ -38,9 +38,10 @@
                         <table class="table" id="placesTable">
                             <thead>
                                 <tr>
-                                    <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
-                                    <th scope="col" tabulator-formatter="html">Ortsname</th>
+                                    
+                                    <th scope="col" >Ortsname</th>
                                     <th scope="col" >Absendeort</th>
+                                    <th scope="col" >Erwähnungen</th>
                                     <th scope="col" >lat</th>
                                     <th scope="col" >lng</th>
                                     <th scope="col" >ID</th>
@@ -53,14 +54,6 @@
                                     </xsl:variable>
                                     <tr>
                                         <td>
-                                            <a>
-                                              <xsl:attribute name="href">
-                                              <xsl:value-of select="concat($id, '.html')"/>
-                                              </xsl:attribute>
-                                              <i class="bi bi-link-45deg"/>
-                                            </a>
-                                        </td>
-                                        <td>
                                             <xsl:value-of select=".//tei:placeName[1]/text()"/>
                                         </td>
                                         <td>
@@ -68,6 +61,9 @@
                                                 <xsl:when test=".//tei:state[@type='sender']">Absendeort</xsl:when>
                                                 <xsl:otherwise/>
                                             </xsl:choose>
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select="count(.//tei:note[@type='mentions'])"/>
                                         </td>
                                         <td>
                                             <xsl:choose>
@@ -84,7 +80,12 @@
                                             </xsl:choose>
                                         </td>
                                         <td>
-                                            <xsl:value-of select="$id"/>
+                                            <a>
+                                                <xsl:attribute name="href">
+                                                    <xsl:value-of select="concat($id, '.html')"/>
+                                                </xsl:attribute>
+                                                <xsl:value-of select="$id"/>
+                                            </a>
                                         </td>
                                     </tr>
                                 </xsl:for-each>

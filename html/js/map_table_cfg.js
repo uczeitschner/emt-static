@@ -41,6 +41,20 @@ const map_cfg = {
       formatter: "plaintext",
       resizable: false,
     },
+    {
+      headerFilter: "input",
+      title: "Erwähnungen",
+      field: "mentions",
+      formatter: "plaintext",
+      resizable: false,
+    },
+    {
+      headerFilter: "input",
+      title: "ID",
+      field: "ID",
+      formatter: "html",
+      resizable: false,
+    },
     /* the following fields are necessary, 
       provide a string val each in your html-table,
       (longitude and latitude)*/
@@ -135,8 +149,12 @@ const map_cfg = {
   function draw_cirlce_from_rowdata(latLng, row) {
     /*provides a circular icon to be drawn on the map, radius is dermined by the amount
       of child elements in the related_objects column first ul child*/
-    let radius_factor = 1;
-    let radius = radius_factor*3;
+    let row_data = Number(row.getData().mentions);
+    if (row_data > 100) {
+      row_data = 100 + row_data / 100
+    }
+    let radius_factor = row_data;
+    let radius = radius_factor*0.2;
     let border_width = 4;
     let options = {
       radius: radius,
