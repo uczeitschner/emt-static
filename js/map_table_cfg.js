@@ -20,7 +20,7 @@ const map_cfg = {
   subdomains: "abcd",
   attribution:
     '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors & <a href="https://carto.com/attributions">CARTO</a>',
-  base_map_label: "Zeitgenössische Karte"
+  base_map_label: "Aktuelle Karte"
 };
 
 /*provide a list of your table columns and what tabulator should do with it
@@ -40,21 +40,21 @@ const columns = [
     title: "Absendeort",
     field: "Absendeort",
     formatter: "plaintext",
-    resizable: false,
+    resizable: true,
   },
   {
     headerFilter: "input",
     title: "Erwähnungen",
     field: "mentions",
     formatter: "plaintext",
-    resizable: false,
+    resizable: true,
   },
   {
     headerFilter: "input",
     title: "ID",
     field: "ID",
     formatter: "html",
-    resizable: false,
+    resizable: true,
   },
   /* the following fields are necessary, 
     provide a string val each in your html-table,
