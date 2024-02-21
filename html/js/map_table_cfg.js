@@ -19,7 +19,7 @@ const map_cfg = {
   /* some map providers need subdomains */
   subdomains: "abcd",
   attribution:
-    '&amp;copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>',
+    '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors & <a href="https://carto.com/attributions">CARTO</a>',
   base_map_label: "Zeitgenössische Karte"
 };
 
@@ -127,7 +127,7 @@ if you don't need this, ignore it*/
 let wms_cfg = {
   label: "Stadtplan 1858 (k.k. Ministerium des Inneren)",
   wms_url: "https://data.wien.gv.at/daten/wms?version=1.1.1",
-  wmsOptions: {
+  layerOptions: {
     service: "WMS",
     version: "1.1.1",
     request: "GetMap",
@@ -145,7 +145,7 @@ let wms_cfg = {
 let tms_cfg = {
   label: "Europa um 1700",
   tms_url: "https://emt-project.github.io/mapserver/map_01/{z}/{x}/{y}.png",
-  tmsOptions: {tms: 1, opacity: 0.8, attribution: "", minZoom: 2, maxZoom: 12}
+  layerOptions: {tms: 1, opacity: 0.8, attribution: "", minZoom: 2, maxZoom: 12, attribution: "Austrian National Library (ÖNB)"},
 }
 
 //////////////////////////////////////////////////

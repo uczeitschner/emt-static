@@ -217,7 +217,7 @@ function build_map_and_table(map_cfg, table_cfg, wms_cfg = null, tms_cfg = null)
   // if wms_cfg is provided wms map layer gets added
   if (wms_cfg !== null) {
     // this is for the page gui / switch for toggling overlays
-    let wms_layer = L.tileLayer.wms(wms_cfg.wms_url, wms_cfg.wmsOptions);
+    let wms_layer = L.tileLayer.wms(wms_cfg.wms_url, wms_cfg.layerOptions);
     wms_layer.addTo(map);
     overlay_control[wms_cfg.label] = wms_layer;
   }
@@ -225,7 +225,7 @@ function build_map_and_table(map_cfg, table_cfg, wms_cfg = null, tms_cfg = null)
   // if tms_cfg is provided tms map layer gets added
   if (tms_cfg !== null) {
     // this is for the page gui / switch for toggling overlays
-    let tms_layer = L.tileLayer('https://emt-project.github.io/mapserver/map_01/{z}/{x}/{y}.png', tms_cfg.tmsOptions);
+    let tms_layer = L.tileLayer('https://emt-project.github.io/mapserver/map_01/{z}/{x}/{y}.png', tms_cfg.layerOptions);
     tms_layer.addTo(map);
     overlay_control[tms_cfg.label] = tms_layer;
   }
