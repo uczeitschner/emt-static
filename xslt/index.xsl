@@ -44,7 +44,8 @@
                     <div class="row p-3">
                         <div class="col-2"/>
                         <div class="col-8">
-                            <h1 class="display-1 text-center">Familiensache</h1>
+                            <h1 class="display-1 text-center">Familiensache? </h1>
+                            <h2 class="display-4 text-center">Die Korrespondenz der Kaiserin Eleonora Magdalena (1655-1720).</h2>
                             <p class="text-center fs-4">Zwischen 1677 und 1716 gingen eine Unzahl
                                 von Briefen hin und her zwischen Wien, Düsseldorf und Heidelberg:
                                 Kaiserin Eleonora Magdalena korrespondierte mit Vater bzw. Bruder,
