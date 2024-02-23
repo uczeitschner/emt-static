@@ -38,7 +38,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item" data-i18n="navbar__blog"
-                                            href="rss.html" />
+                                            href="https://kaiserin.hypotheses.org/" />
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider" />
