@@ -40,7 +40,13 @@
                                 <xsl:value-of select=".//tei:title[@type='main' and @xml:lang='en']"/>
                             </h1>
                         </xsl:if>
-                        <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
+                        <div data-mylang="de">
+                            <xsl:apply-templates select=".//tei:body/tei:div[@xml:lang='de']"/>
+                        </div>
+                        <div data-mylang="en">
+                            <xsl:apply-templates select=".//tei:body/tei:div[@xml:lang='en']"/>
+                        </div>
+                        
                         <p style="text-align:center;">
                             <xsl:for-each select=".//tei:note">
                                 <div class="footnotes">
