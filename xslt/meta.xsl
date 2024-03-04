@@ -42,6 +42,7 @@
                         </xsl:if>
                         <div data-mylang="de">
                             <xsl:apply-templates select=".//tei:body/tei:div[@xml:lang='de']"/>
+                            <xsl:apply-templates select=".//tei:body/tei:div"/>
                         </div>
                         <div data-mylang="en">
                             <xsl:apply-templates select=".//tei:body/tei:div[@xml:lang='en']"/>
