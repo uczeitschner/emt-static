@@ -34,6 +34,17 @@ $(function () {
       });
       $('#languageSwitcher').change((a, b, c) => {
         const chosenLng = $(this).find("option:selected").attr('value');
+        var hide_this_lang = (chosenLng === "en") ? "de" : "en";
+        var show_this_lang = chosenLng
+        var to_show = document.querySelectorAll(`[data-mylang="${show_this_lang}"]`);
+        to_show.forEach(function (el) {
+          el.style.removeProperty("display")
+        });
+        var to_hide = document.querySelectorAll(`[data-mylang="${hide_this_lang}"]`);
+        console.log(`hide ${hide_this_lang}`)
+        to_hide.forEach(function (el) {
+          el.style.display = 'none';
+        });
         i18next.changeLanguage(chosenLng, () => {
           rerender();
         });
@@ -42,3 +53,18 @@ $(function () {
       rerender();
     });
 });
+
+
+var show_this_lang = localStorage.i18nextLng
+  var to_show = document.querySelectorAll(`[data-mylang="${show_this_lang}"]`);
+  to_show.forEach(function (el) {
+    el.style.removeProperty("display")
+  });
+
+var hide_this_lang = (localStorage.i18nextLng === "en") ? "de" : "en";
+var to_hide = document.querySelectorAll(`[data-mylang="${hide_this_lang}"]`);
+console.log(`hide ${hide_this_lang}`)
+to_hide.forEach(function (el) {
+  el.style.display = 'none';
+});
+
