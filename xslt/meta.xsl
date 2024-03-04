@@ -32,9 +32,14 @@
                 <xsl:call-template name="nav_bar"/>
                 <main>
                     <div class="container-md">                        
-                        <h1 class="display-3 text-center">
+                        <h1 class="display-3 text-center" data-mylang="de">
                             <xsl:value-of select="$doc_title"/>
-                        </h1>    
+                        </h1> 
+                        <xsl:if test=".//tei:title[@type='main' and @xml:lang='en']">
+                            <h1 class="display-3 text-center" data-mylang="en">
+                                <xsl:value-of select=".//tei:title[@type='main' and @xml:lang='en']"/>
+                            </h1>
+                        </xsl:if>
                         <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
                         <p style="text-align:center;">
                             <xsl:for-each select=".//tei:note">
@@ -72,26 +77,46 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
+                <!--<script>
+                    var selected = document.querySelectorAll("[data-mylang='en']")
+                    var cur_lang = localStorage.i18nextLng;
+                    console.log(cur_lang)
+                    console.log(selected)
+                    selected.forEach(function(el) {
+                        el.style.display = 'none';
+                    });
+                </script>-->
             </body>
         </html>
     </xsl:template>
     
-    <!--   <xsl:template match="tei:graphic" name="img">
-        <img src="{'img/'||tokenize(data(@url), '/')[last()]}" class="pb-1"/>
-    </xsl:template>-->
-    
     <xsl:template match="tei:figure">
+        <xsl:variable name="float">
+            <xsl:choose>
+                <xsl:when test="data(@rend) eq 'start'">
+                    <xsl:value-of select="'start'"/>
+                </xsl:when>
+                <xsl:when test="data(@rend) eq 'end'">
+                    <xsl:value-of select="'end'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="'start'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <figure class="w-50 float-{$float}">
         <xsl:variable name="imgurl">
             <xsl:value-of select="./tei:graphic/@url"/>
         </xsl:variable>
-        <img class="pb-1">
-            <xsl:attribute name="src">
-                <xsl:value-of select="'img/'||tokenize(data($imgurl), '/')[last()]"/>
-            </xsl:attribute>
-        </img>
+            <img class="p-2 pt-1 w-100">
+                <xsl:attribute name="src">
+                    <xsl:value-of select="'img/'||tokenize(data($imgurl), '/')[last()]"/>
+                </xsl:attribute>
+            </img>
         <xsl:if test=".//tei:desc">
-            <figcaption><xsl:apply-templates select=".//tei:desc"/></figcaption>
+            <figcaption class="p-2 pt-1 w-100"><xsl:apply-templates select=".//tei:desc"/></figcaption>
         </xsl:if>
+        </figure>
     </xsl:template>
     
     <xsl:template match="tei:hi[@rend]">
@@ -146,7 +171,14 @@
         </p>
     </xsl:template>
     <xsl:template match="tei:div">
-        <div id="{generate-id()}"><xsl:apply-templates/></div>
+        <div id="{generate-id()}">
+            <xsl:if test="@xml:lang">
+                <xsl:attribute name="data-mylang">
+                    <xsl:value-of select="@xml:lang"/>
+                </xsl:attribute>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     <xsl:template match="tei:lb">
         <br/>
