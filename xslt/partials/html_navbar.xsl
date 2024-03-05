@@ -72,7 +72,24 @@
                                         href="timeline.html" />
                                     </li>
                                 </ul>
-                            </li>                                    
+                            </li>  
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__register" aria-expanded="false" />
+                                <ul class=" dropdown-menu" role="menu">
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__eleonora"
+                                            href="eleonora.html" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__johannwilhelm"
+                                            href="johannwilhelm.html" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar_philippwilhelm"
+                                            href="philippwilhelm.html" />
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                         <a title="Suche" href="search.html" class="nav-link pe-3" data-i18n="navbar__search"></a>
                         <select class="form-select" name="language" id="languageSwitcher"></select>
