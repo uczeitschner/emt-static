@@ -44,13 +44,9 @@
                     <div class="row p-3">
                         <div class="col-2"/>
                         <div class="col-8">
-                            <h1 class="display-1 text-center">Familiensache? </h1>
-                            <h2 class="display-4 text-center">Die Korrespondenz der Kaiserin Eleonora Magdalena (1655-1720).</h2>
-                            <p class="text-center fs-4">Zwischen 1677 und 1716 gingen eine Unzahl
-                                von Briefen hin und her zwischen Wien, Düsseldorf und Heidelberg:
-                                Kaiserin Eleonora Magdalena korrespondierte mit Vater bzw. Bruder,
-                                den Kurfürsten von der Pfalz. Erstmals wird hier die umfangreiche
-                                Korrespondenz im Volltext zugänglich gemacht. </p>
+                            <h1 class="display-1 text-center" data-i18n="index__h1"/>
+                            <h2 class="display-4 text-center" data-i18n="index__h2"/>
+                            <p class="text-center fs-4" data-i18n="index__teaser"/>
                             <div class="d-grid gap-2 col-6 mx-auto p-3">
                                 <a href="projekt.html" type="button"
                                     class="btn btn-outline-secondary btn-lg button-custom">Über das
