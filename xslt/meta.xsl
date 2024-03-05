@@ -47,10 +47,18 @@
                         <div data-mylang="en">
                             <xsl:apply-templates select=".//tei:body/tei:div[@xml:lang='en']"/>
                         </div>
-                        
+                        <hr class="hr-custom"/>
                         <p style="text-align:center;">
                             <xsl:for-each select=".//tei:note">
                                 <div class="footnotes">
+                                    <xsl:choose>
+                                        <xsl:when test=".//ancestor-or-self::tei:div[@xml:lang='en']">
+                                            <xsl:attribute name="data-mylang"><xsl:value-of select="'en'"/></xsl:attribute>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:attribute name="data-mylang"><xsl:value-of select="'de'"/></xsl:attribute>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                     <xsl:attribute name="id">
                                         <xsl:text>fn</xsl:text>
                                         <xsl:number level="any" format="1"
