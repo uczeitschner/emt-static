@@ -135,15 +135,27 @@
 
                     <!-- Kontakt -->
                     <div class="container">
-                        <hr class="hr-custom"/>
-                        <div class="pt-5 pb-5 text-center">
-                            <h2 class="display-3">Kontakt</h2>
-                            <p class="fs-4">Das Projekt “Familiensache. Dynastische
-                                Handlungsspielräume in der Korrespondenz von Kaiserin Eleonora
-                                Magdalena von Pfalz-Neuburg (1655-1720)” wird am Institut für die
-                                Erforschung der Habsburgermonarchie und des Balkanraumes der
-                                Österreichischen Akademie der Wissenschaften durchgeführt und durch
-                                den FWF gefördert.</p>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <hr class="hr-custom"/>
+                                <div class="pt-5 pb-5 text-center">
+                                    <h2 class="display-3">Zitierempfehlung</h2>
+                                    <p class="fs-4">Familiensache? Die Korrespondenz der Kaiserin Eleonora Magdalena (1655-1720). Bearbeitet von Katrin Keller, Ines Peper, Anna Spitzbart. Technische Umsetzung durch Peter Andorfer, Matthias Schlögl, Levente Kiraly. Wien 2024.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <hr class="hr-custom"/>
+                                <div class="pt-5 pb-5 text-center">
+                                    <h2 class="display-3">Kontakt</h2>
+                                    <p class="fs-4">Das Projekt “Familiensache. Dynastische
+                                        Handlungsspielräume in der Korrespondenz von Kaiserin Eleonora
+                                        Magdalena von Pfalz-Neuburg (1655-1720)” wird am Institut für die
+                                        Erforschung der Habsburgermonarchie und des Balkanraumes der
+                                        Österreichischen Akademie der Wissenschaften durchgeführt und durch
+                                        den FWF gefördert.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </main>
