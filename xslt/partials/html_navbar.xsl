@@ -93,7 +93,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item" data-i18n="navbar_gen"
-                                            href="genealogy.html" />
+                                            href="genealogies.html" />
                                     </li>
                                 </ul>
                             </li>
