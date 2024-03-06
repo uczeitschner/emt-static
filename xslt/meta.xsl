@@ -32,7 +32,7 @@
                 <xsl:call-template name="nav_bar"/>
                 <main>
                     <div class="container-md">                        
-                        <h1 class="display-3 text-center" data-mylang="de">
+                        <h1 class="display-4 text-center" data-mylang="de">
                             <xsl:value-of select="$doc_title"/>
                         </h1> 
                         <xsl:if test=".//tei:title[@type='main' and @xml:lang='en']">
@@ -228,12 +228,18 @@
     <xsl:template match="tei:ref">
         <a>
             <xsl:if test="@target">
-                <xsl:attribute name="href">
-                    <xsl:value-of select="@target"/>
-                </xsl:attribute>
-                <xsl:attribute name="style">
-                    text-decoration: underline;
-                </xsl:attribute>
+                <xsl:choose>
+                    <xsl:when test="ends-with(data(@target), '.xml')">
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="replace(@target, '.xml', '.html')"/>
+                        </xsl:attribute>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="@target"/>
+                        </xsl:attribute>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:if>
             <xsl:apply-templates/>
         </a>
