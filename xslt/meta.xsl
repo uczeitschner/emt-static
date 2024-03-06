@@ -113,24 +113,46 @@
                 <xsl:when test="data(@rend) eq 'end'">
                     <xsl:value-of select="'end'"/>
                 </xsl:when>
+                <xsl:when test="data(@rend) eq 'full'">
+                    <xsl:value-of select="'full'"/>
+                </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="'start'"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <figure class="w-50 float-{$float}">
-        <xsl:variable name="imgurl">
-            <xsl:value-of select="./tei:graphic/@url"/>
-        </xsl:variable>
-            <img class="p-2 pt-1 w-100">
-                <xsl:attribute name="src">
-                    <xsl:value-of select="'img/'||tokenize(data($imgurl), '/')[last()]"/>
-                </xsl:attribute>
-            </img>
-        <xsl:if test=".//tei:desc">
-            <figcaption class="p-2 pt-1 w-100"><xsl:apply-templates select=".//tei:desc"/></figcaption>
-        </xsl:if>
-        </figure>
+        <xsl:choose>
+            <xsl:when test="$float eq 'full'">
+                <figure class="img-fluid">
+                    <xsl:variable name="imgurl">
+                        <xsl:value-of select="./tei:graphic/@url"/>
+                    </xsl:variable>
+                    <img class="p-2 pt-1 w-100">
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="'img/'||tokenize(data($imgurl), '/')[last()]"/>
+                        </xsl:attribute>
+                    </img>
+                    <xsl:if test=".//tei:desc">
+                        <figcaption class="p-2 pt-1 w-100"><xsl:apply-templates select=".//tei:desc"/></figcaption>
+                    </xsl:if>
+                </figure>
+            </xsl:when>
+            <xsl:otherwise>
+                <figure class="w-50 float-{$float}">
+                    <xsl:variable name="imgurl">
+                        <xsl:value-of select="./tei:graphic/@url"/>
+                    </xsl:variable>
+                    <img class="p-2 pt-1 w-100">
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="'img/'||tokenize(data($imgurl), '/')[last()]"/>
+                        </xsl:attribute>
+                    </img>
+                    <xsl:if test=".//tei:desc">
+                        <figcaption class="p-2 pt-1 w-100"><xsl:apply-templates select=".//tei:desc"/></figcaption>
+                    </xsl:if>
+                </figure>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="tei:hi[@rend]">

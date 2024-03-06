@@ -88,6 +88,13 @@
                                         <a class="dropdown-item" data-i18n="navbar_philippwilhelm"
                                             href="philippwilhelm.html" />
                                     </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar_gen"
+                                            href="genealogy.html" />
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
