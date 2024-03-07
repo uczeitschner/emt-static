@@ -126,8 +126,8 @@
                                 
                                 <xsl:if test="./tei:location/tei:geo">
                                     <div class="row">
-                                        <div class="col-4"><div id="map_detail"/></div>
-                                        <div class="col-8">
+                                        <div class="col-md-4"><div id="map_detail"/></div>
+                                        <div class="col-md-8">
                                             <xsl:call-template name="place_detail"/>
                                         </div>
                                     </div>
@@ -144,17 +144,24 @@
                                 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
                                 crossorigin=""></script>
                             <script>
+                                var baseLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                maxZoom: 19,
+                                attribution: '&amp;copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                                });
+                                var tmsLayer = L.tileLayer('https://emt-project.github.io/mapserver/map_01/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, minZoom: 2, maxZoom: 12, attribution: "Austrian National Library (ÖNB)"})
+                                var baseMaps = {
+                                "OpenStreetMap": baseLayer,
+                                "Historische Karte": tmsLayer
+                                };
+                                
                                 var lat = <xsl:value-of select="tokenize(.//tei:geo[1]/text(), ' ')[1]"/>;
                                 var long = <xsl:value-of select="tokenize(.//tei:geo[1]/text(), ' ')[last()]"/>;
                                 $("#map_detail").css("height", "500px");
-                                var map = L.map('map_detail').setView([Number(lat), Number(long)], 13);
-                                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                maxZoom: 19,
-                                attribution: '&amp;copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                                }).addTo(map);
-                                let tms_layer = L.tileLayer('https://emt-project.github.io/mapserver/map_01/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, minZoom: 2, maxZoom: 12, attribution: "Austrian National Library (ÖNB)"});
-                                tms_layer.addTo(map);
+                                var map = L.map('map_detail', {layers: [baseLayer, tmsLayer]}).setView([Number(lat), Number(long)], 7);
+                                
+                                
                                 var marker = L.marker([Number(lat), Number(long)]).addTo(map);
+                                var layerControl = L.control.layers(baseMaps).addTo(map);
                             </script>
                         </xsl:if>
                     </body>
