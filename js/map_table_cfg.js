@@ -145,7 +145,7 @@ let wms_cfg = {
 let tms_cfg = {
   label: "Europa um 1700",
   tms_url: "https://emt-project.github.io/mapserver/map_01/{z}/{x}/{y}.png",
-  layerOptions: {tms: 1, opacity: 0.8, attribution: "", minZoom: 2, maxZoom: 12, attribution: "Austrian National Library (ÖNB)"},
+  layerOptions: {tms: 1, opacity: 0.8, minZoom: 2, maxZoom: 12, attribution: "Austrian National Library (ÖNB)"},
 }
 
 //////////////////////////////////////////////////
