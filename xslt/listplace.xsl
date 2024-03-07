@@ -152,6 +152,8 @@
                                 maxZoom: 19,
                                 attribution: '&amp;copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                                 }).addTo(map);
+                                let tms_layer = L.tileLayer('https://emt-project.github.io/mapserver/map_01/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, minZoom: 2, maxZoom: 12, attribution: "Austrian National Library (ÖNB)"});
+                                tms_layer.addTo(map);
                                 var marker = L.marker([Number(lat), Number(long)]).addTo(map);
                             </script>
                         </xsl:if>
