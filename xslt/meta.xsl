@@ -20,7 +20,7 @@
         <xsl:variable name="container-size">
             <xsl:choose>
                 <xsl:when test="starts-with($doc_title, 'Gen')">
-                    <xsl:value-of select="'container-fluid'"/>
+                    <xsl:value-of select="'container'"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="'container-md'"/>
