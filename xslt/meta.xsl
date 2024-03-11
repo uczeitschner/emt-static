@@ -17,6 +17,16 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
         </xsl:variable>
+        <xsl:variable name="container-size">
+            <xsl:choose>
+                <xsl:when test="starts-with($doc_title, 'Gen')">
+                    <xsl:value-of select="'container-fluid'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="'container-md'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         
         
         
@@ -31,7 +41,7 @@
             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar"/>
                 <main>
-                    <div class="container-md">                        
+                    <div class="{$container-size}">                        
                         <h1 class="display-4 text-center" data-mylang="de">
                             <xsl:value-of select="$doc_title"/>
                         </h1> 
