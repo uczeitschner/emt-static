@@ -43,6 +43,12 @@
                                     <li>
                                         <hr class="dropdown-divider" />
                                     </li>
+                                    <li><span class="dropdown-item">Sprache/Language
+                                        <select class="form-select" name="language" id="languageSwitcher"></select></span>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
                                     <li>
                                         <a class="dropdown-item" data-i18n="navbar__sourcecode"
                                         href="https://github.com/emt-project/emt-static/" />
@@ -98,8 +104,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        <a title="Suche" href="search.html" class="nav-link pe-3" data-i18n="navbar__search"></a>
-                        <select class="form-select" name="language" id="languageSwitcher"></select>
+                        <a title="Suche" href="search.html" class="nav-link pe-3 fs-2"><i class="bi bi-search"></i></a>
                     </div>
                 </div>
             </nav>
