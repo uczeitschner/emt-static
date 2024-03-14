@@ -42,6 +42,7 @@
                                     <th scope="col" tabulator-headerFilter="input">Sender</th>
                                     <th scope="col" tabulator-headerFilter="input">Empfänger</th>
                                     <th scope="col" tabulator-headerFilter="input">Datum</th>
+                                    <th scope="col" tabulator-headerFilter="input">Erschließungsstand</th>
                                     <th scope="col" tabulator-headerFilter="input">Ort</th>
                                     <th scope="col" tabulator-headerFilter="input">Dateinname</th>
                                 </tr>
@@ -64,6 +65,9 @@
                                         </td>
                                         <td>
                                             <xsl:value-of select="data(.//tei:correspAction[@type='sent']//tei:date/@when-iso)[1]"/>
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select="data(.//tei:revisionDesc/@n)"/>
                                         </td>
                                         <td>
                                             <xsl:value-of select=".//tei:correspAction[@type='sent']/tei:placeName/text()"/>

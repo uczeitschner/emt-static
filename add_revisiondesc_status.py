@@ -12,15 +12,15 @@ for x in tqdm(files):
     doc = TeiReader(x)
     fulltext = extract_fulltext(doc.any_xpath(".//tei:body")[0])
     if fulltext:
-        doc_status += "Volltext erschlossen; "
+        doc_status += "Volltext; "
     rs_tags = doc.any_xpath(".//tei:body//tei:rs")
     if rs_tags:
-        doc_status += "Entitäten ausgezeichnet; "
+        doc_status += "Entitäten; "
     regest = extract_fulltext(doc.any_xpath(".//tei:abstract[@n='regest']")[0])
     if regest:
-        doc_status += "Regestvorhanden; "
+        doc_status += "Regest; "
     if not doc_status:
-        doc_status = "nicht weiter erschlossen;"
+        doc_status = "in Bearbeitung;"
     doc_status = doc_status.strip()
     if doc_status[-1] == ";":
         doc_status = doc_status[:-1]
