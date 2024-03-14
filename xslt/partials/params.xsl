@@ -5,9 +5,9 @@
     <xsl:param name="directory_name">emt-static-dev</xsl:param>
     <xsl:param name="project_title">Familiensache. Dynastische Handlungsspielräume in der Korrespondenz von Kaiserin Eleonora Magdalena von Pfalz-Neuburg (1655-1720)</xsl:param>
     <xsl:param name="redmine_id">21311</xsl:param>
-    <xsl:param name="project_short_title">EMT</xsl:param>
+    <xsl:param name="project_short_title">Familiensache</xsl:param>
     <xsl:param name="github_url">https://github.com/emt-project/emt-static-dev</xsl:param>
-    <xsl:param name="html_title">EMT</xsl:param>
+    <xsl:param name="html_title">Familiensache</xsl:param>
     <xsl:param name="project_logo">img/logo.png</xsl:param>
     <xsl:param name="base_url">https://emt.acdh.oeaw.ac.at</xsl:param>
     <xsl:param name="data_repo">https://github.com/emt-project/emt-working-data</xsl:param>
