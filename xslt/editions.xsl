@@ -60,6 +60,7 @@
                                <span class="badge badge-primary p-1 m-1"><xsl:value-of select="./text()"/></span>
                             </xsl:for-each>
                             </h4>
+                            <div class="regest-text"><xsl:apply-templates select=".//tei:ab[@type='notes']"></xsl:apply-templates></div>
                             <div class="regest-text"><xsl:apply-templates select=".//tei:abstract[@n='regest']"></xsl:apply-templates></div>
                         </div>
                         <xsl:for-each select=".//tei:div[@type='page']">
@@ -165,7 +166,27 @@
         <div id="{local:makeId(.)}">
             <xsl:apply-templates/>
         </div>
-    </xsl:template>  
+    </xsl:template>
+    
+    <xsl:template match="tei:ref[@target]">
+        <xsl:variable name="href_value">
+            <xsl:choose>
+                <xsl:when test="starts-with(@target, 'http')">
+                    <xsl:value-of select="data(@target)"/>
+                </xsl:when>
+                <xsl:when test="ends-with(@target, '.xml')">
+                    <xsl:value-of select="replace(@target, '.xml', '.html')"/>
+                </xsl:when>
+                <xsl:when test="ends-with(@target, '.jpg')">
+                    <xsl:value-of select="replace(@target, '.jpg', '.html')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="data(@target)"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <a href="{replace($href_value, '#', '')}"><xsl:value-of select="."/></a>
+    </xsl:template>
     
     <xsl:template match="tei:lb">
         <xsl:variable name="idx" select="format-number(number(replace(@n, 'N', '')), '#')"/>
