@@ -50,7 +50,7 @@
             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
-                    <div class="container">
+                    <div class="container-xl">
                         <xsl:call-template name="header-nav">
                             <xsl:with-param name="doc_title" select="$doc_title"/>
                         </xsl:call-template>
@@ -94,13 +94,13 @@
                                     </div>
                                     
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-7">
                                               <div id="{$openSeadragonId}">
                                                 <img id="{$openSeadragonId}-img" src="{normalize-space($facs-url)}" onload="loadImage('{$openSeadragonId}', '{$rotation}')"></img>
                                                 <!-- cosy spot for OSD viewer  -->
                                             </div>
                                         </div>
-                                        <div class="col-md-6 editionstext">
+                                        <div class="col-md-5 editionstext">
                                             <xsl:apply-templates/>
                                         </div>
                                     </div>
