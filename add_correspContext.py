@@ -86,7 +86,11 @@ for i, ndf in df.groupby("corresp_id"):
         for existing_corresp_context in doc.any_xpath("//tei:correspContext"):
             existing_corresp_context.getparent().remove(existing_corresp_context)
 
-        correspDesc = doc.any_xpath("//tei:correspDesc")[0]
+        try:
+            correspDesc = doc.any_xpath("//tei:correspDesc")[0]
+        except IndexError as e:
+            broken.append([e, x])
+            continue
         correspContext = ET.SubElement(correspDesc, "correspContext")
         ref = ET.SubElement(
             correspContext,

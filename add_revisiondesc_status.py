@@ -16,7 +16,11 @@ for x in tqdm(files):
     rs_tags = doc.any_xpath(".//tei:body//tei:rs")
     if rs_tags:
         doc_status += "Entitäten; "
-    regest = extract_fulltext(doc.any_xpath(".//tei:abstract[@n='regest']")[0])
+    try:
+        regest = extract_fulltext(doc.any_xpath(".//tei:abstract[@n='regest']")[0])
+    except IndexError:
+        print(f"problematic TEI Header in file: {x}")
+        continue
     if regest:
         doc_status += "Regest; "
     if not doc_status:
