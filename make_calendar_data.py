@@ -12,13 +12,18 @@ out_file = os.path.join(data_dir, "calendarData.js")
 
 no_dates = []
 data = []
+broken = []
 for file_name in tqdm(file_list, total=len(file_list)):
     doc = TeiReader(file_name)
     head, tail = os.path.split(file_name)
     id = tail.replace(".xml", "")
 
     # correspAction/date
-    sent_date_node = doc.any_xpath("//tei:correspAction/tei:date")[0]
+    try:
+        sent_date_node = doc.any_xpath("//tei:correspAction/tei:date")[0]
+    except IndexError:
+        broken.append(f"missing '//tei:correspAction/tei:date' in file: {file_name}")
+        continue
     is_valid_date = False
     if "when-iso" in sent_date_node.attrib:
         ca_date_when = sent_date_node.attrib["when-iso"]
@@ -77,3 +82,5 @@ with open(no_dates_file, "w", newline="") as csvfile:
     my_writer.writerow(["file_name"])
     for fail_name in no_dates:
         my_writer.writerow([fail_name])
+for x in broken:
+    print(x)

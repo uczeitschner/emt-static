@@ -89,7 +89,7 @@ for i, ndf in df.groupby("corresp_id"):
         try:
             correspDesc = doc.any_xpath("//tei:correspDesc")[0]
         except IndexError as e:
-            broken.append([e, x])
+            broken.append([e, x["id"]])
             continue
         correspContext = ET.SubElement(correspDesc, "correspContext")
         ref = ET.SubElement(
@@ -157,7 +157,7 @@ for x in non_dateable:
     print(x)
 
 if broken:
-    print(f"the following {len(files)} are not well formed")
+    print(f"the following {len(broken)} are not well formed")
     for x in broken:
         print(x)
 else:
