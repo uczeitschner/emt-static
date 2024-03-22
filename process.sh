@@ -7,5 +7,5 @@ python add_correspContext.py
 python add_revisiondesc_status.py
 python make_typesense_index.py
 python make_calendar_data.py
-# python make_translations.py
+python make_translations.py
 python update_favicons.py
