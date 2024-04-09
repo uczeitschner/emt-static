@@ -39,11 +39,25 @@
                                         <a class="dropdown-item" data-i18n="navbar__blog"
                                             href="https://kaiserin.hypotheses.org/" />
                                     </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><h6 class="dropdown-header" data-i18n="navbar__biography"/></li>
                                     <li>
-                                        <hr class="dropdown-divider" />
+                                        <a class="dropdown-item" data-i18n="navbar__eleonora"
+                                            href="eleonora.html" />
                                     </li>
-                                    <li><span class="dropdown-item">Sprache/Language
-                                        <select class="form-select" name="language" id="languageSwitcher"></select></span>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar__johannwilhelm"
+                                            href="johannwilhelm.html" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar_philippwilhelm"
+                                            href="philippwilhelm.html" />
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><h6 class="dropdown-header">Genealogien</h6></li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar_gen"
+                                            href="genealogies.html" />
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider" />
@@ -78,30 +92,6 @@
                                     </li>
                                 </ul>
                             </li>  
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__biography" aria-expanded="false" />
-                                <ul class=" dropdown-menu" role="menu">
-                                    <li>
-                                        <a class="dropdown-item" data-i18n="navbar__eleonora"
-                                            href="eleonora.html" />
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" data-i18n="navbar__johannwilhelm"
-                                            href="johannwilhelm.html" />
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" data-i18n="navbar_philippwilhelm"
-                                            href="philippwilhelm.html" />
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" data-i18n="navbar_gen"
-                                            href="genealogies.html" />
-                                    </li>
-                                </ul>
-                            </li>
                         </ul>
                         <a title="Suche" href="search.html" class="nav-link pe-3 fs-2"><i class="bi bi-search"></i></a>
                     </div>
