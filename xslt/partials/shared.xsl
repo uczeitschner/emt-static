@@ -89,19 +89,30 @@
                 <xsl:when test="contains(data(@ref), 'org') or ./@type='org'">org</xsl:when>
             </xsl:choose>
         </xsl:variable>
-        <strong><span>
+        <xsl:variable name="entityRef">
+            <xsl:choose>
+                <xsl:when test="starts-with(data(@ref), '#')">
+                    <xsl:value-of select="data(@ref)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="concat('#', data(@ref))"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <strong>
+            <span>
             <xsl:attribute name="class">
                 <xsl:value-of select="concat('entity entity-', $entityType)"/>
             </xsl:attribute>
             <xsl:element name="a">
                 <xsl:attribute name="data-bs-toggle">modal</xsl:attribute>
                 <xsl:attribute name="data-bs-target">
-                    <xsl:value-of select="data(@ref)"/>
-                    <!-- <xsl:value-of select="concat('#', @key)"/> -->
+                    <xsl:value-of select="$entityRef"/>
                 </xsl:attribute>
                 <xsl:apply-templates/>
             </xsl:element>
-        </span></strong>
+            </span>
+        </strong>
         <xsl:choose>
             <xsl:when test="./following-sibling::text()[1][not(starts-with(., ','))]"><xsl:text> </xsl:text></xsl:when>
         </xsl:choose>

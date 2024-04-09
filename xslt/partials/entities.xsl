@@ -4,6 +4,7 @@
     version="2.0" exclude-result-prefixes="xsl tei xs">
     <xsl:import href="./person.xsl"/>
     <xsl:import href="./place.xsl"/>
+    <xsl:import href="./org.xsl"/>
     
     <xsl:template match="tei:listPerson">
         <xsl:apply-templates/>
@@ -55,6 +56,33 @@
                     </div>
                     <div class="modal-body">
                         <xsl:call-template name="place_detail"/>
+                        <hr />
+                        <a href="{$selfLink}">Link zur Detailansicht <i class="bi bi-link-45deg"></i></a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="tei:org">
+        <xsl:variable name="selfLink">
+            <xsl:value-of select="concat(data(@xml:id), '.html')"/>
+        </xsl:variable>
+        <xsl:variable name="label">
+            <xsl:value-of select="./tei:orgName[1]/text()"/>
+        </xsl:variable>
+        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{$label}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel"><xsl:value-of select="$label"/></h1>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <xsl:call-template name="org_detail"/>
                         <hr />
                         <a href="{$selfLink}">Link zur Detailansicht <i class="bi bi-link-45deg"></i></a>
                     </div>
