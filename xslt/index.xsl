@@ -133,7 +133,7 @@
                             <div class="col">
                                 <hr class="hr-custom"/>
                                 <div class="pt-5 pb-5 text-center">
-                                    <h2 class="display-3">Kontakt</h2>
+                                    <h2 class="display-3" data-i18n="index__contact_h"/>
                                     <p class="fs-4" data-i18n="index__contact_text" />
                                 </div>
                             </div>
