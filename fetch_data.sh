@@ -34,9 +34,6 @@ rm -rf ./emt-para-text-main
 echo "update imprint"
 ./shellscripts/dl_imprint.sh
 
-echo "fetch rss feed"
-./dl_rssfeed.sh
-
 echo "fetch bio-pics"
 rm -rf ./html/bio-pics
 curl -LO https://github.com/emt-project/emt-bio-pics/archive/refs/heads/main.zip
@@ -45,3 +42,4 @@ rm main.zip
 mv ./emt-bio-pics-main/bio-pics ./html/bio-pics
 rm -rf ./emt-bio-pics-main
 python delete_faulty_files.py
+python add_missing_hashes.py
