@@ -4,7 +4,7 @@ from acdh_tei_pyutils.tei import TeiReader
 
 
 print("adds missing '#' to tei:rs @ref")
-files = sorted(glob.glob("./data/work-in-progress/*/*.xml", recursive=True))
+files = sorted(glob.glob("./data/editions/*.xml"))
 
 fixed_values = 0
 good_values = 0
