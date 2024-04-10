@@ -29,12 +29,17 @@ for x in files:
 
 print(f"collected {len(items)} images")
 failed = []
-for x in tqdm(items[:30]):
+for x in tqdm(items):
     save_path = os.path.join(image_dir, x["image_name"])
     if os.path.exists(save_path):
         continue
     else:
-        r = requests.get(x["url"])
+        try:
+            r = requests.get(x["url"])
+        except Exception as e:
+            print(x, e)
+            failed.append(x)
+            continue
         if r.status_code == 200:
             with open(save_path, "wb") as f:
                 f.write(r.content)
