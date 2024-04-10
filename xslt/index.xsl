@@ -49,8 +49,8 @@
                             <p class="text-center fs-4" data-i18n="index__teaser"/>
                             <div class="d-grid gap-2 col-6 mx-auto p-3">
                                 <a href="projekt.html" type="button"
-                                    class="btn btn-outline-secondary btn-lg button-custom">Über das
-                                    Projekt</a>
+                                    class="btn btn-outline-secondary btn-lg button-custom"
+                                    data-i18n="index__about_the_project"/>
                             </div>
                         </div>
                         <div class="col-2"/>
@@ -66,14 +66,12 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5 text-end">
-                                    <h2 class="display-3">Briefverzeichnis</h2>
-                                    <p class="fs-4">In die erschlossenen Korrespondenzen kann über
-                                        eine tabellarische sowie eine kalendarische Ansicht
-                                        eingestiegen werden.</p>
+                                    <h2 class="display-3" data-i18n="index__index_of_letters"/>
+                                    <p class="fs-4" data-i18n="index__index_of_letters_text"/>
                                     <div>
                                         <a href="toc.html" type="button"
                                             class="btn btn-outline-secondary btn-lg button-custom"
-                                            >Zum Verzeichnis</a>
+                                            data-i18n="index__index_of_letters_button"/>
                                     </div>
                                 </div>
                             </div>
@@ -86,12 +84,8 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5">
-                                    <h2 class="display-3">Biographien</h2>
-                                    <p class="text-start fs-4">Biographische Skizzen zu <a
-                                            href="philippwilhelm.html">Philipp Wilhelm</a>, <a
-                                            href="eleonora.html">Eleonara</a> und <a
-                                            href="johannwilhelm.html">Johann Wilhelm</a> von
-                                        Pfalz-Neuburg.</p>
+                                    <h2 class="display-3" data-i18n="navbar__biography" />
+                                    <p class="text-start fs-4" data-i18n="[html]index__biograpy_teaser"/>
                                 </div>
                             </div>
                             <div class="col-md-7 p-3">
@@ -111,22 +105,10 @@
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5 text-end">
                                     <h2 class="display-3">Blog</h2>
-                                    <p class="fs-4">Wenn man heute von Kaiserinnen spricht, so
-                                        denken die meisten, gerade in Wien, eigentlich nur an zwei
-                                        Frauen: Maria Theresia und Elisabeth, genannt Sissi. Dabei
-                                        gibt es seit dem Mittelalter eine lange Reihe von Frauen,
-                                        die diesen Titel trugen und denen damit im Rahmen des
-                                        Heiligen Römischen Reiches herrschaftliche Befugnisse,
-                                        zeremonieller Rang und symbolische Bedeutung zukamen. Mit
-                                        diesen Fürstinnen der Frühen Neuzeit hat sich die Forschung
-                                        bislang jedoch kaum beschäftigt. Der Blog liefert Einblicke
-                                        in unser derzeit laufendes Forschungsprojekt und führt die
-                                        politische und repräsentative Rolle dieser Frauen vor
-                                        Augen...</p>
+                                    <p class="fs-4" data-i18n="index__blog_text" />
                                     <div>
                                         <a href="https://kaiserin.hypotheses.org/" type="button"
-                                            class="btn btn-outline-secondary btn-lg button-custom"
-                                            >Zum Blog</a>
+                                            class="btn btn-outline-secondary btn-lg button-custom" data-i18n="index__blog_button" />
                                     </div>
                                 </div>
                             </div>
@@ -135,25 +117,24 @@
 
                     <!-- Kontakt -->
                     <div class="container">
-                        
+
                         <div class="row">
                             <div class="col">
                                 <hr class="hr-custom"/>
                                 <div class="pt-5 pb-5 text-center">
-                                    <h2 class="display-3">Zitierempfehlung</h2>
-                                    <p class="fs-4">Familiensache? Die Korrespondenz der Kaiserin Eleonora Magdalena (1655-1720). Bearbeitet von Katrin Keller, Ines Peper, Anna Spitzbart. Technische Umsetzung durch Peter Andorfer, Matthias Schlögl, Levente Kiraly. Wien 2024.</p>
+                                    <h2 class="display-3" data-i18n="index__quote_h" />
+                                    <p class="fs-4">Familiensache? Die Korrespondenz der Kaiserin
+                                        Eleonora Magdalena (1655-1720). Bearbeitet von Katrin
+                                        Keller, Ines Peper, Anna Spitzbart. Technische Umsetzung
+                                        durch Peter Andorfer, Matthias Schlögl, Levente Kiraly. Wien
+                                        2024.</p>
                                 </div>
                             </div>
                             <div class="col">
                                 <hr class="hr-custom"/>
                                 <div class="pt-5 pb-5 text-center">
                                     <h2 class="display-3">Kontakt</h2>
-                                    <p class="fs-4">Das Projekt “Familiensache. Dynastische
-                                        Handlungsspielräume in der Korrespondenz von Kaiserin Eleonora
-                                        Magdalena von Pfalz-Neuburg (1655-1720)” wird am Institut für die
-                                        Erforschung der Habsburgermonarchie und des Balkanraumes der
-                                        Österreichischen Akademie der Wissenschaften durchgeführt und durch
-                                        den FWF gefördert.</p>
+                                    <p class="fs-4" data-i18n="index__contact_text" />
                                 </div>
                             </div>
                         </div>
