@@ -103,6 +103,11 @@ for x in tqdm(files):
         g.add((cur_col_uri, ACDH["hasSpatialCoverage"], entity_uri))
         g.add((cur_doc_uri, ACDH["hasSpatialCoverage"], entity_uri))
 
+    # hasExtent
+    nr_of_images = len(doc.any_xpath(".//tei:graphic[@url]"))
+    g.add((cur_doc_uri, ACDH["hasExtent"], Literal(f"{nr_of_images} Blätter", lang="de")))
+
+    # images
     try:
         repo = doc.any_xpath(".//tei:repository/text()")[0]
     except IndexError:
@@ -114,7 +119,7 @@ for x in tqdm(files):
     else:
         owner_uri = URIRef("https://d-nb.info/gnd/2005486-5")
 
-    # images
+    
     for i, image in enumerate(doc.any_xpath(".//tei:graphic[@url]"), start=1):
         cur_image_id = f"{cur_col_id}___{i:04}.jpg"
         cur_image_uri = URIRef(f"{TOP_COL_URI}/{cur_image_id}")
@@ -126,6 +131,9 @@ for x in tqdm(files):
         g.add((cur_image_uri, ACDH["hasLicensor"], owner_uri))
         g.add((cur_image_uri, ACDH["hasOwner"], owner_uri))
         g.add((cur_image_uri, ACDH["hasRightsHolder"], owner_uri))
+        if i != nr_of_images:
+            next_uri = URIRef(f"{TOP_COL_URI}/{cur_col_id}___{i + 1:04}.jpg")
+            g.add((cur_image_uri, ACDH["hasNext"], next_uri))
 
 for x in COLS:
     for s in g.subjects(None, x):
