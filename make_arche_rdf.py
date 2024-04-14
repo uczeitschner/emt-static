@@ -45,6 +45,7 @@ for x in tqdm(files):
     cur_doc_uri = URIRef(f"{TOP_COL_URI}/{cur_doc_id}")
     g.add((cur_doc_uri, RDF.type, ACDH["Resource"]))
     g.add((cur_doc_uri, ACDH["isPartOf"], cur_col_uri))
+    g.add((cur_doc_uri, ACDH["hasLicense"], URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0")))
     for p, o in ihb_owner_graph.predicate_objects():
         g.add((cur_doc_uri, p, o))
 
@@ -97,7 +98,7 @@ for x in tqdm(files):
         entity_id = y.xpath("./*[@type='GEONAMES']/text()")[0]
         entity_uri = URIRef(entity_id)
         g.add((entity_uri, RDF.type, ACDH["Place"]))
-        g.add((entity_uri, ACDH["hasUrl"], Literal(f"{APP_URL}{xml_id}", datatype=XSD.anyURI)))
+        # g.add((entity_uri, ACDH["hasUrl"], Literal(f"{APP_URL}{xml_id}", datatype=XSD.anyURI)))
         g.add((entity_uri, ACDH["hasTitle"], Literal(entity_title, lang="und")))
         g.add((cur_col_uri, ACDH["hasSpatialCoverage"], entity_uri))
         g.add((cur_doc_uri, ACDH["hasSpatialCoverage"], entity_uri))

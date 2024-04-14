@@ -10,3 +10,4 @@ python make_calendar_data.py
 python make_cmif.py
 python make_translations.py
 python update_favicons.py
+python make_arche_rdf.py
