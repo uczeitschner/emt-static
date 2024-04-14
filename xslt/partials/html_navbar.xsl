@@ -94,6 +94,10 @@
                                         <a class="dropdown-item" data-i18n="navbar_timeline"
                                         href="timeline.html" />
                                     </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <a class="dropdown-item" href="cmif.xml">Correspondence Metadata Interchange Format (XML)</a>
+                                    </li>
                                 </ul>
                             </li>  
                         </ul>

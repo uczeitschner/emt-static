@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:base="https://kaiserin-eleonora.oeaw.ac.at//emt/indices" xml:id="cmif.xml">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="label">Correspondence Metadata Interchange Format für: Familiensache. Dynastische Handlungsspielräume in der Korrespondenz von Kaiserin Eleonora Magdalena von Pfalz-Neuburg (1655-1720)</title>
+                <editor>
+                    <name ref="https://orcid.org/0000-0002-8621-5162">Katrin Keller</name>
+                    <name ref="https://orcid.org/0000-0002-8676-3935">Ines Peper</name>
+                    <name ref="https://orcid.org/0000-0002-1389-896X">Anna Spitzbart</name>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>INSTITUT FÜR DIE ERFORSCHUNG DER HABSBURGERMONARCHIE UND DES BALKANRAUMES</publisher>
+                <idno type="url">https://kaiserin-eleonora.oeaw.ac.at/cmif.xml</idno>
+                <date when="2024">2024</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl xml:id="ad5c20cc-31b0-11ed-baad-f50cc1e65b54" type="online">Familiensache. Dynastische Handlungsspielräume in der Korrespondenz von Kaiserin Eleonora Magdalena von Pfalz-Neuburg (1655-1720)<ref target="https://kaiserin-eleonora.oeaw.ac.at/">https://kaiserin-eleonora.oeaw.ac.at/</ref>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+{% for x in data %}{% if x.doc_id %}
+            <correspDesc ref="https://kaiserin-eleonora.oeaw.ac.at/{{ x.doc_id}}" source="#ad5c20cc-31b0-11ed-baad-f50cc1e65b54">
+                <correspAction type="sent">
+                    <persName ref="{{ x.sender_gnd }}">{{ x.sender_label }}</persName>
+                    <placeName ref="{{ x.place_geonames}}">{{ x.place_label }}</placeName>
+                    {% if x.date %}{{ x.date|safe }}{% endif %}
+                </correspAction>
+                <correspAction type="received">
+                    <persName ref="{{ x.receiver_gnd }}">{{ x.receiver_label }}</persName>
+                </correspAction>
+            </correspDesc>{% endif %}{% endfor %}
+        </profileDesc>
+        </teiHeader>
+    <text>
+        <body>
+            <p>some text</p>
+        </body>
+    </text>
+</TEI>
