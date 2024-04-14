@@ -11,6 +11,7 @@ from tqdm import tqdm
 templateLoader = jinja2.FileSystemLoader(searchpath="./templates")
 templateEnv = jinja2.Environment(loader=templateLoader)
 template = templateEnv.get_template("cmif.j2")
+DOMAIN = "https://emt.acdh-dev.oeaw.ac.at/"
 
 files = glob.glob("./data/editions/*.xml")
 
@@ -98,6 +99,7 @@ with open("./data/indices/cmif.xml", "w") as f:
         template.render(
             {
                 "data": items,
+                "domain": DOMAIN
             }
         )
     )
