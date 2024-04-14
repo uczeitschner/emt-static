@@ -119,7 +119,7 @@ for x in tqdm(files):
     else:
         owner_uri = URIRef("https://d-nb.info/gnd/2005486-5")
 
-    for i, image in enumerate(doc.any_xpath(".//tei:graphic[@url]"), start=1):
+    for i, image in enumerate(doc.any_xpath(".//tei:facsimile/tei:surface/tei:graphic[@url]"), start=1):
         cur_image_id = f"{cur_col_id}___{i:04}.jpg"
         cur_image_uri = URIRef(f"{TOP_COL_URI}/{cur_image_id}")
         g.add((cur_image_uri, RDF.type, ACDH["Resource"]))
