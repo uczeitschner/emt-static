@@ -28,7 +28,7 @@ for p, o in ihb_owner_graph.predicate_objects():
     g.add((TOP_COL_URI, p, o))
 
 
-files = sorted(glob.glob("data/editions/*.xml"))
+files = sorted(glob.glob("data/editions/*.xml"))[15:25]
 for x in tqdm(files):
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
@@ -119,7 +119,6 @@ for x in tqdm(files):
     else:
         owner_uri = URIRef("https://d-nb.info/gnd/2005486-5")
 
-    
     for i, image in enumerate(doc.any_xpath(".//tei:graphic[@url]"), start=1):
         cur_image_id = f"{cur_col_id}___{i:04}.jpg"
         cur_image_uri = URIRef(f"{TOP_COL_URI}/{cur_image_id}")
@@ -133,7 +132,8 @@ for x in tqdm(files):
         g.add((cur_image_uri, ACDH["hasRightsHolder"], owner_uri))
         if i != nr_of_images:
             next_uri = URIRef(f"{TOP_COL_URI}/{cur_col_id}___{i + 1:04}.jpg")
-            g.add((cur_image_uri, ACDH["hasNext"], next_uri))
+            g.add((cur_image_uri, ACDH["hasNextItem"], next_uri))
+    g.add((cur_col_uri, ACDH["hasNextItem"], URIRef(f"{TOP_COL_URI}/{cur_col_id}___0001.jpg")))
 
 for x in COLS:
     for s in g.subjects(None, x):
