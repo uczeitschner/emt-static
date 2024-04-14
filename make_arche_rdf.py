@@ -104,7 +104,7 @@ for x in tqdm(files):
         g.add((cur_doc_uri, ACDH["hasSpatialCoverage"], entity_uri))
 
     # hasExtent
-    nr_of_images = len(doc.any_xpath(".//tei:graphic[@url]"))
+    nr_of_images = len(doc.any_xpath(".//tei:facsimile/tei:surface/tei:graphic[@url]"))
     g.add((cur_doc_uri, ACDH["hasExtent"], Literal(f"{nr_of_images} Blätter", lang="de")))
 
     # images
