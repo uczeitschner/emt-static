@@ -102,6 +102,17 @@ for x in tqdm(files):
         g.add((cur_col_uri, ACDH["hasSpatialCoverage"], entity_uri))
         g.add((cur_doc_uri, ACDH["hasSpatialCoverage"], entity_uri))
 
+    try:
+        repo = doc.any_xpath(".//tei:repository/text()")[0]
+    except IndexError:
+        owner_uri = URIRef("https://d-nb.info/gnd/2005486-5")
+        repo = "whatever"
+
+    if "Karlsruhe" in repo:
+        owner_uri = URIRef("https://d-nb.info/gnd/1014584-9")
+    else:
+        owner_uri = URIRef("https://d-nb.info/gnd/2005486-5")
+
     # images
     for i, image in enumerate(doc.any_xpath(".//tei:graphic[@url]"), start=1):
         cur_image_id = f"{cur_col_id}___{i:04}.jpg"
@@ -111,6 +122,9 @@ for x in tqdm(files):
         g.add((cur_image_uri, ACDH["hasCategory"], URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/image")))
         g.add((cur_image_uri, ACDH["hasTitle"], Literal(f"{cur_image_id}", lang="und")))
         g.add((cur_image_uri, ACDH["hasLicense"], URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/noc-oklr")))
+        g.add((cur_image_uri, ACDH["hasLicensor"], owner_uri))
+        g.add((cur_image_uri, ACDH["hasOwner"], owner_uri))
+        g.add((cur_image_uri, ACDH["hasRightsHolder"], owner_uri))
 
 for x in COLS:
     for s in g.subjects(None, x):
