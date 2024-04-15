@@ -13,7 +13,7 @@ TOP_COL_URI = URIRef("https://id.acdh.oeaw.ac.at/emt")
 APP_URL = "https://emt.acdh-dev.oeaw.ac.at/"
 
 ACDH = Namespace("https://vocabs.acdh.oeaw.ac.at/schema#")
-COLS = [ACDH["TopCollection"], ACDH["Collection"], ACDH["Resource"]]
+COLS = [ACDH["TopCollection"], ACDH["Collection"], ACDH["Resource"], ACDH["Project"]]
 COL_URIS = set()
 ihb_owner = """
 @prefix acdh: <https://vocabs.acdh.oeaw.ac.at/schema#> .
