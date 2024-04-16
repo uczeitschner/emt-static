@@ -6,6 +6,7 @@ from acdh_tei_pyutils.tei import TeiReader
 from acdh_tei_pyutils.utils import extract_fulltext, make_entity_label, get_xmlid
 from rdflib import Namespace, URIRef, RDF, Graph, Literal, XSD
 
+print("generating ARCHE-Metadata")
 
 g = Graph().parse("arche_seed_files/arche_constants.ttl")
 g_repo_objects = Graph().parse("arche_seed_files/repo_objects_constants.ttl")

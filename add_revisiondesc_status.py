@@ -28,7 +28,10 @@ for x in tqdm(files):
     doc_status = doc_status.strip()
     if doc_status[-1] == ";":
         doc_status = doc_status[:-1]
-    revision_desc = doc.any_xpath(".//tei:revisionDesc")[0]
+    try:
+        revision_desc = doc.any_xpath(".//tei:revisionDesc")[0]
+    except IndexError:
+        print(f"missing tei:revisionDesc in {x}")
     revision_desc.attrib["status"] = slugify(doc_status)
     revision_desc.attrib["n"] = doc_status
     doc.tree_to_file(x)
