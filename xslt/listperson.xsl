@@ -44,7 +44,7 @@
                                     <th scope="col" tabulator-headerFilter="input">Lebensdaten</th>
                                     <th scope="col" tabulator-headerFilter="input">Erwähnungen</th>
                                     <th scope="col" tabulator-headerFilter="input">Sender</th>
-                                    <th scope="col" tabulator-headerFilter="input">Emfpänger</th>
+                                    <th scope="col" tabulator-headerFilter="input">Empfänger</th>
                                     <th scope="col" tabulator-headerFilter="input">ID</th>
                                 </tr>
                             </thead>
