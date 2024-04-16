@@ -57,9 +57,13 @@
                     <xsl:value-of select="$doc_title"/>
                 </h1>
                 <h3 align="center">
-                    <a href="{$teiSource}">
+                    <a href="{$teiSource}" class="pe-2">
                         <i class="bi bi-download" title="show TEI source"/>
                     </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ps-2">
+                        <i class="bi bi-question-lg"></i>
+                    </a>
+                    
                 </h3>
                 <p class="text-center">
                     <small><xsl:value-of select="//tei:msDesc/tei:msIdentifier/tei:repository" /><xsl:text> </xsl:text>
@@ -103,6 +107,32 @@
                 </xsl:if>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Erläuterungen zum Textkritischen Markup</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>Abkürzungen</dt>
+                            <dd class="ps-2"><small>Beispiel: </small> <abbr class="abbr" title="Abgekürzt: g">gnaden</abbr></dd>
+                            <dd class="ps-2">Abkürzunge werden <span class="abbr">mit Blauer Schrift</span> markiert und falls möglich aufgelöst. Die Abkürzung aus dem Original wird <abbr title="Das ist ein Tooltip">mittels Tooltip</abbr> angezeigt.</dd>
+                            <dt>Softkorrekturen/Durchstreichungen</dt>
+                            <dd class="ps-2"><small>Beispiel: </small>die ich mit <span class="seg-blackening">gehors</span>  trewester deuotion</dd>
+                            <dd class="ps-2">Softkorrekturen/Durchstreichungen werden <span class="seg-blackening">durchgestrichen und mit Blauer Schrift</span> markiert.</dd>
+                        </dl>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </xsl:template>
     
     <xsl:template name="mam:nav-li-item">
