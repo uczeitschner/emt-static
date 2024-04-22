@@ -6,6 +6,8 @@
     <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes"
         omit-xml-declaration="yes"/>
     
+    
+    
     <xsl:variable name="prev">
         <xsl:value-of select="replace(tokenize(data(tei:TEI/@prev), '/')[last()], '.xml', '.html')"
         />
@@ -14,6 +16,7 @@
         <xsl:value-of select="replace(tokenize(data(tei:TEI/@next), '/')[last()], '.xml', '.html')"
         />
     </xsl:variable>
+    <xsl:import href="info_modal.xsl"/>
     <xsl:template name="header-nav">
         <xsl:param name="doc_title"/>
         <xsl:variable name="correspContext" as="node()?"
@@ -108,30 +111,7 @@
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Erläuterungen zum Textkritischen Markup</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
-                    </div>
-                    <div class="modal-body">
-                        <dl>
-                            <dt>Abkürzungen</dt>
-                            <dd class="ps-2"><small>Beispiel: </small> <abbr class="abbr" title="Abgekürzt: g">gnaden</abbr></dd>
-                            <dd class="ps-2">Abkürzunge werden <span class="abbr">mit Blauer Schrift</span> markiert und falls möglich aufgelöst. Die Abkürzung aus dem Original wird <abbr title="Das ist ein Tooltip">mittels Tooltip</abbr> angezeigt.</dd>
-                            <dt>Softkorrekturen/Durchstreichungen</dt>
-                            <dd class="ps-2"><small>Beispiel: </small>die ich mit <span class="seg-blackening">gehors</span>  trewester deuotion</dd>
-                            <dd class="ps-2">Softkorrekturen/Durchstreichungen werden <span class="seg-blackening">durchgestrichen und mit Blauer Schrift</span> markiert.</dd>
-                        </dl>
-                        
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <xsl:call-template name="info_modal"/>
         
     </xsl:template>
     
