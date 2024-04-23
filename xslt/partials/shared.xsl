@@ -163,12 +163,16 @@
         <span class="abbr"><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="tei:date">
-        <span class="date"><xsl:apply-templates/></span>
+        <span class="date">
+            <xsl:choose>
+                <xsl:when test="@when">
+                    <xsl:attribute name="title"><xsl:value-of select="@when"/></xsl:attribute>
+                </xsl:when>
+            </xsl:choose><xsl:apply-templates/></span>
         <xsl:choose>
             <xsl:when test="./following-sibling::node()[1][self::text() = ' ']">
                 <xsl:text> </xsl:text>
             </xsl:when>
         </xsl:choose>
-    </xsl:template>
-    
+    </xsl:template>    
 </xsl:stylesheet>
