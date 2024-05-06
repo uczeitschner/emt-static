@@ -22,7 +22,7 @@
                             
                             <dt>Abkürzungen</dt>
                             <dd class="ps-2"><small>Beispiel: </small> <abbr class="abbr" title="Abgekürzt: g">gnaden</abbr></dd>
-                            <dd class="ps-2">Abkürzunge werden <span class="abbr">mit Blauer Schrift</span> markiert und falls möglich aufgelöst. Die Abkürzung aus dem Original wird <abbr title="Das ist ein Tooltip">mittels Tooltip</abbr> angezeigt.</dd>
+                            <dd class="ps-2">Abkürzungen werden <span class="abbr">mit Blauer Schrift</span> markiert und falls möglich aufgelöst. Die Abkürzung aus dem Original wird <abbr title="Das ist ein Tooltip">mittels Tooltip</abbr> angezeigt.</dd>
                             
                             <dt>Softkorrekturen/Durchstreichungen</dt>
                             <dd class="ps-2"><small>Beispiel: </small>die ich mit <span class="seg-blackening">gehors</span>  trewester deuotion</dd>
@@ -34,19 +34,19 @@
                             <dd class="ps-2">
                                 <small>Beispiel: </small><span class="date" title="1679-01-19">19 jener 1679</span>
                             </dd>
-                            <dd class="ps-2">Sofern ein genaues Datum von Editorinnen eruiert werden konnte, so wird diese mittels Tooltip angezeigt, wenn man mit der Maus über die Datumsangabe fährt.</dd>
+                            <dd class="ps-2">Sofern ein genaues Datum von den Editorinnen eruiert werden konnte, so wird diese mittels Tooltip angezeigt, wenn man mit der Maus über die Datumsangabe fährt.</dd>
                             
                             <dt>Ergänzungen durch Editorinnen</dt>
                             <dd class="ps-2"><small>Beispiel: </small>ganzergebenste trewgehorsa<span class="supplied">m</span>ste do<span class="supplied">c</span>hter</dd>
                             
-                            <dt>Unsicher Lesarten</dt>
+                            <dt>Unklare Lesarten</dt>
                             <dd class="ps-2"><small>Beispiel: </small>hab ich nit <span class="unclear"><abbr title="unklare Abkürzung: wahrscheinlich fortschicken">vortsch</abbr></span></dd>
                             <dd class="ps-2">Bei unsicheren Lesarten wird ggf. eine mögliche Lesart via Tooltip angezeigt.</dd>
                             <dt>Chiffren</dt>
                             <dd class="ps-2"><small>Beispiel: </small>insonderheit <span class="unclear unclear-ciphered">weil Spanien in dieser sac</span></dd>
                             <dd class="ps-2">Siehe ausführlich zum Thema Chiffre: <a href="chiffre.html">Zur Chiffre der Kaiserin</a></dd>
-                            
                         </dl>
+                        <p>Zu den <a href="richtlinien.html">Editionsrichtlinien</a></p>
                         
                     </div>
                     <div class="modal-footer">
