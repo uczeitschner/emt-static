@@ -18,7 +18,6 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:titleStmt/tei:title[1]/text()"/>
         </xsl:variable>
-        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html  class="h-100">
             
             <head>
@@ -38,7 +37,6 @@
                         <table class="table" id="placesTable">
                             <thead>
                                 <tr>
-                                    
                                     <th scope="col" >Ortsname</th>
                                     <th scope="col" >Absendeort</th>
                                     <th scope="col" >Erwähnungen</th>
