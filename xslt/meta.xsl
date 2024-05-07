@@ -46,7 +46,7 @@
                             <xsl:value-of select="$doc_title"/>
                         </h1> 
                         <xsl:if test=".//tei:title[@type='main' and @xml:lang='en']">
-                            <h1 class="display-3 text-center" data-mylang="en">
+                            <h1 class="display-4 text-center" data-mylang="en">
                                 <xsl:value-of select=".//tei:title[@type='main' and @xml:lang='en']"/>
                             </h1>
                         </xsl:if>
