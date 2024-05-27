@@ -44,9 +44,9 @@
                     <div class="row p-3">
                         <div class="col-2"/>
                         <div class="col-8">
-                            <h1 class="display-1 text-center" data-i18n="index__h1"/>
-                            <h2 class="display-4 text-center" data-i18n="index__h2"/>
-                            <p class="text-center fs-4" data-i18n="index__teaser"/>
+                            <h1 class="display-2 text-center" data-i18n="index__h1"/>
+                            <h2 class="display-5 text-center" data-i18n="index__h2"/>
+                            <p class="text-center fs-5" data-i18n="index__teaser"/>
                             <div class="d-grid gap-2 col-6 mx-auto p-3">
                                 <a href="projekt.html" type="button"
                                     class="btn btn-outline-secondary btn-lg button-custom"
@@ -67,7 +67,7 @@
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5 text-end">
                                     <h2 class="display-3" data-i18n="index__index_of_letters"/>
-                                    <p class="fs-4" data-i18n="index__index_of_letters_text"/>
+                                    <p class="fs-5" data-i18n="index__index_of_letters_text"/>
                                     <div>
                                         <a href="toc.html" type="button"
                                             class="btn btn-outline-secondary btn-lg button-custom"
@@ -85,7 +85,7 @@
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5">
                                     <h2 class="display-3" data-i18n="navbar__biography" />
-                                    <p class="text-start fs-4" data-i18n="[html]index__biograpy_teaser"/>
+                                    <p class="text-start fs-5" data-i18n="[html]index__biograpy_teaser"/>
                                 </div>
                             </div>
                             <div class="col-md-7 p-3">
@@ -105,7 +105,7 @@
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5 text-end">
                                     <h2 class="display-3">Blog</h2>
-                                    <p class="fs-4" data-i18n="index__blog_text" />
+                                    <p class="fs-5" data-i18n="index__blog_text" />
                                     <div>
                                         <a href="https://kaiserin.hypotheses.org/" type="button"
                                             class="btn btn-outline-secondary btn-lg button-custom" data-i18n="index__blog_button" />
@@ -123,7 +123,7 @@
                                 <hr class="hr-custom"/>
                                 <div class="pt-5 pb-5 text-center">
                                     <h2 class="display-3" data-i18n="index__quote_h" />
-                                    <p class="fs-4">Familiensache? Die Korrespondenz der Kaiserin
+                                    <p class="fs-5">Familiensache? Die Korrespondenz der Kaiserin
                                         Eleonora Magdalena (1655-1720). Bearbeitet von Katrin
                                         Keller, Ines Peper, Anna Spitzbart. Technische Umsetzung
                                         durch Peter Andorfer, Matthias Schlögl, Levente Kiraly. Wien
@@ -134,7 +134,7 @@
                                 <hr class="hr-custom"/>
                                 <div class="pt-5 pb-5 text-center">
                                     <h2 class="display-3" data-i18n="index__contact_h"/>
-                                    <p class="fs-4" data-i18n="index__contact_text" />
+                                    <p class="fs-5" data-i18n="index__contact_text" />
                                 </div>
                             </div>
                         </div>
