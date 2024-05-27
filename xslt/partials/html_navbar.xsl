@@ -66,6 +66,13 @@
                                         <a class="dropdown-item" data-i18n="navbar__sourcecode"
                                         href="https://github.com/emt-project/emt-static/" />
                                     </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" data-i18n="navbar_imprint"
+                                        href="imprint.html" />
+                                    </li>
                                     
                                 </ul>
                             </li>
