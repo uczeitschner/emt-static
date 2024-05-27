@@ -71,23 +71,24 @@ search.addWidgets([
     }
   }),
 
-  instantsearch.widgets.refinementList({
-    container: '#refinement-list-persons',
-    attribute: 'persons',
-    searchable: true,
-    showMore: true,
-    searchablePlaceholder: 'Suche',
-    cssClasses: {
-      searchableInput: 'form-control form-control-sm mb-2 border-light-2',
-      searchableSubmit: 'd-none',
-      searchableReset: 'd-none',
-      showMore: 'btn btn-secondary btn-sm align-content-center',
-      list: 'list-unstyled',
-      count: 'badge m-2 badge-secondary',
-      label: 'd-flex align-items-center',
-      checkbox: 'm-2',
-    }
-  }),
+  // commented due to https://github.com/emt-project/emt-static/issues/71
+  // instantsearch.widgets.refinementList({
+  //   container: '#refinement-list-persons',
+  //   attribute: 'persons',
+  //   searchable: true,
+  //   showMore: true,
+  //   searchablePlaceholder: 'Suche',
+  //   cssClasses: {
+  //     searchableInput: 'form-control form-control-sm mb-2 border-light-2',
+  //     searchableSubmit: 'd-none',
+  //     searchableReset: 'd-none',
+  //     showMore: 'btn btn-secondary btn-sm align-content-center',
+  //     list: 'list-unstyled',
+  //     count: 'badge m-2 badge-secondary',
+  //     label: 'd-flex align-items-center',
+  //     checkbox: 'm-2',
+  //   }
+  // }),
 
   instantsearch.widgets.refinementList({
     container: '#refinement-list-places',
