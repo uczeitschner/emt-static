@@ -31,6 +31,9 @@
             </head>
             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar"/>
+                <!-- ONCE SHOWN MODAL -->
+                <xsl:call-template name="one_time_alert"/>
+                <!-- END ONCE SHOWN MODAL -->
                 <div id="carouselExampleCaptions" class="carousel slide">
 
                     <div class="carousel-inner">
@@ -142,9 +145,6 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
-                <!-- ONCE SHOWN MODAL -->
-                <xsl:call-template name="one_time_alert"/>
-                <!-- END ONCE SHOWN MODAL -->
             </body>
         </html>
     </xsl:template>

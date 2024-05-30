@@ -8,11 +8,4 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("info already shown")
     }
 
-    document.getElementById('popup-close').addEventListener('click', function() {
-        document.getElementById('once-popup').style.display = 'none';
-    });
-
-    document.getElementById('once-popup').addEventListener('click', function() {
-        document.getElementById('once-popup').style.display = 'none';
-    });
 });
