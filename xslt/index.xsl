@@ -14,7 +14,7 @@
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
-    <xsl:import href="partials/one_time_alert.xsl"/>
+    <xsl:import href="./partials/one_time_alert.xsl"/>
 
     <xsl:template match="/">
         <xsl:variable name="doc_title">
