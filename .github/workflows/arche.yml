@@ -8,36 +8,55 @@ jobs:
     name: Ingest Data into ARCHE
     runs-on: ubuntu-latest
     env:
-      ANT_OPTS: -Xmx5g
+      ARCHE_USER: ${{secrets.ARCHE_USER}}
+      ARCHE_PASSWORD: ${{secrets.ARCHE_PASSWORD}}
+      ARCHE: https://arche-curation.acdh-dev.oeaw.ac.at/api
+      TOPCOLID: https://id.acdh.oeaw.ac.at/emt
+      PROJECTID: https://id.acdh.oeaw.ac.at/emt/project
+
     steps:
     - name: Perform Checkout
-      uses: actions/checkout@v2
-    - name: Install Saxon, Ant and Fundament
+      uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+        cache: 'pip'
+    - name: Install Dependencies
+      run: pip install -r requirements.txt
+    - name: Fetch Data
+      run: ./fetch_data.sh
+    - name: Process Data
+      run: ./process.sh
+    - name: Make RDF
+      run: python make_arche_rdf.py
+    - uses: actions/upload-artifact@v4
+      with:
+        name: arche.ttl
+        path: ./to_ingest/arche.ttl
+        if-no-files-found: error
+        overwrite: true
+    - name: Fetch WF-URL
+      run: echo "RUN_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> $GITHUB_ENV
+    - name: cache AV database
+      id: avdb
+      uses: actions/cache@v4
+      with:
+        path: ~/.cvdupdate
+        key: constant
+    - name: refresh AV database
       run: |
-        apt-get update && apt-get install openjdk-11-jre-headless ant -y --no-install-recommend
-        ./shellscripts/script.sh
-    - name: Build
-      run: |
-        ant -f build_arche.xml
-    - name: ingestion dependencies
-      run: |
-        composer require "acdh-oeaw/arche-ingest:^1"
-    - name: ingest resources
-      run: |
-        vendor/bin/arche-import-metadata html/arche.rdf https://arche-dev.acdh-dev.oeaw.ac.at/api ${{secrets.ARCHE_LOGIN}} ${{secrets.ARCHE_PASSWORD}}--retriesOnConflict 25
-    - name: Copy XML Files to to_ingest 
-      run: |
-        mkdir $PWD/to_ingest
-        find -path "./data/editions/*.xml" -exec cp -prv '{}' './to_ingest' ';'
-        find -path "./data/indices/*.xml" -exec cp -prv '{}' './to_ingest' ';'
-        find -path "./data/meta/*.xml" -exec cp -prv '{}' './to_ingest' ';'
-    - name: install repo-file-checker
-      run: |
-        composer require "acdh-oeaw/repo-file-checker:^2"
-        mkdir -p filechecker/tmp filechecker/reports
-    - name: run repo-file-checker
-      run: |
-        php -f vendor/acdh-oeaw/repo-file-checker/index.php -- --tmpDir filechecker/tmp --reportDir filechecker/reports to_ingest 0
-    - name: ingest binaries
-      run: |
-        vendor/bin/arche-import-binary to_ingest https://id.acdh.oeaw.ac.at/emt-static-dev https://arche-dev.acdh-dev.oeaw.ac.at/api ${{secrets.ARCHE_LOGIN}} ${{secrets.ARCHE_PASSWORD}} --skip not_exist
+        python3 -m pip install --user cvdupdate && cvd update
+    - name: run virus_scan
+      run: ./arche__viruscheck.sh
+    - name: run filechecker
+      run: ./arche__filechecker.sh
+    - uses: actions/upload-artifact@v4
+      with:
+        name: filechecker-report
+        path: ./fc_out
+        if-no-files-found: error
+        overwrite: true
+    - name: run metadata import
+      run: ./arche__ingest_md.sh
+    - name: run binary_import
+      run: ./arche__ingest_binaries.sh

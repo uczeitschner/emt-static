@@ -44,6 +44,8 @@ jobs:
         run: ./fetch_data.sh
       - name: Process Data
         run: ./process.sh
+      - name: fulltext index
+        run: python make_typesense_index.py
       - name: Build
         run: ant
       - name: write report
