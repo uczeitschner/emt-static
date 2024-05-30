@@ -1,5 +1,6 @@
 import glob
 import os
+import shutil
 from tqdm import tqdm
 from acdh_cidoc_pyutils import extract_begin_end
 from acdh_tei_pyutils.tei import TeiReader
@@ -7,6 +8,8 @@ from acdh_tei_pyutils.utils import extract_fulltext, make_entity_label, get_xmli
 from rdflib import Namespace, URIRef, RDF, Graph, Literal, XSD
 
 print("generating ARCHE-Metadata")
+to_ingest = "to_ingest"
+os.makedirs(to_ingest, exist_ok=True)
 
 g = Graph().parse("arche_seed_files/arche_constants.ttl")
 g_repo_objects = Graph().parse("arche_seed_files/repo_objects_constants.ttl")
@@ -29,7 +32,7 @@ for p, o in ihb_owner_graph.predicate_objects():
     g.add((TOP_COL_URI, p, o))
 
 
-files = sorted(glob.glob("data/editions/*.xml"))
+files = sorted(glob.glob("data/editions/*.xml"))[:20]
 for x in tqdm(files):
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
@@ -55,6 +58,13 @@ for x in tqdm(files):
     g.add((cur_col_uri, ACDH["hasTitle"], Literal(title, lang="de")))
     g.add((cur_doc_uri, ACDH["hasTitle"], Literal(f"TEI/XML Dokument: {title}", lang="de")))
     g.add((cur_doc_uri, ACDH["hasCategory"], URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/text/tei")))
+
+    # hasNonLinkedIdentifier
+    repo_str = extract_fulltext(doc.any_xpath(".//tei:msIdentifier[1]//tei:repository[1]")[0])
+    idno_str = extract_fulltext(doc.any_xpath(".//tei:msIdentifier[1]//tei:idno[1]")[0])
+    non_linked_id = f"{repo_str}, {idno_str}"
+    g.add((cur_col_uri, ACDH["hasNonLinkedIdentifier"], Literal(non_linked_id, lang="de")))
+    g.add((cur_doc_uri, ACDH["hasNonLinkedIdentifier"], Literal(non_linked_id, lang="de")))
 
     # start/end date
     try:
@@ -117,6 +127,8 @@ for x in tqdm(files):
 
     if "Karlsruhe" in repo:
         owner_uri = URIRef("https://d-nb.info/gnd/1014584-9")
+    elif "korrespondenz" in x:
+        owner_uri = URIRef("https://d-nb.info/gnd/4655277-7")
     else:
         owner_uri = URIRef("https://d-nb.info/gnd/2005486-5")
 
@@ -136,20 +148,20 @@ for x in tqdm(files):
             g.add((cur_image_uri, ACDH["hasNextItem"], next_uri))
     g.add((cur_col_uri, ACDH["hasNextItem"], URIRef(f"{TOP_COL_URI}/{cur_col_id}___0001.jpg")))
 
-    # indices and meta
-    for y in ["indices", "meta"]:
-        for x in glob.glob(f"./data/{y}/*.xml"):
-            doc = TeiReader(x)
-            cur_doc_id = os.path.split(x)[-1]
-            cur_doc_uri = URIRef(f"{TOP_COL_URI}/{cur_doc_id}")
-            g.add((cur_doc_uri, RDF.type, ACDH["Resource"]))
-            g.add((cur_doc_uri, ACDH["isPartOf"], URIRef(f"{TOP_COL_URI}/{y}")))
-            g.add((cur_doc_uri, ACDH["hasLicense"], URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0")))
-            title = extract_fulltext(doc.any_xpath(".//tei:titleStmt/tei:title[1]")[0])
-            g.add((cur_doc_uri, ACDH["hasTitle"], Literal(f"TEI/XML Dokument: {title}", lang="de")))
-            g.add((cur_doc_uri, ACDH["hasCategory"], URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/text/tei")))
-            for p, o in ihb_owner_graph.predicate_objects():
-                g.add((cur_doc_uri, p, o))
+# indices and meta
+for y in ["indices", "meta"]:
+    for x in glob.glob(f"./data/{y}/*.xml"):
+        doc = TeiReader(x)
+        cur_doc_id = os.path.split(x)[-1]
+        cur_doc_uri = URIRef(f"{TOP_COL_URI}/{cur_doc_id}")
+        g.add((cur_doc_uri, RDF.type, ACDH["Resource"]))
+        g.add((cur_doc_uri, ACDH["isPartOf"], URIRef(f"{TOP_COL_URI}/{y}")))
+        g.add((cur_doc_uri, ACDH["hasLicense"], URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0")))
+        title = extract_fulltext(doc.any_xpath(".//tei:titleStmt/tei:title[1]")[0])
+        g.add((cur_doc_uri, ACDH["hasTitle"], Literal(f"TEI/XML Dokument: {title}", lang="de")))
+        g.add((cur_doc_uri, ACDH["hasCategory"], URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/text/tei")))
+        for p, o in ihb_owner_graph.predicate_objects():
+            g.add((cur_doc_uri, p, o))
 
 
 for x in COLS:
@@ -162,3 +174,12 @@ for x in COL_URIS:
 
 print("writing graph to file")
 g.serialize("html/arche.ttl")
+
+shutil.copy("html/arche.ttl", os.path.join(to_ingest, "arche.ttl"))
+
+files_to_ingest = glob.glob("./data/*/*.xml")
+print(f"copying {len(files_to_ingest)} into {to_ingest}")
+for x in files_to_ingest:
+    _, tail = os.path.split(x)
+    new_name = os.path.join(to_ingest, tail)
+    shutil.copy(x, new_name)
