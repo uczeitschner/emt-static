@@ -14,6 +14,7 @@
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
+    <xsl:import href="partials/one_time_alert.xsl"/>
 
     <xsl:template match="/">
         <xsl:variable name="doc_title">
@@ -141,6 +142,9 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
+                <!-- ONCE SHOWN MODAL -->
+                <xsl:call-template name="one_time_alert"/>
+                <!-- END ONCE SHOWN MODAL -->
             </body>
         </html>
     </xsl:template>

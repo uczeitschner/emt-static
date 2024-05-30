@@ -9,4 +9,4 @@ python make_typesense_index.py
 python make_calendar_data.py
 python make_cmif.py
 python make_translations.py
-python make_arche_rdf.py
+# python make_arche_rdf.py
