@@ -42,7 +42,7 @@
         <title><xsl:value-of select="$html_title"/></title>
         <link href="vendor/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="vendor/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-        <link href="https://unpkg.com/tabulator-tables@5.5.0/dist/css/tabulator_bootstrap5.min.css" rel="stylesheet"></link>
+        <link href="vendor/tabulator-tables/css/tabulator_bootstrap5.min.css" rel="stylesheet"></link>
         <link href="css/tablutor-style.css" rel="stylesheet"></link>   
         <link rel="stylesheet" href="css/style.css" type="text/css"></link>        
         <script src="vendor/i18next/i18next.min.js"></script>
