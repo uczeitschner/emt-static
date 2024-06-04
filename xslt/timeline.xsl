@@ -27,8 +27,8 @@
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
                 <link title="timeline-styles" rel="stylesheet"
-                    href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css"></link>
-                <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+                    href="vendor/timeline3/css/timeline.css"></link>
+                <script src="vendor/timeline3/js/timeline-min.js"></script>
             </head>
             
             <body class="d-flex flex-column h-100">
@@ -45,7 +45,10 @@
                 <xsl:call-template name="html_footer"/>
                 <script>
                     var options = {
-                    language: "de"
+                    script_path: 'vendor/timeline3/js/',
+                    language: "de",
+                    hash_bookmark: true,
+                    font: null
                     }
                     $(document).ready(function () {
                     var embed = document.getElementById('timeline-embed');
