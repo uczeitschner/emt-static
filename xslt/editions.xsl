@@ -44,7 +44,7 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"/>
+                <script src="vendor/openseadragon-bin-4.1.1/openseadragon.min.js"/>
                 <script src="js/osd_single.js"></script>
             </head>
             <body class="d-flex flex-column h-100">
