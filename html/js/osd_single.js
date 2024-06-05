@@ -15,7 +15,7 @@ function loadImage(container_id, rotation) {
     // OpenSeaDragon Image Viewer
     var viewer = OpenSeadragon({
         id: container_id,
-        prefixUrl: "../vendor/openseadragon-bin-4.1.1/images/",
+        prefixUrl: "vendor/openseadragon-bin-4.1.1/images/",
         defaultZoomLevel: 0,
         fitHorizontally: true,
         tileSources: imageURL,
