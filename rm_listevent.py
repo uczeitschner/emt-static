@@ -13,16 +13,3 @@ for x in tqdm(files, total=len(files)):
     for bad in doc.any_xpath(".//tei:back//tei:noteGrp"):
         bad.getparent().remove(bad)
     doc.tree_to_file(x)
-
-
-files = sorted(glob.glob("./data/indices/*.xml"))
-print(f"removing noteGrps from {len(files)} indices files")
-
-for x in tqdm(files, total=len(files)):
-    try:
-        doc = TeiReader(x)
-    except:
-        continue
-    for bad in doc.any_xpath(".//tei:back//tei:noteGrp"):
-        bad.getparent().remove(bad)
-    doc.tree_to_file(x)
