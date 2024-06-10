@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy to cluster
 
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -53,16 +53,6 @@ jobs:
         run: ant
       - name: write report
         run: python create_report.py
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: './html'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
