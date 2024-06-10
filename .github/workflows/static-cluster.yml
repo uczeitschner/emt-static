@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
-  deploy:
+  create-container:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -78,7 +78,13 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value={{sha}}
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
@@ -88,3 +94,18 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+  _3:
+    needs: [create-container]
+    uses: acdh-oeaw/gl-autodevops-minimal-port/.github/workflows/deploy.yml@main
+    secrets: inherit
+    with:
+      environment: production
+      fetch-depth: 1
+      DOCKER_TAG: ghcr.io/${{ github.repository }}
+      APP_NAME: emt-static
+      APP_ROOT: /
+      SERVICE_ID: ${{ vars.SERVICE_ID }}
+      PUBLIC_URL: ${{ vars.PUBLIC_URL }}
+      POSTGRES_ENABLED: false
+      default_port: "80"
+      submodules: "false"
