@@ -55,7 +55,7 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css" />
+                <link rel="stylesheet" href="vendor/instantsearch.css/themes/algolia-min.css" />
                 <script src="vendor/instantsearch/instantsearch.production.min.js"></script>
                 <script
                     src="https://cdn.jsdelivr.net/npm/typesense-instantsearch-adapter@2/dist/typesense-instantsearch-adapter.min.js"></script>
