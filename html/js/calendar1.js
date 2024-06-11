@@ -48,15 +48,15 @@ async function createCalendar(url, i18n) {
             } else {
                 li.innerHTML = `${item.label}`
             }
-            
+
             myUl.appendChild(li)
         });
         modalBody.appendChild(myUl)
-        
-          
-       
+
+
+
         myModal.show()
-    
+
         // alert(
         //     `Clicked ${events[0].date} with ${events.length} event(s): ${events.map((event) => event.label).join(", ")}.`,
         // );
@@ -69,7 +69,7 @@ async function createCalendar(url, i18n) {
         }
     })
     console.log(Array.from(senders))
-   
+
     const ul = document.createElement('ul');
     senders.forEach((label, link) => {
         const li = document.createElement('li');
