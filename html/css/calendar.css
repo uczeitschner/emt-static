@@ -1,5 +1,10 @@
 :root {
-    font-family: ui-sans-serif, system-ui, sans-serif;
+    --emt_person_id__9: #ef476f;
+    --emt_person_id__10: #073b4c;
+    --emt_person_id__14: #118ab2;
+    --emt_person_id__18: #8f00ff;
+    --emt_person_id__50: #06d6a0;
+    --Brief_erschlossen: #718355;
 }
 
 acdh-ch-calendar {
@@ -11,18 +16,66 @@ acdh-ch-calendar caption {
     text-align: center;
 }
 
-acdh-ch-calendar-year td[data-event-kinds] {
-    border-bottom: 2px solid var(--calendar-event-color);
+acdh-ch-calendar-year td {
+    text-align: center;
+    padding: 5px;
 }
 
-acdh-ch-calendar-year td[data-event-kinds~="birthday"] {
-    --calendar-event-color: hotpink;
+acdh-ch-calendar-year td button {
+    padding: 2px;
+    border-radius: 6px;
+    width: 100%;
 }
 
-acdh-ch-calendar-year td[data-event-kinds~="party"] {
-    --calendar-event-color: lime;
+acdh-ch-calendar-year td[data-event-kinds] button {
+    /* --calendar-event-color: var(--emt_person_id__9); */
+    background-color: var(--calendar-event-color) !important;
+    outline: 1px solid var(--calendar-event-color);
 }
 
-acdh-ch-calendar-year td[data-event-kinds~="birthday"][data-event-kinds~="party"] {
-    --calendar-event-color: dodgerblue;
+acdh-ch-calendar-year td[data-event-kinds~="emt_person_id__9.html"] button {
+    --calendar-event-color: var(--emt_person_id__9);
+}
+
+acdh-ch-calendar-year td[data-event-kinds~="emt_person_id__10.html"] button {
+    --calendar-event-color: var(--emt_person_id__10);
+    color: white;
+}
+
+acdh-ch-calendar-year td[data-event-kinds~="emt_person_id__14.html"] button {
+    --calendar-event-color: var(--emt_person_id__14);
+}
+
+acdh-ch-calendar-year td[data-event-kinds~="emt_person_id__18.html"] button {
+    --calendar-event-color: var(--emt_person_id__18);
+}
+
+acdh-ch-calendar-year td[data-event-kinds~="emt_person_id__50.html"] button {
+    --calendar-event-color: var(--emt_person_id__50);
+}
+
+acdh-ch-calendar-year td[data-event-kinds~="Brief_erschlossen"] button {
+    --calendar-event-color: var(--Brief_erschlossen);
+}
+
+
+
+.emt_person_id__9 {
+    color: var(--emt_person_id__9)
+}
+
+.emt_person_id__10 {
+    color: var(--emt_person_id__10)
+}
+
+.emt_person_id__14 {
+    color: var(--emt_person_id__14)
+}
+
+.emt_person_id__18 {
+    color: var(--emt_person_id__18)
+}
+
+.emt_person_id__50 {
+    color: var(--emt_person_id__50)
 }

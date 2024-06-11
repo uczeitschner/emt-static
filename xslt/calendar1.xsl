@@ -20,7 +20,7 @@
 
 
             <body class="page">
-                <div class="hfeed site" id="page">
+                
                     <xsl:call-template name="nav_bar"/>
 
                     <div class="container-fluid">
@@ -37,14 +37,31 @@
                                         <span>Select a year: </span>
                                         <acdh-ch-calendar-year-picker></acdh-ch-calendar-year-picker>
                                     </label>
+                                    <acdh-ch-calendar-legend></acdh-ch-calendar-legend>
                                 </div>
                                 <div class="col-10">
                                     <acdh-ch-calendar-year></acdh-ch-calendar-year>
                                 </div>
                             </div>
                         </acdh-ch-calendar>
+                        <div class="modal fade" id="dataModal" tabindex="-1" aria-labelledby="dataModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="dataModalLabel">Data Details</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Data content will be injected here by JavaScript -->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                
                 <xsl:call-template name="html_footer"/>
                 <script type="module" src="js/calendar1.js"></script>
             </body>
