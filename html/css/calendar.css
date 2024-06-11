@@ -1,0 +1,28 @@
+:root {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+acdh-ch-calendar {
+    --calendar-year-columns: 4;
+}
+
+acdh-ch-calendar caption {
+    caption-side: top;
+    text-align: center;
+}
+
+acdh-ch-calendar-year td[data-event-kinds] {
+    border-bottom: 2px solid var(--calendar-event-color);
+}
+
+acdh-ch-calendar-year td[data-event-kinds~="birthday"] {
+    --calendar-event-color: hotpink;
+}
+
+acdh-ch-calendar-year td[data-event-kinds~="party"] {
+    --calendar-event-color: lime;
+}
+
+acdh-ch-calendar-year td[data-event-kinds~="birthday"][data-event-kinds~="party"] {
+    --calendar-event-color: dodgerblue;
+}
