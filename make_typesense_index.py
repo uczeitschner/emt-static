@@ -1,11 +1,14 @@
+import calendar
 import glob
 import os
+from datetime import datetime
 
 from typesense.api_call import ObjectNotFound
 from acdh_cfts_pyutils import TYPESENSE_CLIENT as client
 from acdh_cfts_pyutils import CFTS_COLLECTION
 from acdh_tei_pyutils.tei import TeiReader
 from acdh_tei_pyutils.utils import extract_fulltext
+from acdh_cidoc_pyutils import extract_begin_end
 from tqdm import tqdm
 
 
@@ -25,6 +28,7 @@ current_schema = {
         {"name": "rec_id", "type": "string"},
         {"name": "title", "type": "string"},
         {"name": "full_text", "type": "string"},
+        {"name": "date", "type": "int32"},
         {
             "name": "year",
             "type": "int32",
@@ -38,6 +42,7 @@ current_schema = {
         {"name": "orgs", "type": "string[]", "facet": True, "optional": True},
         {"name": "keywords", "type": "string[]", "facet": True, "optional": True},
     ],
+    "default_sorting_field": "date",
 }
 
 client.collections.create(current_schema)
@@ -114,6 +119,19 @@ for x in tqdm(files, total=len(files)):
         cfts_record["places"] = record["places"]
     record["full_text"] = extract_fulltext(body, tag_blacklist=tag_blacklist)
     cfts_record["full_text"] = record["full_text"]
+    try:
+        date_node = doc.any_xpath("//tei:correspAction/tei:date")[0]
+        date_string = extract_begin_end(date_node)[0]
+        if date_string:
+            pass
+        else:
+            date_string = "1800-01-01"
+    except:
+        date_string = "1800-01-01"
+    date_object = datetime.strptime(date_string, "%Y-%m-%d")
+    time_tuple = date_object.timetuple()
+    unix_timestamp = calendar.timegm(time_tuple)
+    record["date"] = unix_timestamp * -1  # dirty trick to change sort order
     records.append(record)
     cfts_records.append(cfts_record)
 
