@@ -2,7 +2,8 @@
 
 var config = {
     height: 1000,
-    layout: "fitDataStretch",
+    layout: "fitColumns",
+    responsiveLayout: "collapse",
     tooltips: true,
     dataLoader: true,
     };

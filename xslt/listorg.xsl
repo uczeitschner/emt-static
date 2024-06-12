@@ -39,7 +39,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-visible="false" tabulator-download="false">itemid</th>
-                                        <th scope="col" tabulator-headerFilter="input">Name</th>
+                                        <th scope="col" tabulator-headerFilter="input" tabulator-minWidth="350">Name</th>
                                         <th scope="col" tabulator-headerFilter="input">Erwähnungen</th>
                                         <th scope="col" tabulator-headerFilter="input">ID</th>
                                     </tr>

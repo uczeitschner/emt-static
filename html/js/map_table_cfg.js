@@ -34,6 +34,7 @@ const columns = [
     field: "Ortsname",
     formatter: "plaintext",
     resizable: false,
+    minWidth: "350"
   },
   {
     headerFilter: "input",
