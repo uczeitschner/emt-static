@@ -31,18 +31,12 @@
                             <i class="fas fa-download" title="Data"/>
                         </a>
                         <acdh-ch-calendar>
-                            <div class="row">
-                                <div class="col-2">
-                                    <label>
-                                        <span>Select a year: </span>
-                                        <acdh-ch-calendar-year-picker></acdh-ch-calendar-year-picker>
-                                    </label>
-                                    <acdh-ch-calendar-legend></acdh-ch-calendar-legend>
-                                </div>
-                                <div class="col-10">
-                                    <acdh-ch-calendar-year></acdh-ch-calendar-year>
-                                </div>
-                            </div>
+                            <label>
+                                <span>Jahr</span>
+                                <acdh-ch-calendar-year-picker></acdh-ch-calendar-year-picker>
+                            </label>
+                            <!-- To disallow selecting years without events, use `data-variant="sparse"`. -->
+                            <acdh-ch-calendar-year data-variant="sparse"></acdh-ch-calendar-year>
                         </acdh-ch-calendar>
                         <div class="modal fade" id="dataModal" tabindex="-1" aria-labelledby="dataModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
