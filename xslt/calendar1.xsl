@@ -23,20 +23,21 @@
                 
                     <xsl:call-template name="nav_bar"/>
 
-                    <div class="container-fluid">
+                    <div class="container">
 
                         <h1 class="text-center display-3 p-3">
                                     Kalender</h1>
                         <a style="padding-left:5px;" href="js-data/calendarData.js">
                             <i class="fas fa-download" title="Data"/>
                         </a>
+                        <acdh-ch-calendar-legend></acdh-ch-calendar-legend>
                         <acdh-ch-calendar>
-                            <label>
-                                <span>Jahr</span>
-                                <acdh-ch-calendar-year-picker></acdh-ch-calendar-year-picker>
-                            </label>
-                            <!-- To disallow selecting years without events, use `data-variant="sparse"`. -->
-                            <acdh-ch-calendar-year data-variant="sparse"></acdh-ch-calendar-year>
+                                    <label>
+                                        <span>Jahr</span>
+                                        <acdh-ch-calendar-year-picker></acdh-ch-calendar-year-picker>
+                                    </label>
+                                    
+                                    <acdh-ch-calendar-year data-variant="sparse"></acdh-ch-calendar-year>
                         </acdh-ch-calendar>
                         <div class="modal fade" id="dataModal" tabindex="-1" aria-labelledby="dataModalLabel" aria-hidden="true">
                             <div class="modal-dialog">

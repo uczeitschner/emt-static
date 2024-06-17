@@ -16,18 +16,49 @@ function createCalendar(i18n, events, onEventClick) {
     calendar.setData({ events });
 
     calendar.addEventListener("calendar-event-click", onEventClick);
+    const senders = new Map()
+    events.forEach(d => {
+        if (d.sender?.link.includes("emt_person")) {
+            senders.set(d.sender.link, d.sender.label)
+        }
+    })
+    console.log(Array.from(senders))
+
+    const ul = document.createElement('ul');
+    senders.forEach((label, link) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.classList.add(link.replace(".html", ""));
+        a.href = link
+        a.textContent = label
+        li.appendChild(a);
+        ul.appendChild(li);
+    })
+    document.querySelector('acdh-ch-calendar-legend')?.append(ul)
 }
 
 function onEventClick(event) {
-    const { date, events } = event.detail;
+    var myModal = new bootstrap.Modal(document.getElementById("dataModal"), {});
 
-    alert(
-        `${date} mit ${events.length} Ereignissen:\n${events
-            .map((event) => {
-                return `- ${event.label}`;
-            })
-            .join("\n")}.`,
-    );
+        const { date, events } = event.detail;
+        const modalBody = document.querySelector('#dataModal .modal-body');
+        modalBody.innerHTML = "";
+        const myUl = document.createElement("ul")
+
+        events.forEach(item => {
+            const li = document.createElement("li");
+            if (item.link) {
+                li.innerHTML = `
+                <a href="${item.link}">${item.label}</a>
+            `
+            } else {
+                li.innerHTML = `${item.label}`
+            }
+
+            myUl.appendChild(li)
+        });
+        modalBody.appendChild(myUl)
+        myModal.show()
 }
 
 async function request(url) {
