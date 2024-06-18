@@ -6,10 +6,22 @@
     --emt_person_id__50: #06d6a0;
     --Brief_erschlossen: #718355;
 }
+
+:where(acdh-ch-calendar) {
+    display: grid;
+    font-size: 1rem;
+    gap: 2rem
+}
+
 acdh-ch-calendar {
     display: grid;
     gap: 4rem;
 }
+
+acdh-ch-calendar-year {
+	justify-content: center;
+}
+
 acdh-ch-calendar caption {
     caption-side: top;
     text-align: center;
@@ -21,7 +33,7 @@ acdh-ch-calendar caption {
     }
 }
 
-acdh-ch-calendar > label > span {
+acdh-ch-calendar>label>span {
     display: block;
     font-weight: 600;
     margin-block-end: 1rem;
@@ -31,51 +43,51 @@ acdh-ch-calendar-year-picker div[role="radiogroup"] {
     gap: 0 2rem;
 }
 
-acdh-ch-calendar-year-picker div[role="radiogroup"] > label {
+acdh-ch-calendar-year-picker div[role="radiogroup"]>label {
     line-height: 2rem;
 }
 
 
 :where(acdh-ch-calendar-year td > button[data-event-kinds])::after {
-	border-radius: 50%;
+    border-radius: 50%;
 }
 
 
 /** When using tailwindcss, explicitly set text and background colors of events. */
-acdh-ch-calendar-year td > * {
+acdh-ch-calendar-year td>* {
     background-color: var(--calendar-cell-color);
     color: var(--calendar-cell-color-foreground);
 }
 
-acdh-ch-calendar-year td > button[data-event-kinds] {
+acdh-ch-calendar-year td>button[data-event-kinds] {
     --calendar-cell-color: #52525b;
 }
 
-acdh-ch-calendar-year td > button[data-event-kinds="emt_person_id__9.html"] {
+acdh-ch-calendar-year td>button[data-event-kinds="emt_person_id__9.html"] {
     --calendar-cell-color: var(--emt_person_id__9)
 }
 
-acdh-ch-calendar-year td > button[data-event-kinds="emt_person_id__10.html"] {
+acdh-ch-calendar-year td>button[data-event-kinds="emt_person_id__10.html"] {
     --calendar-cell-color: var(--emt_person_id__10);
 }
 
-acdh-ch-calendar-year td > button[data-event-kinds="emt_person_id__14.html"] {
+acdh-ch-calendar-year td>button[data-event-kinds="emt_person_id__14.html"] {
     --calendar-cell-color: var(--emt_person_id__14);
 }
 
-acdh-ch-calendar-year td > button[data-event-kinds="emt_person_id__18.html"] {
+acdh-ch-calendar-year td>button[data-event-kinds="emt_person_id__18.html"] {
     --calendar-cell-color: var(--emt_person_id__18);
 }
 
-acdh-ch-calendar-year td > button[data-event-kinds="var(--emt_person_id__50);"] {
+acdh-ch-calendar-year td>button[data-event-kinds="var(--emt_person_id__50);"] {
     --calendar-cell-color: var(--emt_person_id__50);
 }
 
-acdh-ch-calendar-year td > button[data-event-kinds="Brief_erschlossen"] {
+acdh-ch-calendar-year td>button[data-event-kinds="Brief_erschlossen"] {
     --calendar-cell-color: var(--Brief_erschlossen)
 }
 
-acdh-ch-calendar-year td > button[data-event-kinds="unknown"] {
+acdh-ch-calendar-year td>button[data-event-kinds="unknown"] {
     --calendar-cell-color: #8b5cf6;
 }
 
@@ -102,4 +114,30 @@ acdh-ch-calendar-year td > button[data-event-kinds="unknown"] {
 
 .Brief_erschlossen {
     color: var(--Brief_erschlossen)
+}
+
+/* the legend */
+.calendar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* the select radio group */
+input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+input[type="radio"]:checked+span {
+    border: 2px solid red;
+    padding: 2px;
+    /* optional: adds some space between text and border */
 }

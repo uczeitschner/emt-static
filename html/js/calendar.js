@@ -2,7 +2,7 @@ import { register } from "https://unpkg.com/@acdh-oeaw/calendar-component@0/dist
 import de from "https://unpkg.com/@acdh-oeaw/calendar-component@0/dist/i18n/de.js";
 
 
-register({ picker: "select" });
+register({ });
 // register()
 
 function createCalendar(i18n, events, onEventClick) {
@@ -28,14 +28,12 @@ function createCalendar(i18n, events, onEventClick) {
     console.log(Array.from(senders))
 
     const ul = document.createElement('ul');
+    ul.classList.add("list-unstyled")
     senders.forEach((label, link) => {
         const li = document.createElement('li');
         if (link) {
-            const a = document.createElement('a');
-            a.classList.add(link.replace(".html", ""));
-            a.href = link
-            a.textContent = label
-            li.appendChild(a);
+            li.classList.add(link.replace(".html", ""));
+            li.textContent = label
             ul.appendChild(li);
         }
         else {
