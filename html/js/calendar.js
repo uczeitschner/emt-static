@@ -1,116 +1,89 @@
-function getYear(item) {
-  return item['date'].split('-')[0]
+import { register } from "https://unpkg.com/@acdh-oeaw/calendar-component@0/dist/calendar.js";
+import de from "https://unpkg.com/@acdh-oeaw/calendar-component@0/dist/i18n/de.js";
+
+
+register({ picker: "select" });
+// register()
+
+function createCalendar(i18n, events, onEventClick) {
+    const calendar = document.querySelector("acdh-ch-calendar");
+
+    if (i18n != null) {
+        /** Optionally set locale, defaults to english. */
+        calendar.setI18n(i18n);
+    }
+
+    calendar.setData({ events, currentYear: 1696 });
+
+    calendar.addEventListener("calendar-event-click", onEventClick);
+    const senders = new Map()
+    events.forEach(d => {
+        if (d.sender?.link.includes("emt_person")) {
+            senders.set(d.sender.link, d.sender.label)
+        }
+        else if (d.sender.label.includes("erschlossen")) {
+            senders.set(false, d.sender.label)
+        }
+    })
+    console.log(Array.from(senders))
+
+    const ul = document.createElement('ul');
+    senders.forEach((label, link) => {
+        const li = document.createElement('li');
+        if (link) {
+            const a = document.createElement('a');
+            a.classList.add(link.replace(".html", ""));
+            a.href = link
+            a.textContent = label
+            li.appendChild(a);
+            ul.appendChild(li);
+        }
+        else {
+            li.textContent = label
+            li.classList.add("Brief_erschlossen")
+            ul.appendChild(li)
+        }
+        
+    })
+    document.querySelector('acdh-ch-calendar-legend')?.append(ul)
 }
 
-function createyearcell(val) {
-  return (val !== undefined) ? `<div class="col-xs-6">\
-  <button id="ybtn${val}" class="btn btn-light rounded-0 yearbtn" value="${val}" onclick="updateyear(this.value)">${val}</button>\
-</div>` : '';
+function onEventClick(event) {
+    var myModal = new bootstrap.Modal(document.getElementById("dataModal"), {});
+
+        const { date, events } = event.detail;
+        const modalBody = document.querySelector('#dataModal .modal-body');
+        modalBody.innerHTML = "";
+        const myUl = document.createElement("ul")
+
+        events.forEach(item => {
+            const li = document.createElement("li");
+            if (item.link) {
+                li.innerHTML = `
+                <a href="${item.link}">${item.label}</a>
+            `
+            } else {
+                li.innerHTML = `${item.label}`
+            }
+
+            myUl.appendChild(li)
+        });
+        modalBody.appendChild(myUl)
+        myModal.show()
 }
 
-var calendarTypeData = calendarData.map(r =>
-({
-  startDate: new Date(r.date),
-  endDate: new Date(r.date),
-  name: r.name,
-  linkId: r.id,
-  color: r.id === false ? '#BADA55' : '#A63437'
-}));
-
-
-var startYear = 1677;
-
-var years = Array.from(new Set(calendarData.map(getYear))).sort();
-var yearsTable = document.getElementById('years-table');
-for (var i = 0; i <= years.length; i++) {
-  yearsTable.insertAdjacentHTML('beforeend', createyearcell(years[i]));
-}
-document.getElementById("ybtn" + startYear.toString()).classList.add("focus");
-
-
-const calendar = new Calendar('#calendar', {
-  startYear: startYear,
-  language: "de",
-  dataSource: calendarTypeData.filter(r => r.startDate.getFullYear() === startYear),
-  displayHeader: false,
-  clickDay: function (e) {
-    //window.location = e.events[0].linkId;
-
-    var entries = []
-    $.each(e.events, function (key, entry) {
-      entries.push(entry)
+async function request(url) {
+    const response = await fetch(url);
+    const events = await response.json();
+    return events.map((event) => {
+        return { ...event, date: new Date(event.date) };
     });
-    //window.location = ids.join();
-    if (entries.length > 1) {
-      let html = "<div class='modal' id='dialogForLinks' tabindex='-1' role='dialog' aria-labelledby='modalLabel' aria-hidden='true'>";
-      html += "<div class='modal-dialog' role='document'>";
-      html += "<div class='modal-content'>";
-      html += "<div class='modal-header'>";
-      html += "<h3 class='modal-title' id='modalLabel'>Links</h3>";
-      html += "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>";
-      html += "<span aria-hidden='true'>&times;</span>";
-      html += "</button></div>";
-      html += "<div class='modal-body'><ul>";
-      let numbersTitlesAndIds = new Array();
-      for (let i = 0; i < entries.length; i++) {
-        let linkTitle = entries[i].name;
-        let linkId = entries[i].linkId;
-        let numberInSeriesOfLetters = i + 1;
-        numbersTitlesAndIds.push({ 'i': i, 'position': numberInSeriesOfLetters, 'linkTitle': linkTitle, 'id': linkId });
-      }
-
-      numbersTitlesAndIds.sort(function (a, b) {
-        let positionOne = parseInt(a.position);
-        let positionTwo = parseInt(b.position);
-        if (positionOne < positionTwo) {
-          return -1;
-        }
-        if (positionOne > positionTwo) {
-          return 1;
-        }
-        return 0;
-      });
-      for (let k = 0; k < numbersTitlesAndIds.length; k++) {
-        if (numbersTitlesAndIds[k].id === false) {
-          html += "<li class='indent'>" + numbersTitlesAndIds[k].linkTitle + "</li>";
-        } else {
-          html += "<li class='indent'><a href='" + numbersTitlesAndIds[k].id + "'>" + numbersTitlesAndIds[k].linkTitle + "</a></li>";
-        }
-      }
-      html += "</ul></div>";
-      html += "<div class='modal-footer'>";
-      html += "<button type='button' class='btn btn-secondary' data-dismiss='modal'>X</button>";
-      html += "</div></div></div></div>";
-      $('#dialogForLinks').remove();
-      $('#loadModal').append(html);
-      $('#dialogForLinks').modal('show');
-
-    }
-    else {
-      if (entries.length > 0 && entries[0].linkId !== false) {
-        window.location = entries[0].linkId;
-      }
-    }
-  },
-  renderEnd: function (e) {
-    const buttons = document.querySelectorAll(".yearbtn");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove('focus');
-    }
-    document.getElementById(`ybtn${e.currentYear}`).classList.add("focus");
-  }
-});
-removeBlackDaysFromCalendar();
-
-function updateyear(year) {
-  calendar.setYear(year);
-  const dataSource = calendarTypeData.filter(r => r.startDate.getFullYear() === parseInt(year));
-  calendar.setDataSource(dataSource);
-  removeBlackDaysFromCalendar();
 }
 
-function removeBlackDaysFromCalendar() {
-  $('.day')
-    .filter((i, e) => e.style.boxShadow == "black 0px -4px 0px 0px inset")
-    .css('box-shadow', "rgb(166, 52, 55) 0px -4px 0px 0px inset, rgb(186, 218, 85) 0px -8px 0px 0px inset");
+try {
+    const events = await request("js-data/calendarData.json");
+    createCalendar(de, events, onEventClick);
+    console.log("Successfully created calendar.");
+} catch (error) {
+    console.error("Failed to create calendar.\n", String(error));
 }
