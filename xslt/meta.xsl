@@ -241,7 +241,7 @@
                 <xsl:choose>
                     <xsl:when test="ends-with(data(@target), '.xml')">
                         <xsl:attribute name="href">
-                            <xsl:value-of select="replace(@target, '.xml', '.html')"/>
+                            <xsl:value-of select="tokenize(replace(@target, '.xml', '.html'), '/')[last()]"/>
                         </xsl:attribute>
                     </xsl:when>
                     <xsl:otherwise>
