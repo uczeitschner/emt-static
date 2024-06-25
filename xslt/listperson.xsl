@@ -32,7 +32,7 @@
                 <main>
                     <div class="container">
 
-                        <h1 class="text-center display-3 p-3">
+                        <h1 class="text-center display-5 p-3">
                             <xsl:value-of select="$doc_title"/>
                         </h1>
 
@@ -109,7 +109,7 @@
                         <xsl:call-template name="nav_bar"/>
                         <main>
                             <div class="container">
-                                <h1 class="display-4 text-center">
+                                <h1 class="display-5 text-center">
                                     <xsl:value-of select="$name"/>
                                 </h1>
                                 <xsl:call-template name="person_detail"/>  

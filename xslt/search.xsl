@@ -25,7 +25,7 @@
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container">
-                        <h1 class="text-center display-3 p-3"><xsl:value-of select="$doc_title"/></h1>
+                        <h1 class="text-center display-5 p-3"><xsl:value-of select="$doc_title"/></h1>
                         <div class="ais-InstantSearch">
                             <div class="row">
                                 <div class="col-md-4">
