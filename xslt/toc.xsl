@@ -44,7 +44,7 @@
                                     <th scope="col" tabulator-headerFilter="input">Datum</th>
                                     <th scope="col" tabulator-headerFilter="input">Erschließungsstand</th>
                                     <th scope="col" tabulator-headerFilter="input">Ort</th>
-                                    <th scope="col" tabulator-headerFilter="input">Dateinname</th>
+                                    <!-- <th scope="col" tabulator-headerFilter="input">Dateinname</th> -->
                                 </tr>
                             </thead>
                             <tbody>
