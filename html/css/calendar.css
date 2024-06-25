@@ -1,10 +1,11 @@
 :root {
     --emt_person_id__9: #ef476f;
-    --emt_person_id__10: #073b4c;
+    --emt_person_id__10: #6ce7dd;
     --emt_person_id__14: #118ab2;
     --emt_person_id__18: #8f00ff;
     --emt_person_id__50: #06d6a0;
     --Brief_erschlossen: #718355;
+    --mehrere_briefe: #52525b;
 }
 
 :where(acdh-ch-calendar) {
@@ -93,27 +94,31 @@ acdh-ch-calendar-year td>button[data-event-kinds="unknown"] {
 
 
 .emt_person_id__9 {
-    color: var(--emt_person_id__9)
+    background-color: var(--emt_person_id__9)
 }
 
 .emt_person_id__10 {
-    color: var(--emt_person_id__10)
+    background-color: var(--emt_person_id__10)
 }
 
 .emt_person_id__14 {
-    color: var(--emt_person_id__14)
+    background-color: var(--emt_person_id__14)
 }
 
 .emt_person_id__18 {
-    color: var(--emt_person_id__18)
+    background-color: var(--emt_person_id__18)
 }
 
 .emt_person_id__50 {
-    color: var(--emt_person_id__50)
+    background-color: var(--emt_person_id__50)
 }
 
 .Brief_erschlossen {
-    color: var(--Brief_erschlossen)
+    background-color: var(--Brief_erschlossen)
+}
+
+.mehrere_briefe {
+    background-color: var(--mehrere_briefe)
 }
 
 /* the legend */
@@ -137,7 +142,18 @@ input {
 }
 
 input[type="radio"]:checked+span {
-    border: 2px solid red;
+    border: 2px solid var(--mehrere_briefe);
+    border-radius: 10%;
     padding: 2px;
-    /* optional: adds some space between text and border */
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.legend-item {
+    padding: 1em
 }

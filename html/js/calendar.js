@@ -2,7 +2,7 @@ import { register } from "https://unpkg.com/@acdh-oeaw/calendar-component@0/dist
 import de from "https://unpkg.com/@acdh-oeaw/calendar-component@0/dist/i18n/de.js";
 
 
-register({ });
+register({});
 // register()
 
 function createCalendar(i18n, events, onEventClick) {
@@ -25,49 +25,30 @@ function createCalendar(i18n, events, onEventClick) {
             senders.set(false, d.sender.label)
         }
     })
-    console.log(Array.from(senders))
-
-    const ul = document.createElement('ul');
-    ul.classList.add("list-unstyled")
-    senders.forEach((label, link) => {
-        const li = document.createElement('li');
-        if (link) {
-            li.classList.add(link.replace(".html", ""));
-            li.textContent = label
-            ul.appendChild(li);
-        }
-        else {
-            li.textContent = label
-            li.classList.add("Brief_erschlossen")
-            ul.appendChild(li)
-        }
-        
-    })
-    document.querySelector('acdh-ch-calendar-legend')?.append(ul)
 }
 
 function onEventClick(event) {
     var myModal = new bootstrap.Modal(document.getElementById("dataModal"), {});
 
-        const { date, events } = event.detail;
-        const modalBody = document.querySelector('#dataModal .modal-body');
-        modalBody.innerHTML = "";
-        const myUl = document.createElement("ul")
+    const { date, events } = event.detail;
+    const modalBody = document.querySelector('#dataModal .modal-body');
+    modalBody.innerHTML = "";
+    const myUl = document.createElement("ul")
 
-        events.forEach(item => {
-            const li = document.createElement("li");
-            if (item.link) {
-                li.innerHTML = `
+    events.forEach(item => {
+        const li = document.createElement("li");
+        if (item.link) {
+            li.innerHTML = `
                 <a href="${item.link}">${item.label}</a>
             `
-            } else {
-                li.innerHTML = `${item.label}`
-            }
+        } else {
+            li.innerHTML = `${item.label}`
+        }
 
-            myUl.appendChild(li)
-        });
-        modalBody.appendChild(myUl)
-        myModal.show()
+        myUl.appendChild(li)
+    });
+    modalBody.appendChild(myUl)
+    myModal.show()
 }
 
 async function request(url) {

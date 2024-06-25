@@ -26,7 +26,7 @@
 
                 <div class="container">
 
-                    <h1 class="text-center display-3 p-3"> Kalender</h1>
+                    <h1 class="text-center display-5 p-3"> Kalender</h1>
                     <a style="padding-left:5px;" href="js-data/calendarData.js">
                         <i class="fas fa-download" title="Data"/>
                     </a>
@@ -37,13 +37,39 @@
                                 <span>Jahr</span>
                             </label>
                             <acdh-ch-calendar-year-picker/>
-                            <span class="p2 text-center fs-2"> Legende</span>
-                            <acdh-ch-calendar-legend/>
+                            <span class="p2 text-center fs-2">Legende</span>
+                            <acdh-ch-calendar-legend>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <span class="dot emt_person_id__9"></span>
+                                        <span class="legend-item">Eleonora Magdalena von Pfalz-Neuburg</span>
+                                    </li>
+                                    <li><span class="dot emt_person_id__18"></span>
+                                        <span class="legend-item">Johann Wilhelm von Pfalz-Neuburg</span>
+                                    </li>
+                                    <li><span class="dot emt_person_id__50"></span>
+                                        <span class="legend-item">Philipp Wilhelm von Pfalz-Neuburg</span>
+                                    </li>
+                                    <li><span class="dot emt_person_id__14"></span>
+                                        <span class="legend-item">Franziska Sibylla von Baden-Baden, geb. Sachsen-Lauenburg</span>
+                                    </li>
+                                    <li><span class="dot emt_person_id__10"></span>
+                                        <span class="legend-item">Elisabeth Amalie von Pfalz-Neuburg</span>
+                                    </li>
+                                    <li><span class="dot Brief_erschlossen"></span>
+                                        <span class="legend-item">In der Korrespondenz erwähnter Brief</span>
+                                    </li>
+                                    <li>
+                                        <span class="dot mehrere_briefe"></span>
+                                        <span class="legend-item">Mehrere Briefe unterschiedlicher AbsenderInnen</span>
+                                    </li>
+                                </ul>
+                            </acdh-ch-calendar-legend>
                         </div>
 
                         <acdh-ch-calendar-year data-variant="sparse"/>
                     </acdh-ch-calendar>
-                    
+
                     <div class="modal fade" id="dataModal" tabindex="-1"
                         aria-labelledby="dataModalLabel" aria-hidden="true">
                         <div class="modal-dialog">

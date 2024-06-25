@@ -70,7 +70,7 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5 text-end">
-                                    <h2 class="display-3" data-i18n="index__index_of_letters"/>
+                                    <h2 class="display-5" data-i18n="index__index_of_letters"/>
                                     <p class="fs-5" data-i18n="index__index_of_letters_text"/>
                                     <div>
                                         <a href="toc.html" type="button"
@@ -88,7 +88,7 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5">
-                                    <h2 class="display-3" data-i18n="navbar__biography" />
+                                    <h2 class="display-5" data-i18n="navbar__biography" />
                                     <p class="text-start fs-5" data-i18n="[html]index__biograpy_teaser"/>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="pt-5 pb-5 text-end">
-                                    <h2 class="display-3">Blog</h2>
+                                    <h2 class="display-5">Blog</h2>
                                     <p class="fs-5" data-i18n="index__blog_text" />
                                     <div>
                                         <a href="https://kaiserin.hypotheses.org/" type="button"
@@ -126,7 +126,7 @@
                             <div class="col">
                                 <hr class="hr-custom"/>
                                 <div class="pt-5 pb-5 text-center">
-                                    <h2 class="display-3" data-i18n="index__quote_h" />
+                                    <h2 class="display-5" data-i18n="index__quote_h" />
                                     <p class="fs-5">Familiensache? Die Korrespondenz der Kaiserin
                                         Eleonora Magdalena (1655—1720). Bearbeitet von Katrin
                                         Keller, Ines Peper, Anna Spitzbart. Technische Umsetzung
@@ -137,7 +137,7 @@
                             <div class="col">
                                 <hr class="hr-custom"/>
                                 <div class="pt-5 pb-5 text-center">
-                                    <h2 class="display-3" data-i18n="index__contact_h"/>
+                                    <h2 class="display-5" data-i18n="index__contact_h"/>
                                     <p class="fs-5" data-i18n="index__contact_text" />
                                 </div>
                             </div>
