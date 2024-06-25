@@ -15,7 +15,7 @@
     
     <xsl:template match="/">
         <xsl:variable name="doc_title">
-            <xsl:value-of select="'Timeline'"/>
+            <xsl:value-of select="'Zeitleiste'"/>
         </xsl:variable>
         
         
@@ -43,24 +43,7 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
-                <script>
-                    var options = {
-                    script_path: 'vendor/timeline3/js/',
-                    language: "de",
-                    hash_bookmark: true,
-                    font: null
-                    }
-                    $(document).ready(function () {
-                    var embed = document.getElementById('timeline-embed');
-                    embed.style.height = getComputedStyle(document.body).height;
-                    window.timeline = new TL.Timeline('timeline-embed', 'js-data/timeline.json', options);
-                    window.addEventListener('resize', function () {
-                    var embed = document.getElementById('timeline-embed');
-                    embed.style.height = getComputedStyle(document.body).height;
-                    timeline.updateDisplay();
-                    })
-                    });
-                </script>
+                <script src="js/timeline.js"/>
             </body>
         </html>
     </xsl:template>

@@ -44,14 +44,13 @@
                                         <span class="dot emt_person_id__9"></span>
                                         <span class="legend-item">Eleonora Magdalena von Pfalz-Neuburg</span>
                                     </li>
-                                    <li><span class="dot emt_person_id__18"></span>
+                                    <li>
+                                        <span class="dot emt_person_id__18"></span>
                                         <span class="legend-item">Johann Wilhelm von Pfalz-Neuburg</span>
                                     </li>
-                                    <li><span class="dot emt_person_id__50"></span>
+                                    <li>
+                                        <span class="dot emt_person_id__50"></span>
                                         <span class="legend-item">Philipp Wilhelm von Pfalz-Neuburg</span>
-                                    </li>
-                                    <li><span class="dot emt_person_id__14"></span>
-                                        <span class="legend-item">Franziska Sibylla von Baden-Baden, geb. Sachsen-Lauenburg</span>
                                     </li>
                                     <li><span class="dot emt_person_id__10"></span>
                                         <span class="legend-item">Elisabeth Amalie von Pfalz-Neuburg</span>
@@ -62,6 +61,10 @@
                                     <li>
                                         <span class="dot mehrere_briefe"></span>
                                         <span class="legend-item">Mehrere Briefe unterschiedlicher AbsenderInnen</span>
+                                    </li>
+                                    <li>
+                                        <span class="dot emt_person_id__14"></span>
+                                        <span class="legend-item">Franziska Sibylla von Baden-Baden, geb. Sachsen-Lauenburg</span>
                                     </li>
                                 </ul>
                             </acdh-ch-calendar-legend>
