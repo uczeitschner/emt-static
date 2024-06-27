@@ -128,7 +128,7 @@
                                 <div class="pt-5 pb-5 text-center">
                                     <h2 class="display-5" data-i18n="index__quote_h" />
                                     <p class="fs-5">Familiensache? Die Korrespondenz der Kaiserin
-                                        Eleonora Magdalena (1655—1720). Bearbeitet von Katrin
+                                        Eleonora Magdalena (1655–1720). Bearbeitet von Katrin
                                         Keller, Ines Peper, Anna Spitzbart. Technische Umsetzung
                                         durch Peter Andorfer, Matthias Schlögl, Levente Kiraly. Wien
                                         2024.</p>
