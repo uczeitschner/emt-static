@@ -12,3 +12,5 @@ echo '<div lang="en">' >> ${IMPRINT_XML}
 curl https://imprint.acdh.oeaw.ac.at/${REDMINE_ID}en >> ${IMPRINT_XML}
 echo "</div>" >> ${IMPRINT_XML}
 echo "</root>" >> ${IMPRINT_XML}
+
+cat ${IMPRINT_XML}
