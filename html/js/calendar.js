@@ -1,5 +1,5 @@
-import { register } from "../vendor/calendar-component/dist/calendar.js";
-import de from "../vendor/calendar-component/dist/i18n/de.js";
+import { register } from "../vendor/calendar-component/calendar.js";
+import de from "../vendor/calendar-component/i18n/de.js";
 
 
 register({});
