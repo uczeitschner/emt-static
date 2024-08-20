@@ -16,7 +16,7 @@
                 <xsl:with-param name="html_title" select="$doc_title"/>
             </xsl:call-template>
             <link rel="stylesheet"
-                href="https://unpkg.com/@acdh-oeaw/calendar-component/dist/calendar.css"/>
+                href="vendor/calendar-component/calendar.css"/>
             <link rel="stylesheet" href="css/calendar.css"/>
 
 

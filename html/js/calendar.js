@@ -1,5 +1,5 @@
-import { register } from "https://unpkg.com/@acdh-oeaw/calendar-component@0/dist/calendar.js";
-import de from "https://unpkg.com/@acdh-oeaw/calendar-component@0/dist/i18n/de.js";
+import { register } from "../vendor/calendar-component/dist/calendar.js";
+import de from "../vendor/calendar-component/dist/i18n/de.js";
 
 
 register({});
