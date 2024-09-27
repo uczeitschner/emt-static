@@ -2,7 +2,10 @@
 name: Deploy static content to Pages
 
 on:
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  schedule:
+  - cron: "12 5 * * *"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -39,6 +42,7 @@ jobs:
         run: |
           apt-get update && apt-get install openjdk-11-jre-headless ant -y --no-install-recommend
           ./shellscripts/script.sh
+          python -m pip config set global.break-system-packages true
           pip install -r requirements.txt
       - name: Fetch data
         run: ./fetch_data.sh
