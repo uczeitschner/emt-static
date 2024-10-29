@@ -67,7 +67,9 @@ for x in tqdm(files, total=len(files)):
     elif start == end and start:
         new_date.attrib["when"] = start
         new_date.text = start
-    date_str = ET.tostring(new_date, with_tail=False, inclusive_ns_prefixes=NSMAP).decode("utf-8")
+    date_str = ET.tostring(
+        new_date, with_tail=False, inclusive_ns_prefixes=NSMAP
+    ).decode("utf-8")
     if len(date_str) < 8:
         item["date"] = None
     else:
@@ -95,11 +97,4 @@ for x in tqdm(files, total=len(files)):
     items.append(item)
 
 with open("./data/indices/cmif.xml", "w") as f:
-    f.write(
-        template.render(
-            {
-                "data": items,
-                "domain": DOMAIN
-            }
-        )
-    )
+    f.write(template.render({"data": items, "domain": DOMAIN}))

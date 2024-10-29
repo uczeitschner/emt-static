@@ -49,43 +49,95 @@ for x in tqdm(files):
     cur_doc_uri = URIRef(f"{TOP_COL_URI}/{cur_doc_id}")
     g.add((cur_doc_uri, RDF.type, ACDH["Resource"]))
     g.add((cur_doc_uri, ACDH["isPartOf"], cur_col_uri))
-    g.add((cur_doc_uri, ACDH["hasLicense"], URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0")))
+    g.add(
+        (
+            cur_doc_uri,
+            ACDH["hasLicense"],
+            URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0"),
+        )
+    )
     for p, o in ihb_owner_graph.predicate_objects():
         g.add((cur_doc_uri, p, o))
 
     # title
-    title = extract_fulltext(doc.any_xpath(".//tei:titleStmt/tei:title[@type='main']")[0])
+    title = extract_fulltext(
+        doc.any_xpath(".//tei:titleStmt/tei:title[@type='main']")[0]
+    )
     g.add((cur_col_uri, ACDH["hasTitle"], Literal(title, lang="de")))
-    g.add((cur_doc_uri, ACDH["hasTitle"], Literal(f"TEI/XML Dokument: {title}", lang="de")))
-    g.add((cur_doc_uri, ACDH["hasCategory"], URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/text/tei")))
+    g.add(
+        (
+            cur_doc_uri,
+            ACDH["hasTitle"],
+            Literal(f"TEI/XML Dokument: {title}", lang="de"),
+        )
+    )
+    g.add(
+        (
+            cur_doc_uri,
+            ACDH["hasCategory"],
+            URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/text/tei"),
+        )
+    )
 
     # hasNonLinkedIdentifier
-    repo_str = extract_fulltext(doc.any_xpath(".//tei:msIdentifier[1]//tei:repository[1]")[0])
+    repo_str = extract_fulltext(
+        doc.any_xpath(".//tei:msIdentifier[1]//tei:repository[1]")[0]
+    )
     idno_str = extract_fulltext(doc.any_xpath(".//tei:msIdentifier[1]//tei:idno[1]")[0])
     non_linked_id = f"{repo_str}, {idno_str}"
-    g.add((cur_col_uri, ACDH["hasNonLinkedIdentifier"], Literal(non_linked_id, lang="de")))
-    g.add((cur_doc_uri, ACDH["hasNonLinkedIdentifier"], Literal(non_linked_id, lang="de")))
+    g.add(
+        (cur_col_uri, ACDH["hasNonLinkedIdentifier"], Literal(non_linked_id, lang="de"))
+    )
+    g.add(
+        (cur_doc_uri, ACDH["hasNonLinkedIdentifier"], Literal(non_linked_id, lang="de"))
+    )
 
     # start/end date
     try:
-        start, end = extract_begin_end(doc.any_xpath(".//tei:correspAction[@type='sent']/tei:date")[0])
+        start, end = extract_begin_end(
+            doc.any_xpath(".//tei:correspAction[@type='sent']/tei:date")[0]
+        )
     except IndexError:
         start, end = False, False
     if start:
-        g.add((cur_col_uri, ACDH["hasCoverageStartDate"], Literal(start, datatype=XSD.date)))
-        g.add((cur_doc_uri, ACDH["hasCoverageStartDate"], Literal(start, datatype=XSD.date)))
+        g.add(
+            (
+                cur_col_uri,
+                ACDH["hasCoverageStartDate"],
+                Literal(start, datatype=XSD.date),
+            )
+        )
+        g.add(
+            (
+                cur_doc_uri,
+                ACDH["hasCoverageStartDate"],
+                Literal(start, datatype=XSD.date),
+            )
+        )
     if end:
-        g.add((cur_col_uri, ACDH["hasCoverageEndDate"], Literal(end, datatype=XSD.date)))
-        g.add((cur_doc_uri, ACDH["hasCoverageEndDate"], Literal(start, datatype=XSD.date)))
+        g.add(
+            (cur_col_uri, ACDH["hasCoverageEndDate"], Literal(end, datatype=XSD.date))
+        )
+        g.add(
+            (cur_doc_uri, ACDH["hasCoverageEndDate"], Literal(start, datatype=XSD.date))
+        )
 
     # actors (persons):
-    for y in doc.any_xpath(".//tei:back//tei:person[@xml:id and ./tei:idno[@type='GND']]"):
+    for y in doc.any_xpath(
+        ".//tei:back//tei:person[@xml:id and ./tei:idno[@type='GND']]"
+    ):
         xml_id = get_xmlid(y)
         entity_title = make_entity_label(y.xpath("./*[1]")[0])[0]
         entity_id = y.xpath("./*[@type='GND']/text()")[0]
         entity_uri = URIRef(entity_id)
         g.add((entity_uri, RDF.type, ACDH["Person"]))
-        g.add((entity_uri, ACDH["hasUrl"], Literal(f"{APP_URL}{xml_id}", datatype=XSD.anyURI)))
+        g.add(
+            (
+                entity_uri,
+                ACDH["hasUrl"],
+                Literal(f"{APP_URL}{xml_id}", datatype=XSD.anyURI),
+            )
+        )
         g.add((entity_uri, ACDH["hasTitle"], Literal(entity_title, lang="und")))
         g.add((cur_col_uri, ACDH["hasActor"], entity_uri))
         g.add((cur_doc_uri, ACDH["hasActor"], entity_uri))
@@ -97,13 +149,21 @@ for x in tqdm(files):
         entity_id = y.xpath("./*[@type='GND']/text()")[0]
         entity_uri = URIRef(entity_id)
         g.add((entity_uri, RDF.type, ACDH["Organisation"]))
-        g.add((entity_uri, ACDH["hasUrl"], Literal(f"{APP_URL}{xml_id}", datatype=XSD.anyURI)))
+        g.add(
+            (
+                entity_uri,
+                ACDH["hasUrl"],
+                Literal(f"{APP_URL}{xml_id}", datatype=XSD.anyURI),
+            )
+        )
         g.add((entity_uri, ACDH["hasTitle"], Literal(entity_title, lang="und")))
         g.add((cur_col_uri, ACDH["hasActor"], entity_uri))
         g.add((cur_doc_uri, ACDH["hasActor"], entity_uri))
 
     # spatial coverage:
-    for y in doc.any_xpath(".//tei:back//tei:place[@xml:id and ./tei:idno[@type='GEONAMES']]"):
+    for y in doc.any_xpath(
+        ".//tei:back//tei:place[@xml:id and ./tei:idno[@type='GEONAMES']]"
+    ):
         xml_id = get_xmlid(y)
         entity_title = make_entity_label(y.xpath("./*[1]")[0])[0]
         entity_id = y.xpath("./*[@type='GEONAMES']/text()")[0]
@@ -116,7 +176,9 @@ for x in tqdm(files):
 
     # hasExtent
     nr_of_images = len(doc.any_xpath(".//tei:facsimile/tei:surface/tei:graphic[@url]"))
-    g.add((cur_doc_uri, ACDH["hasExtent"], Literal(f"{nr_of_images} Blätter", lang="de")))
+    g.add(
+        (cur_doc_uri, ACDH["hasExtent"], Literal(f"{nr_of_images} Blätter", lang="de"))
+    )
 
     # images
     try:
@@ -132,21 +194,41 @@ for x in tqdm(files):
     else:
         owner_uri = URIRef("https://d-nb.info/gnd/2005486-5")
 
-    for i, image in enumerate(doc.any_xpath(".//tei:facsimile/tei:surface/tei:graphic[@url]"), start=1):
+    for i, image in enumerate(
+        doc.any_xpath(".//tei:facsimile/tei:surface/tei:graphic[@url]"), start=1
+    ):
         cur_image_id = f"{cur_col_id}___{i:04}.jpg"
         cur_image_uri = URIRef(f"{TOP_COL_URI}/{cur_image_id}")
         g.add((cur_image_uri, RDF.type, ACDH["Resource"]))
         g.add((cur_image_uri, ACDH["isPartOf"], cur_col_uri))
-        g.add((cur_image_uri, ACDH["hasCategory"], URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/image")))
+        g.add(
+            (
+                cur_image_uri,
+                ACDH["hasCategory"],
+                URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/image"),
+            )
+        )
         g.add((cur_image_uri, ACDH["hasTitle"], Literal(f"{cur_image_id}", lang="und")))
-        g.add((cur_image_uri, ACDH["hasLicense"], URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/noc-oklr")))
+        g.add(
+            (
+                cur_image_uri,
+                ACDH["hasLicense"],
+                URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/noc-oklr"),
+            )
+        )
         g.add((cur_image_uri, ACDH["hasLicensor"], owner_uri))
         g.add((cur_image_uri, ACDH["hasOwner"], owner_uri))
         g.add((cur_image_uri, ACDH["hasRightsHolder"], owner_uri))
         if i != nr_of_images:
             next_uri = URIRef(f"{TOP_COL_URI}/{cur_col_id}___{i + 1:04}.jpg")
             g.add((cur_image_uri, ACDH["hasNextItem"], next_uri))
-    g.add((cur_col_uri, ACDH["hasNextItem"], URIRef(f"{TOP_COL_URI}/{cur_col_id}___0001.jpg")))
+    g.add(
+        (
+            cur_col_uri,
+            ACDH["hasNextItem"],
+            URIRef(f"{TOP_COL_URI}/{cur_col_id}___0001.jpg"),
+        )
+    )
 
 # indices and meta
 for y in ["indices", "meta"]:
@@ -156,10 +238,28 @@ for y in ["indices", "meta"]:
         cur_doc_uri = URIRef(f"{TOP_COL_URI}/{cur_doc_id}")
         g.add((cur_doc_uri, RDF.type, ACDH["Resource"]))
         g.add((cur_doc_uri, ACDH["isPartOf"], URIRef(f"{TOP_COL_URI}/{y}")))
-        g.add((cur_doc_uri, ACDH["hasLicense"], URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0")))
+        g.add(
+            (
+                cur_doc_uri,
+                ACDH["hasLicense"],
+                URIRef("https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-4-0"),
+            )
+        )
         title = extract_fulltext(doc.any_xpath(".//tei:titleStmt/tei:title[1]")[0])
-        g.add((cur_doc_uri, ACDH["hasTitle"], Literal(f"TEI/XML Dokument: {title}", lang="de")))
-        g.add((cur_doc_uri, ACDH["hasCategory"], URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/text/tei")))
+        g.add(
+            (
+                cur_doc_uri,
+                ACDH["hasTitle"],
+                Literal(f"TEI/XML Dokument: {title}", lang="de"),
+            )
+        )
+        g.add(
+            (
+                cur_doc_uri,
+                ACDH["hasCategory"],
+                URIRef("https://vocabs.acdh.oeaw.ac.at/archecategory/text/tei"),
+            )
+        )
         for p, o in ihb_owner_graph.predicate_objects():
             g.add((cur_doc_uri, p, o))
 
