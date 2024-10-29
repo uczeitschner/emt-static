@@ -21,7 +21,7 @@ for x in tqdm(files):
         if ref == "#":
             rs.pop("ref")
             fixed_values += 1
-        elif ref[0] != '#':
+        elif ref[0] != "#":
             rs.attrib["ref"] = f"#{ref}"
             fixed_values += 1
         else:

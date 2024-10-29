@@ -55,7 +55,8 @@
                                     <li><span class="dot emt_person_id__10"></span>
                                         <span class="legend-item">Elisabeth Amalie von Pfalz-Neuburg</span>
                                     </li>
-                                    <li><span class="dot Brief_erschlossen"></span>
+                                    <li>
+                                        <span class="dot Brief_erschlossen"></span>
                                         <span class="legend-item">In der Korrespondenz erwähnter Brief</span>
                                     </li>
                                     <li>
@@ -78,7 +79,6 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="dataModalLabel">Data Details</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Schließen"/>
                                 </div>
