@@ -49,5 +49,17 @@
         <script src="vendor/i18next/jquery-i18next.min.js"></script>
         <script src="vendor/i18next/i18nextBrowserLanguageDetector.min.js"></script>
         <script src="vendor/i18next/i18nextHttpBackend.min.js"></script>
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+              var u = "https://matomo.acdh.oeaw.ac.at/";
+              _paq.push(['setTrackerUrl', u + 'piwik.php']);
+              _paq.push(['setSiteId', '226']);
+              var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+              g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+            })();
+        </script>
     </xsl:template>
 </xsl:stylesheet>
