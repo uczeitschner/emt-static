@@ -11,14 +11,14 @@ from tqdm import tqdm
 templateLoader = jinja2.FileSystemLoader(searchpath="./templates")
 templateEnv = jinja2.Environment(loader=templateLoader)
 template = templateEnv.get_template("cmif.j2")
-DOMAIN = "https://emt.acdh-dev.oeaw.ac.at/"
+DOMAIN = "https://kaiserin-eleonora.oeaw.ac.at/"
 
 files = glob.glob("./data/editions/*.xml")
 
 items = []
 for x in tqdm(files, total=len(files)):
     doc_id = os.path.split(x)[-1]
-    item = {"doc_id": doc_id}
+    item = {"doc_id": doc_id.replace(".xml", ".html")}
     doc = TeiReader(x)
     # sender
     try:
