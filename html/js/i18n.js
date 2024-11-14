@@ -31,7 +31,7 @@ var show_this_lang = localStorage.i18nextLng
     el.style.removeProperty("display")
   });
 
-var hide_this_lang = (localStorage.i18nextLng === "en") ? "de" : "en";
+var hide_this_lang = (localStorage.i18nextLng.includes("en")) ? "de" : "en";
 var to_hide = document.querySelectorAll(`[data-mylang="${hide_this_lang}"]`);
 console.log(`hide ${hide_this_lang}`)
 to_hide.forEach(function (el) {
