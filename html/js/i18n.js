@@ -3,13 +3,9 @@ const rerender = () => {
 }
 
 $(function () {
-  // use plugins and options as needed, for options, detail see
-  // https://www.i18next.com
   i18next
     .use(i18nextHttpBackend)
     .use(i18nextBrowserLanguageDetector)
-    // init i18next
-    // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
       debug: false,
       fallbackLng: 'en',
@@ -38,3 +34,33 @@ to_hide.forEach(function (el) {
   el.style.display = 'none';
 });
 
+function applyLanguageClasses() {
+  const selectedLang = localStorage.getItem('i18nextLng');
+  const deButton = document.getElementById('lang-switch-de');
+  const enButton = document.getElementById('lang-switch-en');
+
+  if (selectedLang === 'de') {
+    deButton.classList.add('fs-2');
+    enButton.classList.remove('fs-2');
+  } else if (selectedLang === 'en') {
+    enButton.classList.add('fs-2');
+    deButton.classList.remove('fs-2');
+  }
+}
+
+// Event listener for the DE button
+document.getElementById('lang-switch-de').addEventListener('click', function() {
+  localStorage.setItem('i18nextLng', 'de');
+  applyLanguageClasses();
+  location.reload(); // Reload the page
+});
+
+// Event listener for the EN button (for two-way switching)
+document.getElementById('lang-switch-en').addEventListener('click', function() {
+  localStorage.setItem('i18nextLng', 'en');
+  applyLanguageClasses();
+  location.reload(); // Reload the page
+});
+
+// Apply the classes based on the stored language on page load
+applyLanguageClasses();
