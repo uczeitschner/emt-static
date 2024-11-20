@@ -50,8 +50,8 @@
                 </div>
                 
             </div>
-            <div class="float-end me-3">
-                <a href="{$github_url}"><i class="bi bi-github"></i></a>
+            <div class="text-center pt-4">
+                <a href="{$github_url}"><i class="fs-1 bi bi-github"></i></a>
             </div>
         </footer>
         <script src="vendor/jquery/jquery-3.6.3.min.js"></script>
