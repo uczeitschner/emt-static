@@ -2,6 +2,7 @@ import glob
 import os
 import jinja2
 import lxml.etree as ET
+from datetime import date
 from acdh_cidoc_pyutils import extract_begin_end
 from acdh_tei_pyutils.tei import TeiReader
 from acdh_tei_pyutils.utils import check_for_hash, make_entity_label
@@ -12,6 +13,7 @@ templateLoader = jinja2.FileSystemLoader(searchpath="./templates")
 templateEnv = jinja2.Environment(loader=templateLoader)
 template = templateEnv.get_template("cmif.j2")
 DOMAIN = "https://kaiserin-eleonora.oeaw.ac.at/"
+current_date = date.today().strftime("%Y-%m-%d")
 
 files = glob.glob("./data/editions/*.xml")
 
@@ -97,4 +99,4 @@ for x in tqdm(files, total=len(files)):
     items.append(item)
 
 with open("./data/indices/cmif.xml", "w") as f:
-    f.write(template.render({"data": items, "domain": DOMAIN}))
+    f.write(template.render({"data": items, "domain": DOMAIN, "date": current_date}))
