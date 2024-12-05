@@ -5,7 +5,7 @@ on:
 
 jobs:
   build_pages:
-    name: Ingest Binary-Data into ARCHE
+    name: Ingest Metadata into ARCHE
     runs-on: ubuntu-latest
     env:
       ARCHE_USER: pandorfer
@@ -14,10 +14,18 @@ jobs:
       TOPCOLID: https://id.acdh.oeaw.ac.at/emt
 
     steps:
-    - name: Perform Checkout
-      uses: actions/checkout@v4
-    - name: Download binary data
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Install Python Packages
+      run: pip install -r requirements.txt
+    - name: Fetch data
       run: ./fetch_data.sh
+    - name: Process Data
+      run: ./process.sh
+    - name: create metadata
+      run: python make_arche_rdf.py
     - name: remove arche.ttl
       run: rm to_ingest/arche.ttl
     - name: run binaries import
