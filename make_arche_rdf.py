@@ -32,7 +32,7 @@ for p, o in ihb_owner_graph.predicate_objects():
     g.add((TOP_COL_URI, p, o))
 
 
-files = sorted(glob.glob("data/editions/*.xml"))[:20]
+files = sorted(glob.glob("data/editions/*.xml"))
 for x in tqdm(files):
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
