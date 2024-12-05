@@ -33,7 +33,7 @@ for p, o in ihb_owner_graph.predicate_objects():
 
 
 files = sorted(glob.glob("data/editions/*.xml"))
-for x in tqdm(files):
+for x in tqdm(files)[:5]:
     doc = TeiReader(x)
     cur_col_id = os.path.split(x)[-1].replace(".xml", "")
     cur_doc_id = f"{cur_col_id}.xml"
