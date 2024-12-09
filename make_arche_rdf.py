@@ -222,6 +222,9 @@ for x in tqdm(files):
         if i != nr_of_images:
             next_uri = URIRef(f"{TOP_COL_URI}/{cur_col_id}___{i + 1:04}.jpg")
             g.add((cur_image_uri, ACDH["hasNextItem"], next_uri))
+        else:
+            next_uri = URIRef(f"{TOP_COL_URI}/{cur_col_id}.xml")
+            g.add((cur_image_uri, ACDH["hasNextItem"], next_uri))
     g.add(
         (
             cur_col_uri,
