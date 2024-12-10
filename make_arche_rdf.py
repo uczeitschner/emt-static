@@ -14,7 +14,7 @@ os.makedirs(to_ingest, exist_ok=True)
 g = Graph().parse("arche_seed_files/arche_constants.ttl")
 g_repo_objects = Graph().parse("arche_seed_files/repo_objects_constants.ttl")
 TOP_COL_URI = URIRef("https://id.acdh.oeaw.ac.at/emt")
-APP_URL = "https://emt.acdh-dev.oeaw.ac.at/"
+APP_URL = "https://kaiserin-eleonora.oeaw.ac.at/"
 
 ACDH = Namespace("https://vocabs.acdh.oeaw.ac.at/schema#")
 COLS = [ACDH["TopCollection"], ACDH["Collection"], ACDH["Resource"]]
@@ -49,6 +49,15 @@ for x in tqdm(files):
     cur_doc_uri = URIRef(f"{TOP_COL_URI}/{cur_doc_id}")
     g.add((cur_doc_uri, RDF.type, ACDH["Resource"]))
     g.add((cur_doc_uri, ACDH["isPartOf"], cur_col_uri))
+    g.add(
+        (
+            cur_doc_uri,
+            ACDH["hasUrl"],
+            Literal(
+                f"{APP_URL}{cur_doc_id.replace(".xml", ".html")}", datatype=XSD.anyURI
+            ),
+        )
+    )
     g.add(
         (
             cur_doc_uri,
@@ -169,7 +178,13 @@ for x in tqdm(files):
         entity_id = y.xpath("./*[@type='GEONAMES']/text()")[0]
         entity_uri = URIRef(entity_id)
         g.add((entity_uri, RDF.type, ACDH["Place"]))
-        # g.add((entity_uri, ACDH["hasUrl"], Literal(f"{APP_URL}{xml_id}", datatype=XSD.anyURI)))
+        g.add(
+            (
+                entity_uri,
+                ACDH["hasUrl"],
+                Literal(f"{APP_URL}{xml_id}", datatype=XSD.anyURI),
+            )
+        )
         g.add((entity_uri, ACDH["hasTitle"], Literal(entity_title, lang="und")))
         g.add((cur_col_uri, ACDH["hasSpatialCoverage"], entity_uri))
         g.add((cur_doc_uri, ACDH["hasSpatialCoverage"], entity_uri))
