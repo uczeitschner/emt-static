@@ -6,7 +6,7 @@ docker run \
   --rm \
   --network="host" \
   -v ${PWD}/fc_out:/reports \
-  -v ${PWD}/to_ingest:/data \
+  -v ${PWD}/img:/data \
   --entrypoint arche-filechecker \
   acdhch/arche-ingest \
   --overwrite --skipWarnings --html /data /reports
