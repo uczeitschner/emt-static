@@ -301,3 +301,6 @@ for x in files_to_ingest:
     _, tail = os.path.split(x)
     new_name = os.path.join(to_ingest, tail)
     shutil.copy(x, new_name)
+
+print(f"copy title image into {to_ingest}")
+shutil.copy("./html/bio-pics/emt_person_id__9.jpg", os.path.join(to_ingest, "title-image.jpg"))
