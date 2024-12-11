@@ -290,6 +290,8 @@ for x in COL_URIS:
     for p, o in g_repo_objects.predicate_objects():
         g.add((x, p, o))
 
+g.parse("./arche_seed_files/other_things.ttl")
+
 print("writing graph to file")
 g.serialize("html/arche.ttl")
 
