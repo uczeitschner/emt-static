@@ -2,7 +2,7 @@
 
 echo "ingest binaries for ${TOPCOLID} into ${ARCHE}"
 docker run --rm \
-  -v ${PWD}/img:/data \
+  -v ${PWD}/to_ingest:/data \
   --network="host" \
   --entrypoint arche-import-binary \
   acdhch/arche-ingest \
