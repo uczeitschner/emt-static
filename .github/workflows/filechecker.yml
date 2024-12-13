@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
-  deploy:
+  check:
     runs-on: ubuntu-latest
     env:
       ARCHE_USER: pandorfer
@@ -36,6 +36,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: Download binary data
         run: ./fetch_data.sh
+      - name: process the data
+        run: ./process.sh
+      - name: make arche metadata
+        run: python make_arche.py
       - name: check files
         run: ./arche__filechecker.sh
       - name: Upload artifact
