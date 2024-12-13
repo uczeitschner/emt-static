@@ -31,17 +31,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setu up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: install python packages
+        run: pip install -r requirements.txt
       - name: Download binary data
         run: ./fetch_data.sh
       - name: check files
         run: ./arche__filechecker.sh
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: "fc_out"
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Run virus scan
+        run: ./arche__viruscheck.sh
